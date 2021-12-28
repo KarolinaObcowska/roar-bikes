@@ -1,7 +1,31 @@
 @import '../../sassStyles/_variables'
-
+@import '../../sassStyles/_typography'
 section
-    height: 80vh
+    height: 75vh
     background: url("../../img/bg.jpg")
     background-size: cover
-    background-position: center top
+    background-position: top
+    div
+        width: 700px
+        height: 230px
+        border-radius: 50px 50px 50px 150px
+        background-color: $primary-color-opacity
+        position: absolute
+        display: flex
+        align-items: left
+        flex-direction: column
+        bottom: 13rem
+        right: 10rem
+        padding: 1rem 0rem 1rem 12rem
+        h1, h2
+            color: $bright-primary-color
+            margin: 0
+
+        button
+            background-color: $secondary-color
+            border: none
+            color: $bright-primary-color
+            padding: .5rem
+            border-radius: 1rem
+            width: 7rem
+            margin-left: 2rem
