@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./HeroBanner";
 
-const Banner = ({ description, text, icon }) => {
+const Banner = ({ icon, description, text }) => {
   return (
     <div className="card">
       <div className="card-wrapper">{icon}</div>
