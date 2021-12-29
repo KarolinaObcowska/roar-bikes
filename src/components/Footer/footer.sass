@@ -1,0 +1,47 @@
+@import '../../sassStyles/_variables'
+
+.footer-wrapper
+    background-color: $dark-primary-color
+    margin: 0
+    height: 40vh
+    .footer
+        width: 80%
+        display: flex
+        justify-content: space-between
+        margin: auto
+        align-items: top
+        .details,
+        .address
+            color: $bright-primary-color
+            font-family: $secondary-font
+            font-weight: $regular-font
+            font-size: 0.8rem
+            line-height: 4
+        .address
+            line-height: 3
+            .socials
+                font-size: 2rem
+                .social-icon
+                    margin: 0rem 1rem
+            form
+                .form-item,
+                .form-submit
+                    height: 2.7rem
+                    margin: 0
+                    font-family: $primary-font
+                .form-item
+                    background-color: $dark-primary-color
+                    color: $bright-primary-color
+                    border: 0.5px solid $bright-primary-color
+                    border-top-left-radius: 5px
+                    border-bottom-left-radius: 5px
+                    padding: 0.5rem
+
+                .form-submit
+                    background-color: $bright-primary-color
+                    color: $dark-primary-color
+                    width: 3rem
+                    border: none
+                    border-bottom-right-radius: 5px
+                    border-top-right-radius: 5px
+                    font-weight: $semibold-font
