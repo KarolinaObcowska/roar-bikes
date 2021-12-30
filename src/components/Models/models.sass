@@ -1,6 +1,5 @@
 @import '../../sassStyles/_variables'
-@import '../../sassStyles/_typography'
-@import '../../sassStyles/_animations'
+@import '../../sassStyles/_mixins'
 
 .models
     background-color: $bright-primary-color
@@ -48,9 +47,5 @@
                 font-weight: $regular-font
                 font-family: $secondary-font
                 color: $dark-secondary-color
-
-@media (prefers-reduce-motion: no-preference)
-    .figure-animation
-        animation-name: wipe-enter
-        animation-duration: 1s
-        animation-iteration-count: infinite
+            button
+                @include cta-button

@@ -1,10 +1,18 @@
 @import './_variables'
 
-@mixin sm
-    @media (max-width: $screen-sm)
-@mixin md
-    @media (max-width: $screen-md)
-@mixin lg
-    @media (max-width: $screen-lg)
-@mixin xl
-    @media (max-width: $screen-xl)
+@mixin cta-button
+    background-color: $secondary-color
+    border: none
+    color: $bright-primary-color
+    padding: 0.5rem 1.5rem
+    border-radius: 1.5rem
+    font-family: $secondary-font
+
+// @mixin sm
+//     @media (max-width: $screen-sm)
+// @mixin md
+//     @media (max-width: $screen-md)
+// @mixin lg
+//     @media (max-width: $screen-lg)
+// @mixin xl
+//     @media (max-width: $screen-xl)
