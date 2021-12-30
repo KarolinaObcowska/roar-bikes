@@ -1,6 +1,7 @@
 @import '../../sassStyles/_variables'
 .active
     background-color: $bright-primary-color
+    border-bottom: 1px solid $dark-secondary-color
 .header
     background: transparent
 .header,
@@ -27,9 +28,25 @@
                     font-weight: $regular-font
                     text-decoration: none
                     margin-right: 3rem
+                    cursor: pointer
                     span
                         font-weight: $bold-font
                     .icon
                         font-size: 1.5rem
                 a:hover
                     color: $primary-color
+        .dropdown-menu .active
+            background-color: $bright-primary-color
+        .dropdown-menu
+            position: absolute
+            top: 72px
+            left: 410px
+            border-left: 1px solid $dark-secondary-color
+            border-bottom: 1px solid $dark-secondary-color
+            border-right: 1px solid $dark-secondary-color
+            width: 150px
+            ul
+                display: flex
+                flex-direction: column
+                li
+                    padding: .5rem

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import "./navbar.sass";
 import { useState, useEffect } from "react";
 import { BsCart3 } from "react-icons/bs";
@@ -7,6 +8,7 @@ import { GiLion } from "react-icons/gi";
 import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const changeBackgroundColor = () => {
     if (window.scrollY >= 100) {
@@ -34,10 +36,28 @@ const Navbar = () => {
               <a href="asd">HOME</a>
             </li>
             <li>
-              <a href="asd">
+              <a className="dropdown-menu-link" onClick={() => setIsOpen(!isOpen)}>
                 PRODUCTS <IoIosArrowDown />{" "}
               </a>
             </li>
+            {isOpen ? (
+              <div
+                onMouseLeave={() => setIsOpen(false)}
+                className={navbar ? "dropdown-menu active" : "dropdown-menu"}>
+                <ul onClick={() => setIsOpen(false)}>
+                  <li>
+                    <a>SIAMESE</a>
+                  </li>
+                  <li>
+                    <a>SPHYNX</a>
+                  </li>
+                  <li>
+                    <a>BENGAL</a>
+                  </li>
+                </ul>
+              </div>
+            ) : null}
+
             <li>
               <a href="asd">CONTACT</a>
             </li>
