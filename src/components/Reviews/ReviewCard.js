@@ -13,7 +13,6 @@ const ReviewCard = ({ name, avatar, stars, review }) => {
         <div>
           <h3 className="name">{name}</h3>
           {tab.map((el, id) => {
-            console.log(el);
             return <AiFillStar className="star" key={id} />;
           })}
 

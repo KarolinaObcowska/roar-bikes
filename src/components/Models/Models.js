@@ -6,6 +6,8 @@ import Bike3 from "../../img/bike-3.png";
 import Description from "./Description";
 
 const Models = () => {
+  const elements = document.querySelectorAll(".photo");
+  console.log(elements.length);
   return (
     <section className="models">
       <div className="title-wrapper">
@@ -14,7 +16,11 @@ const Models = () => {
       <div className="models-wrapper">
         <div className="item-1 item">
           <figure className="item-figure-1">
-            <img src={Bike1} className="photo" alt="Picutre of Siaseme model bike." />
+            <img
+              src={Bike1}
+              className="photo figure-animation"
+              alt="Picutre of Siaseme model bike."
+            />
           </figure>
         </div>
         <Description
@@ -32,12 +38,12 @@ const Models = () => {
             compromises."
         />
         <div className="item-4 item">
-          <figure className="item-figure-2">
+          <figure className="item-figure-2 figure">
             <img src={Bike2} className="photo" alt="Picutre of Sphynx model bike." />
           </figure>
         </div>
         <div className="item-5 item">
-          <figure className="item-figure-3">
+          <figure className="item-figure-3 figure">
             <img src={Bike3} className="photo" alt="Picutre of Siaseme model bike." />
           </figure>
         </div>

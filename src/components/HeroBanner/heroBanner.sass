@@ -1,4 +1,5 @@
 @import '../../sassStyles/_variables'
+@import '../../sassStyles/_animations'
 
 .banner
     background-color: $bright-secondary-color
@@ -28,3 +29,14 @@
             font-weight: $regular-font
             color: $dark-secondary-color
             font-size: 0.7rem
+
+@media (prefers-reduced-motion: no-preference)
+    .card
+        animation-name: wipe-enter
+        animation-duration: 1s
+        animation-iteration-count: 1
+@media (prefers-reduced-motion: no-preference)
+    .icon
+        animation-name: show-icon
+        animation-duration: 3s
+        animation-iteration-count: 1
