@@ -1,4 +1,5 @@
 @import '../../sassStyles/_variables'
+
 .active
     background-color: $bright-primary-color
     border-bottom: 1px solid $dark-secondary-color
@@ -10,19 +11,24 @@
     position: fixed
     z-index: 1
     header
-        nav
+        .navbar
             display: flex
             justify-content: space-around
-            ul
+            .navbar-list,
+            .icons-list
                 display: flex
                 margin: 1rem auto
                 justify-content: space-between
                 padding: 0
                 align-items: center
                 list-style-type: none
+                .logo-text
+                    margin-bottom: 2rem
                 .logo
                     font-size: 2.5rem
                     margin-right: 0.5rem
+                .mobile-menu
+                    display: none
                 a
                     color: $dark-primary-color
                     font-weight: $regular-font
@@ -50,3 +56,29 @@
                 flex-direction: column
                 li
                     padding: .5rem
+
+@media screen and (max-width: $screen-lg)
+    .header
+        header
+            .navbar
+                .navbar-list li:not(:nth-child(2))
+                    display: none
+                .navbar-list,
+                .icon-list
+                    margin: 1rem auto
+                .navbar-list
+                    .mobile-menu
+                        display: inline
+                    .icon-list
+                        li
+                            a
+                                .icon
+                                    color: $primary-color
+@media (max-width: $screen-md)
+    .header
+        header
+            .navbar
+                .navbar-list
+                    margin: 1rem 1rem
+                .icons-list
+                    display: none

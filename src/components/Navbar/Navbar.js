@@ -24,12 +24,12 @@ const Navbar = () => {
   return (
     <div className={navbar ? "active" : "header"}>
       <header>
-        <nav>
-          <ul>
+        <nav className="navbar">
+          <ul className="navbar-list">
             <GiLion className="logo" />
             <li>
               <a href="asd" className="logo-text">
-                <span>ROAR</span>BIKES
+                <span>ROAR</span>BIKES <IoIosArrowDown className="mobile-menu" />{" "}
               </a>
             </li>
             <li>
@@ -57,12 +57,11 @@ const Navbar = () => {
                 </ul>
               </div>
             ) : null}
-
             <li>
               <a href="asd">CONTACT</a>
             </li>
           </ul>
-          <ul>
+          <ul className="icons-list">
             <li>
               <a href="asd">
                 <FiSearch className="icon" />

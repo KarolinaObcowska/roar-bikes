@@ -20,6 +20,9 @@
             display: flex
             align-items: center
             justify-content: center
+            .icon
+                width: 4rem
+                height: 4rem
         h6
             margin: 0
             margin-top: 0.6rem
@@ -40,3 +43,21 @@
         animation-name: show-icon
         animation-duration: 3s
         animation-iteration-count: 1
+
+@media screen and (max-width: $screen-sm)
+    .banner
+        height: fit-content
+        display: grid
+        padding: 1rem
+        .card
+            margin: 1rem
+            .card-wrapper
+                width: 10rem
+                height: 10rem
+                .icon
+                    width: 8rem
+                    height: 8rem
+            h6
+                font-size: 1rem
+            p
+                font-size: 0.9rem

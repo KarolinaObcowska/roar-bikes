@@ -10,22 +10,22 @@ const HeroBanner = () => {
       <Banner
         description="SAFETY BY DESIGN"
         text="Safety first"
-        icon={<AiOutlineSafety className="icon" size={50} color="#000000" />}
+        icon={<AiOutlineSafety className="icon" color="#000000" />}
       />
       <Banner
         description="SUPPORT 24/7"
         text="We support 24h a day"
-        icon={<MdHeadsetMic className="icon" size={50} color="#000000" />}
+        icon={<MdHeadsetMic className="icon" color="#000000" />}
       />
       <Banner
         description="EXPERT SERVICE"
         text="Professionals who know"
-        icon={<GrBike className="icon" size={50} color="#000000" />}
+        icon={<GrBike className="icon" color="#000000" />}
       />
       <Banner
         description="REAPIR"
         text="Expert Mechanics"
-        icon={<BsTools className="icon" size={50} color="#000000" />}
+        icon={<BsTools className="icon" color="#000000" />}
       />
     </div>
   );
