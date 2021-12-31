@@ -40,3 +40,24 @@
                 font-weight: $regular-font
                 line-height: 1.75
                 min-height: 200px
+
+@media screen and (max-width: $screen-lg)
+    .reviews
+        .title
+        .reviews-wrapper
+            flex-direction: column
+            .card-wrapper
+                width: 100%
+                align-items: center
+                .main
+                    margin-top: 1rem
+                .review
+                    min-height: fit-content
+                    margin-bottom: 1rem
+
+@media screen and (max-width: $screen-md)
+    .reviews
+        .title
+        .reviews-wrapper
+            flex-direction: column
+            .card-wrapper
