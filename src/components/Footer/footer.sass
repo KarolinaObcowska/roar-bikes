@@ -45,3 +45,37 @@
                     border-bottom-right-radius: 5px
                     border-top-right-radius: 5px
                     font-weight: $semibold-font
+
+@media screen and (max-width: $screen-lg)
+    .footer-wrapper
+        height: fit-content
+        .footer
+            .details,
+            .address
+                font-size: 0.5rem
+            .address
+                .socials
+                    font-size: 1rem
+                    .social-icon
+                form
+                    .form-item,
+                    .form-submit
+                        height: 1.5rem
+                    .form-item
+                    .form-submit
+                        width: 2rem
+
+@media screen and (max-width: $screen-sm)
+    .footer-wrapper
+        height: fit-content
+        .footer
+            .details,
+            .address
+                line-height: 1
+                margin: 0.5rem
+                .socials
+                    .social-icon
+                        margin-bottom: 0.5rem
+            .address form,
+            .address p
+                display: none
