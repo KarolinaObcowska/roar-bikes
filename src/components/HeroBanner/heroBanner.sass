@@ -12,7 +12,7 @@
         display: flex
         flex-direction: column
         align-items: center
-        .card-wrapper
+        .card__container
             background-color: $primary-color
             width: 5rem
             height: 5rem
@@ -20,14 +20,14 @@
             display: flex
             align-items: center
             justify-content: center
-            .icon
+            .card__icon
                 width: 4rem
                 height: 4rem
-        h6
+        .card__title
             margin: 0
             margin-top: 0.6rem
             color: $dark-primary-color
-        p
+        .card__description
             margin: 0
             font-weight: $regular-font
             color: $dark-secondary-color
@@ -39,7 +39,7 @@
         animation-duration: 1s
         animation-iteration-count: 1
 @media (prefers-reduced-motion: no-preference)
-    .icon
+    .card__icon
         animation-name: show-icon
         animation-duration: 3s
         animation-iteration-count: 1
@@ -51,13 +51,13 @@
         padding: 1rem
         .card
             margin: 1rem
-            .card-wrapper
+            .card__container
                 width: 10rem
                 height: 10rem
-                .icon
+                .card__icon
                     width: 8rem
                     height: 8rem
-            h6
+            .card__title
                 font-size: 1rem
-            p
+            .card__description
                 font-size: 0.9rem

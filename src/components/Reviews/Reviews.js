@@ -6,8 +6,8 @@ import ReviewCard from "./ReviewCard";
 const Reviews = () => {
   return (
     <section className="reviews">
-      <h3 className="title">REVIEWS</h3>
-      <div className="reviews-wrapper">
+      <h3 className="reviews__title">REVIEWS</h3>
+      <div className="reviews__container">
         <ReviewCard
           name="Brandon Short"
           avatar={Avatar1}

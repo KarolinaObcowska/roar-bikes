@@ -10,7 +10,7 @@
     background-attachment: fixed
     display: flex
     justify-content: center
-    .wrapper
+    .hero__container
         width: 1000px
         height: 220px
         border-radius: 50px 50px 50px 150px
@@ -19,32 +19,33 @@
         bottom: 15rem
         padding-top: .5rem
         margin: 1rem
-        .text-wrapper
+        .hero__item
             width: 400px
             position: absolute
             left: 0
             text-align: right
-        h1, h2
-            color: $bright-primary-color
-            margin: 0
-        button
-            @include cta-button
+            .hero__title,
+            .hero__subtitle
+                color: $bright-primary-color
+                margin: 0
+            .hero__btn
+                @include cta-button
 
 @media screen and (max-width: $screen-lg)
     .hero
         height: 75vh
-        .wrapper
+        .hero__container
             width: 700px
 @media screen and (max-width: $screen-md)
     .hero
         height: 75vh
-        .wrapper
+        .hero__container
             height: fit-content
             width: 100%
             border-radius: 0px
             display: flex
             justify-content: center
-            .text-wrapper
+            .hero__item
                 padding: 1rem
                 position: relative
                 display: flex

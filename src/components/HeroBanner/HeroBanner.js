@@ -8,24 +8,24 @@ const HeroBanner = () => {
   return (
     <div className="banner">
       <Banner
-        description="SAFETY BY DESIGN"
-        text="Safety first"
-        icon={<AiOutlineSafety className="icon" color="#000000" />}
+        title="SAFETY BY DESIGN"
+        description="Safety first"
+        icon={<AiOutlineSafety className="card__icon" color="#000000" />}
       />
       <Banner
-        description="SUPPORT 24/7"
-        text="We support 24h a day"
-        icon={<MdHeadsetMic className="icon" color="#000000" />}
+        title="SUPPORT 24/7"
+        description="We support 24h a day"
+        icon={<MdHeadsetMic className="card__icon" color="#000000" />}
       />
       <Banner
-        description="EXPERT SERVICE"
-        text="Professionals who know"
-        icon={<GrBike className="icon" color="#000000" />}
+        title="EXPERT SERVICE"
+        description="Professionals who know"
+        icon={<GrBike className="card__icon" color="#000000" />}
       />
       <Banner
-        description="REAPIR"
-        text="Expert Mechanics"
-        icon={<BsTools className="icon" color="#000000" />}
+        title="REAPIR"
+        description="Expert Mechanics"
+        icon={<BsTools className="card__icon" color="#000000" />}
       />
     </div>
   );

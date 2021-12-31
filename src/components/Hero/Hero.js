@@ -7,11 +7,11 @@ const Hero = () => {
     <div>
       <section className="hero">
         <Slide left>
-          <div className="wrapper">
-            <div className="text-wrapper">
-              <h2>NEW MODEL</h2>
-              <h1>SIASEME</h1>
-              <button>SHOP NOW</button>
+          <div className="hero__container">
+            <div className="hero__item">
+              <h2 className="hero__subtitle">NEW MODEL</h2>
+              <h1 className="hero__title">SIASEME</h1>
+              <button className="hero__btn">SHOP NOW</button>
             </div>
           </div>
         </Slide>

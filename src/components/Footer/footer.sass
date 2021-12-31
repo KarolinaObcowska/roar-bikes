@@ -1,44 +1,43 @@
 @import '../../sassStyles/_variables'
 
-.footer-wrapper
+.footer
     background-color: $dark-primary-color
     height: 40vh
     width: 100vw
     position: relative
-    .footer
+    .footer__container
         width: 80%
         display: flex
         justify-content: space-between
         margin: auto
         align-items: top
-        .details,
-        .address
+        .footer__details,
+        .footer__address
             color: $bright-primary-color
             font-family: $secondary-font
             font-weight: $regular-font
             font-size: 0.8rem
             line-height: 4
-        .address
+        .footer__address
             line-height: 3
-            .socials
+            .footer__social
                 font-size: 2rem
-                .social-icon
+                .footer__social-icon
                     margin: 0rem 1rem
-            form
-                .form-item,
-                .form-submit
+            .form
+                .form__input,
+                .form__submit
                     height: 2.7rem
                     margin: 0
                     font-family: $primary-font
-                .form-item
+                .form__input
                     background-color: $dark-primary-color
                     color: $bright-primary-color
                     border: 0.5px solid $bright-primary-color
                     border-top-left-radius: 5px
                     border-bottom-left-radius: 5px
                     padding: 0.5rem
-
-                .form-submit
+                .form__submit
                     background-color: $bright-primary-color
                     color: $dark-primary-color
                     width: 3rem
@@ -48,35 +47,34 @@
                     font-weight: $semibold-font
 
 @media screen and (max-width: $screen-lg)
-    .footer-wrapper
+    .footer
         height: fit-content
-        .footer
-            .details,
-            .address
+        .footer__container
+            .footer__details,
+            .footer__address
                 font-size: 0.5rem
-            .address
-                .socials
+            .footer__address
+                .footer__social
                     font-size: 1rem
-                    .social-icon
-                form
-                    .form-item,
-                    .form-submit
+                    .footer__social-icon
+                .form
+                    .form__input,
+                    .form__submit
                         height: 1.5rem
-                    .form-item
-                    .form-submit
+                    .form__input
+                    .form__submit
                         width: 2rem
 
 @media screen and (max-width: $screen-sm)
-    .footer-wrapper
+    .footer
         height: fit-content
-        .footer
-            .details,
-            .address
+        .footer__container
+            .footer__details,
+            .footer__address
                 line-height: 1
                 margin: 0.5rem
-                .socials
-                    .social-icon
+                .footer__social
+                    .footer__social-icon
                         margin-bottom: 0.5rem
-            .address form,
-            .address p
+            .form
                 display: none

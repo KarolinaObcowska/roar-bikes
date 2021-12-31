@@ -6,35 +6,35 @@ import Fade from "react-reveal/Fade";
 
 const Footer = () => {
   return (
-    <div className="footer-wrapper">
-      <footer className="footer">
+    <div className="footer">
+      <footer className="footer__container">
         <Fade bottom>
-          <div className="details">
+          <div className="footer__details">
             <p>Company</p>
             <p>Materials</p>
             <p>Our Process</p>
           </div>
-          <div className="details">
+          <div className="footer__details">
             <p>Setup</p>
             <p>Warranty</p>
             <p>Bike Registration</p>
           </div>
-          <div className="details">
+          <div className="footer__details">
             <p>Contact Us</p>
             <p>Dealer Locator</p>
             <p>Shipping/Returns</p>
             <p>Careers</p>
           </div>
-          <address className="address">
-            <div className="socials">
-              <FaFacebookF className="social-icon" />
-              <RiInstagramLine className="social-icon" />
-              <BsTwitter className="social-icon" />
+          <address className="footer__address">
+            <div className="footer__social">
+              <FaFacebookF className="footer__social-icon" />
+              <RiInstagramLine className="footer__social-icon" />
+              <BsTwitter className="footer__social-icon" />
             </div>
-            <p>Subscribe to our newsletter</p>
-            <form>
-              <input placeholder="E-mail" type="email" className="form-item" />
-              <input type="submit" value="OK" className="form-submit" />
+            <form className="form">
+              <p className="form__title">Subscribe to our newsletter</p>
+              <input className="form__input" placeholder="E-mail" type="email" />
+              <input className="form__submit" type="submit" value="OK" />
             </form>
           </address>
         </Fade>

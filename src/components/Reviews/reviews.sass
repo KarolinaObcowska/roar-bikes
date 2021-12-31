@@ -2,11 +2,11 @@
 
 .reviews
     background-color: $primary-color
-    .title
+    .reviews__title
         text-align: center
         padding: 1rem
         background-color: $bright-primary-color
-    .reviews-wrapper
+    .reviews__container
         height: fit-content
         width: 80%
         background-color: $primary-color
@@ -14,27 +14,27 @@
         justify-content: space-evenly
         margin: auto
         align-items: center
-        .card-wrapper
+        .review__wrapper
             display: flex
             flex-direction: column
             width: 300px
-            .main
+            .review--main
                 display: flex
                 margin-top: 2rem
-                .avatar
+                .review__avatar
                     width: 100px
                     height: 100px
                     border-radius: 100%
                     object-fit: cover
 
-                .name,
-                .star
+                .review__name,
+                .review__star
                     margin: 0.5rem
-                .star
+                .review__star
                     color: $secondary-color
-                .name
+                .review__name
                     font-weight: $medium-font
-            .review
+            .review__description-wrapper
                 color: $dark-primary-color
                 font-family: $secondary-font
                 font-weight: $regular-font
@@ -43,14 +43,14 @@
 
 @media screen and (max-width: $screen-lg)
     .reviews
-        .title
-        .reviews-wrapper
+        .reviews__title
+        .reviews__container
             flex-direction: column
-            .card-wrapper
+            .review__wrapper
                 width: 100%
                 align-items: center
-                .main
+                .review--main
                     margin-top: 1rem
-                .review
+                .review__description-wrapper
                     min-height: fit-content
                     margin-bottom: 1rem

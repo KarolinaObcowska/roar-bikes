@@ -10,31 +10,31 @@ import Fade from "react-reveal/Fade";
 const CustomerPhoto = () => {
   return (
     <section className="customer-photo">
-      <h3 className="title">CUSTOMER PHOTO</h3>
-      <div className="customer-photo-wrapper">
-        <div className="photo">
+      <h3 className="customer-photo__title">CUSTOMER PHOTO</h3>
+      <div className="customer-photo__container">
+        <div className="photo-container">
           <Fade left>
-            <img src={Photo1} className="image" alt="" />
+            <img src={Photo1} className="photo-container__image" alt="" />
           </Fade>
           <Fade top>
-            <img src={Photo2} className="image" alt="" />
+            <img src={Photo2} className="photo-container__image" alt="" />
           </Fade>
           <Fade right>
-            <img src={Photo3} className="image" alt="" />
+            <img src={Photo3} className="photo-container__image" alt="" />
           </Fade>
           <Fade left>
-            <img src={Photo4} className="image" alt="" />
+            <img src={Photo4} className="photo-container__image" alt="" />
           </Fade>
           <Fade bottom>
-            <img src={Photo5} className="image" alt="" />
+            <img src={Photo5} className="photo-container__image" alt="" />
           </Fade>
           <Fade right>
-            <img src={Photo6} className="image" alt="" />
+            <img src={Photo6} className="photo-container__image" alt="" />
           </Fade>
         </div>
         <Fade bottom>
-          <div className="text-wrapper">
-            <p className="text">
+          <div className="text-container">
+            <p className="text-container__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
               exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure

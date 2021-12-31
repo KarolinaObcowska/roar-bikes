@@ -7,23 +7,23 @@ const ReviewCard = ({ name, avatar, stars, review }) => {
   tab.fill(0, 0, stars);
 
   return (
-    <div className="card-wrapper">
-      <div className="main">
+    <div className="review__wrapper">
+      <div className="review--main">
         <Fade left>
-          <img src={avatar} alt={`${name} 's avatar`} className="avatar" />
+          <img src={avatar} alt={`${name} 's avatar`} className="review__avatar" />
         </Fade>
         <Fade top>
           <div>
-            <h3 className="name">{name}</h3>
+            <h3 className="review__name">{name}</h3>
             {tab.map((el, id) => {
-              return <AiFillStar className="star" key={id} />;
+              return <AiFillStar className="review__star" key={id} />;
             })}
           </div>
         </Fade>
       </div>
       <Fade bottom>
-        <div className="review">
-          <p>{review}</p>
+        <div className="review__description-wrapper">
+          <p className="review__description">{review}</p>
         </div>
       </Fade>
     </div>
