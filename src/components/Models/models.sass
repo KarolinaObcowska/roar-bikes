@@ -49,3 +49,49 @@
                 color: $dark-secondary-color
             button
                 @include cta-button
+
+@media screen and (max-width: $screen-md)
+    .models
+        .title-wrapper
+            text-align: center
+        .models-wrapper
+            display: grid
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(6, 1fr)
+            grid-column-gap: px
+            grid-row-gap: 20px
+            .item-1
+                grid-area: 1 / 1 / 2 / 2
+            .desc-1
+                grid-area: 2 / 1 / 3 / 2
+            .item-2
+                grid-area: 3 / 1 / 4 / 2
+            .desc-2
+                grid-area: 4 / 1 / 5 / 2
+            .item-3
+                grid-area: 5 / 1 / 6 / 2
+            .desc-3
+                grid-area: 6 / 1 / 7 / 2
+            .item
+                .item-figure-1,
+                .item-figure-2,
+                .item-figure-3
+                    width: 280px
+                    height: 180px
+                .photo
+                    width: 300px
+                    height: 180px
+@media screen and (max-width: $screen-lg)
+    .models
+        width: 100%
+        .title-wrapper
+        .models-wrapper
+            .item
+                .item-figure-1,
+                .item-figure-2,
+                .item-figure-3
+                    width: 300px
+                    height: 220px
+                .photo
+                    width: 350px
+                    height: 230px

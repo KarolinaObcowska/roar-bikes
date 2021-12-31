@@ -26,6 +26,7 @@ const Models = () => {
         </div>
         <Slide right>
           <Description
+            className="desc-1"
             name="SIAMESE"
             description="The Siamese looks a lot like out other Trail and Enduro models because it is - it has
             the same type vof progressive geometry, ultra-capable suspension, and a state-of-the-art
@@ -35,6 +36,7 @@ const Models = () => {
         </Slide>
         <Slide left>
           <Description
+            className="desc-2"
             name="SPHYNX"
             description="The Sphinx is the worlds most versatile big-tire machine. Compatibile with almost every
             wheel size available, from 26 and 27.5 Fat to 27.5+ to 29er, the LES Fat is a
@@ -42,14 +44,14 @@ const Models = () => {
             compromises."
           />
         </Slide>
-        <div className="item-4 item">
+        <div className="item-2 item">
           <Slide right>
             <figure className="item-figure-2 figure">
               <img src={Bike2} className="photo" alt="Picutre of Sphynx model bike." />
             </figure>
           </Slide>
         </div>
-        <div className="item-5 item">
+        <div className="item-3 item">
           <Slide left>
             <figure className="item-figure-3 figure">
               <img src={Bike3} className="photo" alt="Picutre of Siaseme model bike." />
@@ -58,6 +60,7 @@ const Models = () => {
         </div>
         <Slide right>
           <Description
+            className="desc-3"
             name="BENGAL"
             description="The Bengal breaks the only remaining gravel cycling speed record worth breaking; the
             Speed of Imagination. With unrivaled handling, massive tire clearance, and pro-caliber
