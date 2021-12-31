@@ -27,3 +27,21 @@
     .text
         font-family: $secondary-font
         font-weight: $regular-font
+
+@media screen and (max-width: $screen-lg)
+    .customer-photo
+        height: fit-content
+        .title
+        .customer-photo-wrapper
+            .photo
+                grid-template-columns: repeat(2, 50%)
+                grid-template-rows: repeat(3, 40vw)
+
+@media screen and (max-width: $screen-md)
+    .customer-photo
+        height: fit-content
+        .title
+        .customer-photo-wrapper
+            .photo
+                grid-template-columns: repeat(1, 100%)
+                grid-template-rows: repeat(6, 50vw)
