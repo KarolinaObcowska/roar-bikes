@@ -4,7 +4,7 @@
     background-color: $bright-primary-color
     border-bottom: 1px solid $dark-secondary-color
 .header
-    background: transparent
+    background: $bright-color-opacity
 .header,
 .active
     width: 100%
@@ -23,12 +23,20 @@
                 align-items: center
                 list-style-type: none
                 .logo-text
+                    cursor: not-allowed
+                    pointer-events: none
                     margin-bottom: 2rem
                 .logo
+                    cursor: not-allowed
+                    pointer-events: none
                     font-size: 2.5rem
                     margin-right: 0.5rem
                 .mobile-menu
                     display: none
+                .mobile-menu-icon
+                    display: none
+                    cursor: not-allowed
+                    pointer-events: none
                 a
                     color: $dark-primary-color
                     font-weight: $regular-font
@@ -42,43 +50,87 @@
                 a:hover
                     color: $primary-color
         .dropdown-menu .active
-            background-color: $bright-primary-color
+            background-color: $bright-color-opacity
         .dropdown-menu
             position: absolute
+            background-color: $bright-color-opacity
             top: 72px
-            left: 410px
-            border-left: 1px solid $dark-secondary-color
-            border-bottom: 1px solid $dark-secondary-color
-            border-right: 1px solid $dark-secondary-color
-            width: 150px
+            left: 0
+            width: 100vw
+            height: 10vh
+            display: flex
+            align-items: center
+            justify-content: center
             ul
                 display: flex
-                flex-direction: column
-                li
+                flex-direction: row
+                list-style: none
+                width: 100%
+                justify-content: space-evenly
+                li a
+                    background-color: $primary-color
+                    border-radius: 50px 75px 75px 150px
                     padding: .5rem
+                    width: fit-content
 
 @media screen and (max-width: $screen-lg)
-    .header
+    .header,
+    .active
         header
             .navbar
+                justify-content: space-between
                 .navbar-list li:not(:nth-child(2))
                     display: none
                 .navbar-list,
-                .icon-list
-                    margin: 1rem auto
+                .icons-list
+                    margin: 1rem
                 .navbar-list
-                    .mobile-menu
+                    .logo-text,
+                    .logo
+                        cursor: pointer
+                        pointer-events: auto
+                    .mobile-menu-icon
                         display: inline
-                    .icon-list
-                        li
-                            a
-                                .icon
-                                    color: $primary-color
+                        cursor: pointer
+                        pointer-events: auto
+        .mobile-menu
+            background-color: $bright-color-opacity
+            width: 100vw
+            position: absolute
+            top: 72px
+            height: calc( 100vh - 72px )
+            .mobile-menu-list
+                font-size: 2rem
+                display: flex
+                flex-direction: column
+                list-style: none
+                .product
+                    margin: 1rem 0rem
+                .product a
+                    background-color: $primary-color
+                    color: $dark-primary-color
+                    border-radius: 20px 90px 75px 190px
+                    text-decoration: none
+            .mobile-menu-icons-list
+                display: none
+
 @media (max-width: $screen-md)
-    .header
+    .header,
+    .active
         header
             .navbar
+                justify-content: left
                 .navbar-list
                     margin: 1rem 1rem
                 .icons-list
                     display: none
+        .mobile-menu
+            .mobile-menu-icons-list
+                display: flex
+                flex-direction: row
+                list-style: none
+                li a
+                    padding: 0.5rem
+                    font-size: 2rem
+                    text-decoration: none
+                    color: $dark-primary-color
