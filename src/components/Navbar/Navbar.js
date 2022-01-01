@@ -1,16 +1,17 @@
 /* eslint-disable no-unused-vars */
 import "./navbar.sass";
 import { useState, useEffect } from "react";
-import { BsCart3 } from "react-icons/bs";
-import { MdOutlineAccountCircle } from "react-icons/md";
-import { FiSearch } from "react-icons/fi";
 import { GiLion } from "react-icons/gi";
 import { IoIosArrowDown } from "react-icons/io";
+import DropdownMenu from "./DropdownMenu";
+import IconsList from "./IconsList";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
+
   const changeBackgroundColor = () => {
     if (window.scrollY >= 100) {
       setNavbar(true);
@@ -18,10 +19,12 @@ const Navbar = () => {
       setNavbar(false);
     }
   };
+
   useEffect(() => {
     changeBackgroundColor();
     window.addEventListener("scroll", changeBackgroundColor);
   });
+
   return (
     <div className={navbar ? "active" : "header"}>
       <header>
@@ -45,86 +48,21 @@ const Navbar = () => {
                 PRODUCTS <IoIosArrowDown />{" "}
               </a>
             </li>
-            {isOpen ? (
-              <div
-                onMouseLeave={() => setIsOpen(false)}
-                className={navbar ? "dropdown-menu active" : "dropdown-menu"}>
-                <ul onClick={() => setIsOpen(false)}>
-                  <li>
-                    <a>SIAMESE</a>
-                  </li>
-                  <li>
-                    <a>SPHYNX</a>
-                  </li>
-                  <li>
-                    <a>BENGAL</a>
-                  </li>
-                </ul>
-              </div>
-            ) : null}
+            {isOpen ? <DropdownMenu setIsOpen={setIsOpen} navbar={navbar} /> : null}
             <li>
               <a href="asd">CONTACT</a>
             </li>
           </ul>
-          <ul className="icons-list">
-            <li>
-              <a href="asd">
-                <FiSearch className="icon" />
-              </a>
-            </li>
-            <li>
-              <a href="asd">
-                <BsCart3 className="icon" />
-              </a>
-            </li>
-            <li>
-              <a href="asd">
-                <MdOutlineAccountCircle className="icon" />
-              </a>
-            </li>
-          </ul>
+          <IconsList styles="icons-list" />
         </nav>
+        {/* MOBILE MENU*/}
+        {mobileMenu ? (
+          <div className="mobile-menu" onClick={() => setMobileMenu(!mobileMenu)}>
+            <MobileMenu />
+            <IconsList styles="mobile-menu-icons-list" />
+          </div>
+        ) : null}
       </header>
-
-      {/* MOBILE MENU*/}
-      {mobileMenu ? (
-        <div className="mobile-menu" onClick={() => setMobileMenu(!mobileMenu)}>
-          <ul className="mobile-menu-list">
-            <li>
-              <a>HOME</a>
-            </li>
-            <li className="product">
-              <a>SIAMESE</a>
-            </li>
-            <li className="product">
-              <a>SPHYNX</a>
-            </li>
-            <li className="product">
-              <a href="asd">BENGAL</a>
-            </li>
-            <li>
-              <a>CONTACT</a>
-            </li>
-          </ul>
-          <ul className="mobile-menu-icons-list">
-            <li>
-              <a href="asd">
-                <FiSearch className="icon" />
-              </a>
-            </li>
-            <li>
-              <a href="asd">
-                <BsCart3 className="icon" />
-              </a>
-            </li>
-            <li>
-              <a href="asd">
-                <MdOutlineAccountCircle className="icon" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      ) : null}
     </div>
   );
 };
