@@ -50,18 +50,20 @@
     .footer
         height: fit-content
         .footer__container
+            width: 100%
+            padding: 1rem
             .footer__details,
             .footer__address
                 font-size: 0.5rem
             .footer__address
                 .footer__social
+                    line-height: 2
                     font-size: 1rem
                     .footer__social-icon
                 .form
                     .form__input,
                     .form__submit
                         height: 1.5rem
-                    .form__input
                     .form__submit
                         width: 2rem
 
@@ -69,12 +71,19 @@
     .footer
         height: fit-content
         .footer__container
-            .footer__details,
-            .footer__address
-                line-height: 1
+            .footer__details
+                line-height: 2
                 margin: 0.5rem
+            .footer__address
                 .footer__social
+                    height: fit-content
                     .footer__social-icon
-                        margin-bottom: 0.5rem
+                        margin: 0rem 0.3rem
             .form
-                display: none
+                padding: 0
+                margin-right: 0.5rem
+                .form__title
+                    margin: 0
+                .form__input,
+                .form__submit
+                    width: 5rem
