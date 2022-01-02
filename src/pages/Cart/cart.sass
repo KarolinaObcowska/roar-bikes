@@ -1,9 +1,10 @@
 @import '../../sassStyles/_variables'
 @import '../../sassStyles/_mixins'
 .cart
-    margin-top: 12vh
     width: 100%
-    height: 150vh
+    position: relative
+    min-height: 100vh
+    padding-bottom: 40vh
     .cart__banner-container
         background-color: $primary-color
         width: 100%
@@ -117,3 +118,10 @@
                         width: 100%
                         @include btn-secondary
                         margin: 1rem 0rem
+
+@media screen and (max-width: $screen-lg)
+    .cart
+        .cart__banner-container
+        .cart-container
+            width: 100%
+            margin: 1rem
