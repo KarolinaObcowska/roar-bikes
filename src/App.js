@@ -1,17 +1,14 @@
+/* eslint-disable no-unused-vars */
 import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Models from "./components/Models/Models";
-import Reviews from "./components/Reviews/Reviews";
-import CustomerPhoto from "./components/CustomerPhoto/CustomerPhoto";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import Cart from "./pages/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Hero />
-      <Models />
-      <Reviews />
-      <CustomerPhoto />
+      <Cart />
+      {/* <LandingPage /> */}
       <Footer />
     </div>
   );

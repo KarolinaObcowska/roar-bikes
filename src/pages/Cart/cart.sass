@@ -1,0 +1,46 @@
+@import '../../sassStyles/_variables'
+@import '../../sassStyles/_mixins'
+.cart
+    margin-top: 12vh
+    width: 100%
+    .cart__banner-container
+        background-color: $primary-color
+        width: 100%
+        position: relative
+        .banner
+            height: 120px
+            background-color: $primary-color
+            display: flex
+            .banner__title
+                color: $dark-primary-color
+    .cart-container
+        display: flex
+        margin: auto
+        width: 75%
+        height: 60vh
+        .cart__summary
+            margin-top: 2rem
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+            .summary__table
+                width: 100%
+
+                .summary__table-header
+                    tr
+                        td
+                            padding: 1rem
+                .summary__table-body
+                    tr
+
+                        td
+                            padding: 1rem
+
+            .summary__buttons
+                margin: 1rem 0rem
+                width: 100%
+                display: flex
+                justify-content: space-between
+                .summary__buttons-item
+                    @include btn-secondary
