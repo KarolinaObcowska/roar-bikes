@@ -70,13 +70,34 @@
                 margin-top: 2rem
                 width: 100%
     .item__details-container
+        width: 100%
+        background-color: $dark-primary-color
+        justify-content: center
         display: flex
-        flex-direction: column
         .item__details
+            height: 100%
+            width: 70%
+            display: flex
+            justify-content: center
             .details__text
-            .details__title
-            .details__description
+                padding: 2rem
+                width: 40%
+                color: $bright-primary-color
+                font-weight: $regular-font
+                .details__title
+                    font-weight: $regular-font
+                .details__description
+                    font-family: $secondary-font
+                    font-weight: $regular-font
+                    font-size: 0.7rem
+                    line-height: 1.5
         .details__photo
+            width: 40%
+            display: flex
+            flex-direction: column
+            padding: 2rem
+            margin-top
             .details__photo-item
-                height: 200px
-                width: 200px
+                height: 150px
+                width: 80%
+                margin: 1rem
