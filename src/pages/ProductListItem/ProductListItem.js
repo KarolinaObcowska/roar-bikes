@@ -35,8 +35,8 @@ const ProductListItem = () => {
             <h3 className="info__price">$3400</h3>
           </div>
           <p className="info__color">Color:</p>
-          <BsFillCircleFill className="info__color-item" />
-          <BsFillCircleFill className="info__color-item" />
+          <BsFillCircleFill className="shadow info__color-item" />
+          <BsFillCircleFill className="shadow info__color-item" />
           <p className="info__size">Size:</p>
           <select className="info__select">
             <option value="-">Please select</option>
