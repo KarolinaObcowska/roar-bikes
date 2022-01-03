@@ -49,10 +49,11 @@ const ProductListItem = () => {
           <button className="info__btn">ADD TO CART</button>
         </div>
       </div>
+      <div className="details__buttons">
+        <button className="details__btn">DESCRIPTION</button>
+        <button className="details__btn">SPECIFICATION</button>
+      </div>
       <div className="item__details-container">
-        {/* <button className="details__btn">DESCRIPTION</button>
-        <button className="details__btn">SPECIFICATION</button> */}
-
         <div className="item__details">
           <div className="details__text">
             <h3 className="details__title">IT IS RIGHT FOR YOU IF...</h3>
