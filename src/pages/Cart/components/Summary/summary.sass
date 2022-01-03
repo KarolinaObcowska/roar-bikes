@@ -1,0 +1,79 @@
+@import '../../../../sassStyles/_variables'
+@import '../../../../sassStyles/_mixins'
+
+.cart__summary
+    margin-top: 2rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    .summary__table
+        width: 100%
+        border-collapse: collapse
+        .summary__table-header
+            border-bottom: 1px solid $dark-secondary-color
+            height: 5rem
+            th:first-of-type
+                text-align: left
+            th
+                padding: 1rem
+        .summary__table-body
+            height: 5rem
+            border-bottom: 1px solid $dark-secondary-color
+            td
+                padding: 0rem
+                font-weight: $regular-font
+                text-align: center
+            td:first-of-type
+                text-align: left
+            td
+                .product-container
+                    display: flex
+                    img
+                        filter: grayscale(100%)
+                        border: 1px solid $dark-secondary-color
+                        width: 120px
+                        height: 80px
+                        padding: 0.5rem
+                    figcaption
+                        font-family: $primary-font
+                        color: $dark-secondary-color
+                        font-size: 0.8rem
+                        margin: .5rem
+
+    .summary__buttons
+        margin: 1rem 0rem
+        width: 100%
+        display: flex
+        justify-content: space-between
+        .summary__buttons-item
+            @include btn-secondary
+
+@media screen and (max-width: $screen-md)
+    .cart__summary
+        .summary__table
+            width: 90vw
+            font-size: 0.7rem
+            .summary__table-header
+                height: 3rem
+                th:first-of-type
+                    text-align: left
+                    .summary__table-body
+                        td:first-of-type
+                            text-align: left
+                        td
+                            .product-container
+                                img
+                                    width: 100px
+                                    height: 60px
+
+                                figcaption
+                                    font-size: 0.5rem
+                                    margin: .5rem
+        .summary__buttons
+            margin: 1rem 0rem
+            width: 90%
+            display: flex
+            justify-content: space-between
+            .summary__buttons-item
+                margin: 0
