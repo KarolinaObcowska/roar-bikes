@@ -1,0 +1,35 @@
+@import "../../sassStyles/_mixins"
+@import "../../sassStyles/_variables"
+
+.item-container
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    .item__info-container
+        width: 80%
+        display: flex
+        .item__photo-container
+            width: 70%
+            .photo
+            .photo__gallery
+        .item__info
+            width: 30%
+            .info
+                .info__name
+                .info__price
+            .info__color
+            .info__size
+            .info__quantity
+            .info__button
+    .item__details-container
+        display: flex
+        flex-direction: column
+        .item__details
+            .details__text
+            .details__title
+            .details__description
+        .details__photo
+            .details__photo-item
+                height: 200px
+                width: 200px
