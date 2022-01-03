@@ -9,19 +9,66 @@
     .item__info-container
         width: 80%
         display: flex
+        margin-top: 5rem
         .item__photo-container
-            width: 70%
+            margin: 0
+            width: 75%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
             .photo
+                width: 450px
+                height: 300px
             .photo__gallery
+                height: 10rem
+                .photo__gallery-item
+                    border: 1px solid $dark-secondary-color
+                    margin: 0.5rem
+                    width: 100px
+                    height: 100px
         .item__info
-            width: 30%
+            width: 25%
+            margin-left: 2rem
             .info
-                .info__name
+                width: 5rem
+                height: 4rem
+                text-align: center
+                background-color: $primary-color
+                border-radius: 50px 75px 75px 150px
+                .info__name,
                 .info__price
+                    margin: 0
+                .info__price
+                    color: $bright-primary-color
+            .info__color-item
+                border: 1px solid $dark-secondary-color
+                border-radius: 50%
+                font-size: 1.5rem
+                margin: 0.5rem
+                color: #e21f50
+            .info__color-item:first-of-type
+                color: #152891
+            .info__input
+                padding: 0
+            .info__select,
+            .info__input
+                font-family: $secondary-font
+                width: 100%
+                color: $dark-secondary-color
+                padding: .5rem
+                border: .5px solid $dark-secondary-color
+                background-color: $bright-secondary-color
+            .info__input
+                width: 90%
+            .info__quantity,
+            .info__size,
             .info__color
-            .info__size
-            .info__quantity
-            .info__button
+                margin-bottom: 0
+            .info__btn
+                @include btn-secondary
+                margin-top: 2rem
+                width: 100%
     .item__details-container
         display: flex
         flex-direction: column
