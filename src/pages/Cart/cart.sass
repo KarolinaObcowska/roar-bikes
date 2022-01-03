@@ -1,13 +1,9 @@
 @import '../../sassStyles/_variables'
 @import '../../sassStyles/_mixins'
 .cart
-    width: 100%
-    position: relative
-    min-height: 100vh
-    padding-bottom: 40vh
+    padding-bottom: 2rem
     .cart__banner-container
-        background-color: $primary-color
-        width: 100%
+        width: 100wv
         position: relative
         .banner
             height: 120px
@@ -121,7 +117,50 @@
 
 @media screen and (max-width: $screen-lg)
     .cart
+        height: 100%
         .cart__banner-container
         .cart-container
-            width: 100%
-            margin: 1rem
+            width: 97%
+            padding: 1rem 0rem
+
+@media screen and (max-width: $screen-md)
+    .cart
+        height: 100%
+        .cart__banner-container
+        .cart-container
+            align-items: center
+            .cart__summary
+                .summary__table
+                    width: 90vw
+                    font-size: 0.7rem
+                    .summary__table-header
+                        height: 3rem
+                        th:first-of-type
+                            text-align: left
+                    .summary__table-body
+                        td:first-of-type
+                            text-align: left
+                        td
+                            .product-container
+                                img
+                                    width: 100px
+                                    height: 60px
+
+                                figcaption
+                                    font-size: 0.5rem
+                                    margin: .5rem
+                .summary__buttons
+                    margin: 1rem 0rem
+                    width: 90%
+                    display: flex
+                    justify-content: space-between
+                    .summary__buttons-item
+                        margin: 0
+            .cart__order
+                width: 90vw
+                flex-direction: column
+                align-items: center
+                .order__request-container,
+                .order__totals-container
+                    width: 90%
+                    padding: 0rem
