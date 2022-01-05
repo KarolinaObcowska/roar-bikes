@@ -1,6 +1,4 @@
-import Avatar1 from "../../img/avatar1.jpg";
-import Avatar2 from "../../img/avatar2.jpg";
-import Avatar3 from "../../img/avatar3.jpg";
+import { Avatar1, Avatar2, Avatar3 } from "../../img/avatars";
 import ReviewCard from "./ReviewCard";
 
 const Reviews = () => {

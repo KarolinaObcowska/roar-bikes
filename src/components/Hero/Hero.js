@@ -1,4 +1,5 @@
 import "./hero.sass";
+import { Link } from "react-router-dom";
 import HeroBanner from "../HeroBanner/HeroBanner";
 import Slide from "react-reveal/Slide";
 
@@ -11,7 +12,9 @@ const Hero = () => {
             <div className="hero__item">
               <h2 className="hero__subtitle">NEW MODEL</h2>
               <h1 className="hero__title">SIASEME</h1>
-              <button className="hero__btn">SHOP NOW</button>
+              <Link to="/product/siaseme" className="hero__btn">
+                SHOP NOW
+              </Link>
             </div>
           </div>
         </Slide>

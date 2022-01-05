@@ -10,24 +10,10 @@ import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [navbar, setNavbar] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  const changeBackgroundColor = () => {
-    if (window.scrollY >= 100) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
-
-  useEffect(() => {
-    changeBackgroundColor();
-    window.addEventListener("scroll", changeBackgroundColor);
-  });
-
   return (
-    <div className={navbar ? "active" : "header"}>
+    <div className="header">
       <header>
         <nav className="navbar">
           <ul className="navbar-list">
@@ -51,7 +37,7 @@ const Navbar = () => {
                 PRODUCTS <IoIosArrowDown />{" "}
               </a>
             </li>
-            {isOpen ? <DropdownMenu setIsOpen={setIsOpen} navbar={navbar} /> : null}
+            {isOpen ? <DropdownMenu setIsOpen={setIsOpen} /> : null}
             <li>
               <Link to="/contact" className="link">
                 CONTACT

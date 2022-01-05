@@ -1,18 +1,12 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import "./productListItem.sass";
-import B1 from "./data/bike1.png";
-import B2 from "./data/bike2.png";
-import B3 from "./data/bike3.png";
-import B4 from "./data/bike4.png";
-import B5 from "./data/bike5.png";
 import { useState, useEffect } from "react";
-import Bike1 from "../../img/bike-1.png";
-import Photo1 from "../../img/photo-1.jpg";
-import Photo2 from "../../img/photo-2.jpg";
+import { Photo1, Photo2 } from "../../img/customer-photo";
 import Tracker from "../../components/Tracker/Tracker";
 import { BsFillCircleFill } from "react-icons/bs";
 
-const ProductListItem = () => {
+const ProductListItem = ({ price, name, mainPhoto, data }) => {
   const [images, setImages] = useState(null);
 
   return (
@@ -20,19 +14,17 @@ const ProductListItem = () => {
       <Tracker />
       <div className="item__info-container">
         <figure className="item__photo-container">
-          <img className="photo" src={Bike1} />
+          <img className="photo" src={mainPhoto} />
           <div className="photo__gallery">
-            <img className="photo__gallery-item" src={B1} />
-            <img className="photo__gallery-item" src={B2} />
-            <img className="photo__gallery-item" src={B3} />
-            <img className="photo__gallery-item" src={B4} />
-            <img className="photo__gallery-item" src={B5} />
+            {data.map((el) => (
+              <img className="photo__gallery-item" key={el} src={el} />
+            ))}
           </div>
         </figure>
         <div className="item__info">
           <div className="info">
-            <h3 className="info__name">SIAMESE</h3>
-            <h3 className="info__price">$3400</h3>
+            <h3 className="info__name">{name}</h3>
+            <h3 className="info__price">{price}</h3>
           </div>
           <p className="info__color">Color:</p>
           <BsFillCircleFill className="shadow info__color-item" />
@@ -45,7 +37,7 @@ const ProductListItem = () => {
             <option value="L">L</option>
           </select>
           <p className="info__quantity">Quantity:</p>
-          <input type="number" className="info__input" value="0" />
+          <input type="number" className="info__input" />
           <button className="info__btn">ADD TO CART</button>
         </div>
       </div>
@@ -58,7 +50,7 @@ const ProductListItem = () => {
           <div className="details__text">
             <h3 className="details__title">IT IS RIGHT FOR YOU IF...</h3>
             <p className="details__description">
-              The Siamese is long and slack up front, short and snappy out back. We kept the center
+              The {name} is long and slack up front, short and snappy out back. We kept the center
               of gravity low and gave the Shuttle an event burlier version of the rear shock linkage
               featured on out long-travel bikes. Finally, we maximized frame and wheel stiffness
               with Suber Boost Plus 157mm spacing. The end result? The Shuttle manages to be
@@ -67,7 +59,7 @@ const ProductListItem = () => {
             </p>
             <h3 className="details__title">THE TECH YOU GET</h3>
             <p className="details__description">
-              Siamese specific electric assist 150 watt drive unit system silently doubles the
+              {name} specific electric assist 150 watt drive unit system silently doubles the
               averege riders output, so you ride harder, longer and on trials that prevoiusly seemed
               un-rideable. The Shuttle is so awesome you can even ride with turned off and guess
               what? It still shreds. Hard. Just like our class-leading trial and enduro models. That

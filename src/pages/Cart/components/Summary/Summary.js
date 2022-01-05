@@ -1,5 +1,5 @@
 import "./summary.sass";
-import Bike1 from "../../../../img/bike-3.png";
+import Bike1 from "../../../../img/bike-main-picks/bike-1.png";
 
 const Summary = () => {
   return (

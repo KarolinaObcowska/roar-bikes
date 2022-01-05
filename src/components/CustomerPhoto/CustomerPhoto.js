@@ -1,10 +1,5 @@
 import "./customerphoto.sass";
-import Photo1 from "../../img/photo-1.jpg";
-import Photo2 from "../../img/photo-2.jpg";
-import Photo3 from "../../img/photo-3.jpg";
-import Photo4 from "../../img/photo-4.jpg";
-import Photo5 from "../../img/photo-5.jpg";
-import Photo6 from "../../img/photo-6.jpg";
+import { Photo1, Photo2, Photo3, Photo4, Photo5, Photo6 } from "../../img/customer-photo";
 import Fade from "react-reveal/Fade";
 
 const CustomerPhoto = () => {

@@ -1,8 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./models.sass";
-import Bike1 from "../../img/bike-1.png";
-import Bike2 from "../../img/bike-2.png";
-import Bike3 from "../../img/bike-3.png";
+import { Bike1, Bike2, Bike3 } from "../../img/bike-main-picks";
 import Description from "./Description";
 import Slide from "react-reveal/Slide";
 
