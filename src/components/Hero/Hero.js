@@ -11,8 +11,8 @@ const Hero = () => {
           <div className="hero__container">
             <div className="hero__item">
               <h2 className="hero__subtitle">NEW MODEL</h2>
-              <h1 className="hero__title">SIASEME</h1>
-              <Link to="/product/siaseme" className="hero__btn">
+              <h1 className="hero__title">SIAMESE</h1>
+              <Link to="/product/siamese" className="hero__btn">
                 SHOP NOW
               </Link>
             </div>

@@ -8,11 +8,11 @@ import bike2_2 from "./bike2_2.png";
 import bike2_3 from "./bike2_3.png";
 import bike2_4 from "./bike2_4.png";
 import bike2_5 from "./bike2_5.png";
-import bike3_1 from "./bike2_1.png";
-import bike3_2 from "./bike2_2.png";
-import bike3_3 from "./bike2_3.png";
-import bike3_4 from "./bike2_4.png";
-import bike3_5 from "./bike2_5.png";
+import bike3_1 from "./bike3_1.png";
+import bike3_2 from "./bike3_2.png";
+import bike3_3 from "./bike3_3.png";
+import bike3_4 from "./bike3_4.png";
+import bike3_5 from "./bike3_5.png";
 
 export {
   bike1_1,

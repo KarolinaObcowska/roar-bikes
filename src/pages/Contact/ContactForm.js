@@ -1,5 +1,4 @@
 import "./contactForm.sass";
-
 const ContactForm = () => {
   return (
     <section className="container">

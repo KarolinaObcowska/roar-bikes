@@ -11,7 +11,7 @@ const ProductListItem = ({ price, name, mainPhoto, data }) => {
 
   return (
     <section className="item-container">
-      <Tracker />
+      <Tracker name={name} />
       <div className="item__info-container">
         <figure className="item__photo-container">
           <img className="photo" src={mainPhoto} />
