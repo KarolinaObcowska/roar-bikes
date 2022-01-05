@@ -4,13 +4,15 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 import Cart from "./pages/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 import ProductListItem from "./pages/ProductListItem/ProductListItem";
+import ContactForm from "./pages/Contact/ContactForm";
 import "./sassStyles/_global.sass";
 
 function App() {
   return (
     <div className="app">
       <Navbar />
-      <ProductListItem />
+      <ContactForm />
+      {/* <ProductListItem /> */}
       {/* <Cart /> */}
       {/* <LandingPage /> */}
     </div>
