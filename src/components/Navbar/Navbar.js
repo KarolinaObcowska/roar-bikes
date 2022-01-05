@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import "./navbar.sass";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { GiLion } from "react-icons/gi";
 import { IoIosArrowDown } from "react-icons/io";
@@ -37,7 +38,9 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="asd">HOME</a>
+              <Link to="/" className="link">
+                HOME
+              </Link>
             </li>
             <li>
               <a
@@ -50,7 +53,9 @@ const Navbar = () => {
             </li>
             {isOpen ? <DropdownMenu setIsOpen={setIsOpen} navbar={navbar} /> : null}
             <li>
-              <a href="asd">CONTACT</a>
+              <Link to="/contact" className="link">
+                CONTACT
+              </Link>
             </li>
           </ul>
           <IconsList styles="icons-list" />

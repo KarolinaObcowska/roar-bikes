@@ -37,17 +37,20 @@
                     display: none
                     cursor: not-allowed
                     pointer-events: none
+                .link,
                 a
                     color: $dark-primary-color
                     font-weight: $regular-font
                     text-decoration: none
                     margin-right: 3rem
                     cursor: pointer
+                    padding: 0rem 1rem
+                a
                     span
                         font-weight: $bold-font
                     .icon
                         font-size: 1.5rem
-                a:hover
+                .link:hover
                     color: $primary-color
         .dropdown-menu .active
             background-color: $bright-color-opacity
@@ -67,8 +70,9 @@
                 list-style: none
                 width: 100%
                 justify-content: space-evenly
-                li a
+                li .link
                     background-color: $primary-color
+
                     border-radius: 50px 75px 75px 150px
                     padding: .5rem
                     width: fit-content
@@ -104,9 +108,13 @@
                     display: flex
                     flex-direction: column
                     list-style: none
+                    .link
+                        text-decoration: none
+                        color: $dark-primary-color
                     .product
                         margin: 1rem 0rem
-                    .product a
+
+                    .product .link
                         background-color: $primary-color
                         color: $dark-primary-color
                         border-radius: 20px 90px 75px 190px
@@ -129,7 +137,7 @@
                     display: flex
                     flex-direction: row
                     list-style: none
-                    li a
+                    li .link
                         padding: 0.5rem
                         font-size: 2rem
                         text-decoration: none

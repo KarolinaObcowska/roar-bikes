@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./navbar.sass";
+import { Link } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
@@ -8,19 +9,19 @@ const IconsList = ({ styles }) => {
   return (
     <ul className={styles}>
       <li>
-        <a href="asd">
+        <Link to="/" className="link">
           <FiSearch className="icon" />
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="asd">
+        <Link to="/cart" className="link">
           <BsCart3 className="icon" />
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="asd">
+        <Link to="/account" className="link">
           <MdOutlineAccountCircle className="icon" />
-        </a>
+        </Link>
       </li>
     </ul>
   );

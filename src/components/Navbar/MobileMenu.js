@@ -1,22 +1,33 @@
 import "./navbar.sass";
+import { Link } from "react-router-dom";
 
 const MobileMenu = () => {
   return (
     <ul className="mobile-menu-list">
       <li>
-        <a>HOME</a>
+        <Link to="/" className="link">
+          HOME
+        </Link>
       </li>
       <li className="product">
-        <a>SIAMESE</a>
+        <Link to="/product/siamese" className="link">
+          SIAMESE
+        </Link>
       </li>
       <li className="product">
-        <a>SPHYNX</a>
+        <Link to="/product/sphynx" className="link">
+          SPHYNX
+        </Link>
       </li>
       <li className="product">
-        <a href="asd">BENGAL</a>
+        <Link to="/product/bengal" className="link">
+          BENGAL
+        </Link>
       </li>
       <li>
-        <a>CONTACT</a>
+        <Link to="/contact" className="link">
+          CONTACT
+        </Link>
       </li>
     </ul>
   );

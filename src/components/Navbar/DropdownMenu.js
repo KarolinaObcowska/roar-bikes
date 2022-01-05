@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from "react";
+import { Link } from "react-router-dom";
 import "./navbar.sass";
 const DropdownMenu = ({ setIsOpen, navbar }) => {
   return (
@@ -8,13 +8,19 @@ const DropdownMenu = ({ setIsOpen, navbar }) => {
       className={navbar ? "dropdown-menu active" : "dropdown-menu"}>
       <ul onClick={() => setIsOpen(false)}>
         <li>
-          <a>SIAMESE</a>
+          <Link to="/product/siamese" className="link">
+            SIAMESE
+          </Link>
         </li>
         <li>
-          <a>SPHYNX</a>
+          <Link to="/product/sphynx" className="link">
+            SPHYNX
+          </Link>
         </li>
         <li>
-          <a>BENGAL</a>
+          <Link to="/product/bengal" className="link">
+            BENGAL
+          </Link>
         </li>
       </ul>
     </div>
