@@ -63,7 +63,7 @@ $gold-tri: #fccc47
                 border: .5px solid $dark-secondary-color
                 background-color: $bright-secondary-color
             .info__input
-                width: 90%
+                width: 93%
             .info__quantity,
             .info__size,
             .info__color
@@ -117,3 +117,40 @@ $gold-tri: #fccc47
                 height: 150px
                 width: 80%
                 margin: 1rem
+                .photo__gallery
+                    display: flex
+                    flex-direction: column
+
+@media screen and (max-width: $screen-lg)
+    .item-container
+        align-items: none
+        .item__info-container
+            width: 90%
+            justify-content: space-between
+            .item__photo-container
+                width: 50%
+                .photo__gallery
+                    .photo__gallery-item
+                        width: 75px
+                        height: 75px
+
+@media screen and (max-width: $screen-md)
+    .item-container
+        .item__info-container
+            width: 100%
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            .item__photo-container
+                width: 90%
+                height: fit-content
+                .photo
+                    width: 400px
+                    height: 250px
+                .photo__gallery
+                    .photo__gallery-item
+                        width: 50px
+                        height: 50px
+            .item__info
+                width: 90%
+// @media screen and (max-width: $screen-md)
