@@ -1,3 +1,4 @@
+import Button from "../../../../components/Button/Button";
 import "./order.sass";
 
 const Order = () => {
@@ -28,7 +29,7 @@ const Order = () => {
           </table>
         </div>
         <div className="totals__buttons">
-          <button className="totals__buttons-item">PROCEED TO CHECKOUT</button>
+          <Button text="PROCEED TO CHECKOUT" />
         </div>
       </div>
     </div>

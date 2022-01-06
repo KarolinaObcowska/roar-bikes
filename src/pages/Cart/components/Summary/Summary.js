@@ -1,5 +1,6 @@
 import "./summary.sass";
 import Bike1 from "../../../../img/bike-main-picks/bike-1.png";
+import Button from "../../../../components/Button/Button";
 
 const Summary = () => {
   return (
@@ -30,8 +31,8 @@ const Summary = () => {
         </tbody>
       </table>
       <div className="summary__buttons">
-        <button className="summary__buttons-item">CLEAR SHOPPING CART</button>
-        <button className="summary__buttons-item">ADD TO CART</button>
+        <Button text="CLEAR SHOPPING CART" width="fit-content" />
+        <Button text="ADD TO CART" width="fit-content" />
       </div>
     </div>
   );

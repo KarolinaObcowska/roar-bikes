@@ -1,3 +1,6 @@
+import Button from "../../components/Button/Button";
+import FormInput from "../../components/FormInput/FormInput";
+import FormTextarea from "../../components/FormTextarea/FormTextarea";
 import "./contactForm.sass";
 const ContactForm = () => {
   return (
@@ -5,23 +8,11 @@ const ContactForm = () => {
       <div className="form-container">
         <form className="form">
           <h2 className="form__title">CONTACT US</h2>
-          <div className="form__group">
-            <label className="form__group-title">First Name</label>
-            <input className="form__group-input" type="text" />
-          </div>
-          <div className="form__group">
-            <label className="form__group-title">Last Name</label>
-            <input className="form__group-input" type="text" />
-          </div>
-          <div className="form__group">
-            <label className="form__group-title">E-mail</label>
-            <input className="form__group-input" type="email" />
-          </div>
-          <div className="form__group">
-            <label className="form__group-title">Message</label>
-            <textarea className="form__group-textarea" />
-          </div>
-          <button className="form__btn">SEND MESSAGE</button>
+          <FormInput name="First Name" />
+          <FormInput name="Last Name" />
+          <FormInput name="E-mail" />
+          <FormTextarea name="Message" />
+          <Button text="send message" />
         </form>
       </div>
     </section>
