@@ -1,18 +1,18 @@
-import "./footer.sass";
+import "./style.sass";
 import { FaFacebookF } from "react-icons/fa";
 import { RiInstagramLine } from "react-icons/ri";
 import { BsTwitter } from "react-icons/bs";
 import Fade from "react-reveal/Fade";
-import FooterDetails from "./FooterDetails";
+import FooterCard from "./FooterCard";
 
 const Footer = () => {
   return (
     <div className="footer">
       <footer className="footer__container">
         <Fade bottom>
-          <FooterDetails titleOne="Company" titleTwo="Materials" titleThree="Our Process" />
-          <FooterDetails titleOne="Setup" titleTwo="Warranty" titleThree="Bike Registration" />
-          <FooterDetails
+          <FooterCard titleOne="Company" titleTwo="Materials" titleThree="Our Process" />
+          <FooterCard titleOne="Setup" titleTwo="Warranty" titleThree="Bike Registration" />
+          <FooterCard
             titleOne="Contact Us"
             titleTwo="Dealer Locator"
             titleThree="Shipping/Returns"

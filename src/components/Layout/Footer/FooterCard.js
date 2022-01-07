@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import "./footer.sass";
-const FooterDetails = ({ titleOne, titleTwo, titleThree }) => {
+import "./style.sass";
+const FooterCard = ({ titleOne, titleTwo, titleThree }) => {
   return (
-    <div className="footer__details">
+    <div className="footer__card">
       <p>{titleOne}</p>
       <p>{titleTwo}</p>
       <p>{titleThree}</p>
@@ -11,4 +11,4 @@ const FooterDetails = ({ titleOne, titleTwo, titleThree }) => {
   );
 };
 
-export default FooterDetails;
+export default FooterCard;

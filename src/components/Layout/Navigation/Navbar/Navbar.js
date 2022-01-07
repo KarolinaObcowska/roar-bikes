@@ -1,15 +1,13 @@
 /* eslint-disable no-unused-vars */
-import "./navbar.sass";
+import "./style.sass";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { GiLion } from "react-icons/gi";
 import { IoIosArrowDown } from "react-icons/io";
-import DropdownMenu from "./DropdownMenu";
-import IconsList from "./IconsList";
-import MobileMenu from "./MobileMenu";
+import NavbarIcon from "../NavbarIcon/NavbarIcon";
+import NavbarMobile from "../NavbarMobile/NavbarMobile";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
@@ -29,28 +27,23 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <a
-                className="dropdown-menu-link"
-                onClick={() => {
-                  setIsOpen(!isOpen);
-                }}>
-                PRODUCTS <IoIosArrowDown />{" "}
-              </a>
+              <Link to="/products" className="link">
+                PRODUCTS
+              </Link>
             </li>
-            {isOpen ? <DropdownMenu setIsOpen={setIsOpen} /> : null}
             <li>
               <Link to="/contact" className="link">
                 CONTACT
               </Link>
             </li>
           </ul>
-          <IconsList styles="icons-list" />
+          <NavbarIcon styles="icons-list" />
         </nav>
         {/* MOBILE MENU*/}
         {mobileMenu ? (
           <div className="mobile-menu" onClick={() => setMobileMenu(!mobileMenu)}>
-            <MobileMenu />
-            <IconsList styles="mobile-menu-icons-list" />
+            <NavbarMobile />
+            <NavbarIcon styles="mobile-menu-icons-list" />
           </div>
         ) : null}
       </header>

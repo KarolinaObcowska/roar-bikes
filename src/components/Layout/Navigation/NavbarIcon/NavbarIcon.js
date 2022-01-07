@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
-import "./navbar.sass";
+import "./style.sass";
 import { Link } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
+import "./style.sass";
 
-const IconsList = ({ styles }) => {
+const NavbarIcon = ({ styles }) => {
   return (
     <ul className={styles}>
       <li>
@@ -27,4 +28,4 @@ const IconsList = ({ styles }) => {
   );
 };
 
-export default IconsList;
+export default NavbarIcon;

@@ -1,4 +1,4 @@
-@import '../../sassStyles/_variables'
+@import '../../../sassStyles/_variables'
 
 .footer
     background-color: $dark-primary-color
@@ -11,7 +11,7 @@
         justify-content: space-evenly
         margin: auto
         align-items: top
-        .footer__details,
+        .footer__card,
         .footer__address
             color: $bright-primary-color
             font-family: $secondary-font
@@ -51,7 +51,7 @@
         .footer__container
             width: 100%
             padding: 1rem 0rem
-            .footer__details,
+            .footer__card,
             .footer__address
                 font-size: 0.5rem
             .footer__address
@@ -69,7 +69,7 @@
 @media screen and (max-width: $screen-sm)
     .footer
         .footer__container
-            .footer__details
+            .footer__card
                 line-height: 2
                 margin: 0.5rem
             .footer__address

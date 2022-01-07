@@ -1,11 +1,9 @@
-import Navbar from "./components/Navbar/Navbar";
 import { Bike1, Bike2, Bike3 } from "./img/bike-main-picks";
 import { bike1_1, bike1_2, bike1_3, bike1_4, bike1_5 } from "./img/bike-small-picks";
 import { bike2_1, bike2_2, bike2_3, bike2_4, bike2_5 } from "./img/bike-small-picks";
 import { bike3_1, bike3_2, bike3_3, bike3_4, bike3_5 } from "./img/bike-small-picks";
-import LandingPage from "./pages/LandingPage/LandingPage";
+import Home from "./components/Layout/Home/Home";
 import Cart from "./pages/Cart/Cart";
-import Footer from "./components/Footer/Footer";
 import ProductListItem from "./pages/ProductListItem/ProductListItem";
 import ContactForm from "./pages/Contact/ContactForm";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -18,9 +16,8 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/cart" element={<Cart />} />
           <Route
@@ -49,7 +46,6 @@ function App() {
           />
         </Routes>
       </Router>
-      <Footer />
     </div>
   );
 }

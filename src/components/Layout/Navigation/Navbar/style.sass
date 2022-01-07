@@ -1,4 +1,4 @@
-@import '../../sassStyles/_variables'
+@import "../../../../sassStyles/_variables"
 
 .header
     background-color: $bright-color-opacity
@@ -48,30 +48,6 @@
                         font-size: 1.5rem
                 .link:hover
                     color: $primary-color
-        .dropdown-menu .active
-            background-color: $bright-color-opacity
-        .dropdown-menu
-            position: absolute
-            background-color: $bright-color-opacity
-            top: 72px
-            left: 0
-            width: 100vw
-            height: 10vh
-            display: flex
-            align-items: center
-            justify-content: center
-            ul
-                display: flex
-                flex-direction: row
-                list-style: none
-                width: 100%
-                justify-content: space-evenly
-                li .link
-                    background-color: $primary-color
-
-                    border-radius: 50px 75px 75px 150px
-                    padding: .5rem
-                    width: fit-content
 
 @media screen and (max-width: $screen-lg)
     .header,
@@ -93,30 +69,6 @@
                         display: inline
                         cursor: pointer
                         pointer-events: auto
-            .mobile-menu
-                background-color: $bright-secondary-color-opacity
-                width: 100vw
-                position: absolute
-                top: 72px
-                height: calc( 100vh - 72px )
-                .mobile-menu-list
-                    font-size: 2rem
-                    display: flex
-                    flex-direction: column
-                    list-style: none
-                    .link
-                        text-decoration: none
-                        color: $dark-primary-color
-                    .product
-                        margin: 1rem 0rem
-
-                    .product .link
-                        background-color: $primary-color
-                        color: $dark-primary-color
-                        border-radius: 20px 90px 75px 190px
-                        text-decoration: none
-                .mobile-menu-icons-list
-                    display: none
 
 @media (max-width: $screen-md)
     .header,
@@ -130,12 +82,3 @@
                     display: none
             .mobile-menu
                 z-index: 3
-                .mobile-menu-icons-list
-                    display: flex
-                    flex-direction: row
-                    list-style: none
-                    li .link
-                        padding: 0.5rem
-                        font-size: 2rem
-                        text-decoration: none
-                        color: $dark-primary-color
