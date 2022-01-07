@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./formInput.sass";
+import "./FormInput.sass";
 
 const FormInput = ({ name }) => {
   return (

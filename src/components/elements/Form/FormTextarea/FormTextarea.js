@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./formTextarea.sass";
+import "./FormTextarea.sass";
 
 const FormTextarea = ({ name }) => {
   return (

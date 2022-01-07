@@ -1,6 +1,5 @@
-@import '../../../sassStyles/_variables'
-@import '../../../sassStyles/_typography'
-@import '../../../sassStyles/_mixins'
+@use '../../../styles/_variables'
+@use '../../../styles/_typography'
 
 .hero
     height: 60vh
@@ -14,7 +13,7 @@
         width: 1000px
         height: 220px
         border-radius: 50px 50px 50px 150px
-        background-color: $primary-color-opacity
+        background-color: variables.$primary-color-opacity
         position: absolute
         bottom: 15rem
         padding-top: .5rem
@@ -26,15 +25,15 @@
             text-align: right
             .hero__title,
             .hero__subtitle
-                color: $bright-primary-color
+                color: variables.$bright-primary-color
                 margin: 0
 
-@media screen and (max-width: $screen-lg)
+@media screen and (max-width: variables.$screen-lg)
     .hero
         height: 75vh
         .hero__container
             width: 700px
-@media screen and (max-width: $screen-md)
+@media screen and (max-width: variables.$screen-md)
     .hero
         height: 75vh
         .hero__container

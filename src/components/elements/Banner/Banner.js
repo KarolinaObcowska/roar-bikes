@@ -1,4 +1,4 @@
-import "./banner.sass";
+import "./Banner.sass";
 import Card from "../Card/Card";
 import { MdHeadsetMic } from "react-icons/md";
 import { AiOutlineSafety } from "react-icons/ai";

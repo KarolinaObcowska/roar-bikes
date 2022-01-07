@@ -1,4 +1,4 @@
-@import "../../../../sassStyles/_variables"
+@use '../../../../styles/_variables'
 
 .review__wrapper
     display: flex
@@ -16,17 +16,17 @@
         .review__star
             margin: 0.5rem
         .review__star
-            color: $secondary-color
+            color: variables.$secondary-color
         .review__name
-            font-weight: $medium-font
+            font-weight: variables.$medium-font
     .review__description-wrapper
-        color: $dark-primary-color
-        font-family: $secondary-font
-        font-weight: $regular-font
+        color: variables.$dark-primary-color
+        font-family: variables.$secondary-font
+        font-weight: variables.$regular-font
         line-height: 1.75
         min-height: 200px
 
-@media screen and (max-width: $screen-lg)
+@media screen and (max-width: variables.$screen-lg)
     .review__wrapper
         width: 100%
         align-items: center

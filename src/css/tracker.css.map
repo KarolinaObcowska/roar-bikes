@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,mHAAI,CDEZ,AAAA,kBAAkB,AAAC,CACf,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,gBAAgB,CCGG,IAAO,CDF1B,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,eAAe,CAAE,MAAM,CACvB,MAAM,CAAE,KAAI,CAAC,KAAK,CCFC,OAAO,CDQe,AAb7C,AAQI,kBARc,CAQd,QAAQ,AAAC,CACL,KAAK,CAAE,GAAG,CAIyB,AAb3C,AAUQ,kBAVU,CAQd,QAAQ,CAEJ,cAAc,AAAC,CACX,UAAU,CAAE,IAAI,CAChB,WAAW,CCCN,QAAQ,CDAb,WAAW,CCCR,GAAG,CDDuB",
+    "sources": [
+        "../components/elements/Tracker/tracker.sass",
+        "../sassStyles/_variables.sass"
+    ],
+    "names": [],
+    "file": "tracker.css"
+}

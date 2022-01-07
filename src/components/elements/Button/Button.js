@@ -1,9 +1,10 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable react/prop-types */
-import "./button.sass";
+import "./Button.sass";
 
-const Button = ({ text, width }) => {
+const Button = ({ text, width, variant }) => {
   return (
-    <button className="btn" style={{ width: width }}>
+    <button className={variant} style={{ width: width }}>
       {text}
     </button>
   );

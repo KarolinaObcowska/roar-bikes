@@ -1,4 +1,4 @@
-import "./style.sass";
+import "./NavbarMobile.sass";
 import { Link } from "react-router-dom";
 
 const NavbarMobile = () => {

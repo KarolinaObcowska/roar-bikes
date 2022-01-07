@@ -8,7 +8,7 @@ const Review = ({ name, avatar, stars, review }) => {
   tab.fill(0, 0, stars);
 
   return (
-    <div className="review__wrapper">
+    <section className="review__wrapper">
       <div className="review--main">
         <Fade left>
           <img src={avatar} alt={`${name} 's avatar`} className="review__avatar" />
@@ -27,7 +27,7 @@ const Review = ({ name, avatar, stars, review }) => {
           <p className="review__description">{review}</p>
         </div>
       </Fade>
-    </div>
+    </section>
   );
 };
 

@@ -1,9 +1,9 @@
-import "./style.sass";
+import "./Footer.sass";
 import { FaFacebookF } from "react-icons/fa";
 import { RiInstagramLine } from "react-icons/ri";
 import { BsTwitter } from "react-icons/bs";
 import Fade from "react-reveal/Fade";
-import FooterCard from "./FooterCard";
+import FooterCard from "@Partials/FooterCard/FooterCard";
 
 const Footer = () => {
   return (

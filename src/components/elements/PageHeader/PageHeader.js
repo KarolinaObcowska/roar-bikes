@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./pageHeader.sass";
+import "./PageHeader.sass";
 
 const PageHeader = ({ title }) => {
   return (

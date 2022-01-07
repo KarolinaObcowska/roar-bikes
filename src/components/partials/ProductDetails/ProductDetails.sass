@@ -1,0 +1,55 @@
+@use '../../../styles/_variables'
+
+.details__buttons
+    margin-top: 3rem
+    display: flex
+    width: 80%
+.item__details-container
+    width: 100%
+    background-color: variables.$dark-primary-color
+    justify-content: center
+    display: flex
+    .item__details
+        height: 100%
+        width: 70%
+        display: flex
+        justify-content: center
+        .details__text
+            padding: 2rem
+            width: 40%
+            color: variables.$bright-primary-color
+            font-weight: variables.$regular-font
+            .details__title
+                font-weight: variables.$regular-font
+            .details__description
+                font-family: variables.$secondary-font
+                font-weight: variables.$regular-font
+                font-size: 0.7rem
+                line-height: 1.5
+        .details__photo
+            width: 40%
+            display: flex
+            flex-direction: column
+            padding: 2rem
+            .details__photo-item
+                height: 150px
+                width: 80%
+                margin: 1rem
+
+@media screen and (max-width: variables.$screen-md)
+    .item__details-container
+        padding-bottom: 2rem
+        padding-top: 2rem
+        .item__details
+            flex-direction: column
+            .details__text
+                padding: 0
+                width: 100%
+            .details__photo
+                width: 100%
+                padding: 0
+                .details__photo-item
+                    height: 150px
+                    width: 100%
+                    margin: 0
+                    margin-top: 1rem

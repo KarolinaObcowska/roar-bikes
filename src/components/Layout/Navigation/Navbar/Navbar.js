@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import "./style.sass";
+import "./Navbar.sass";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { GiLion } from "react-icons/gi";

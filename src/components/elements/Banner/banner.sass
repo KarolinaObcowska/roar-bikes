@@ -1,15 +1,14 @@
-@import '../../../sassStyles/_variables'
-@import '../../../sassStyles/_mixins'
+@use '../../../styles/_variables'
 
 .banner
-    background-color: $bright-secondary-color
+    background-color: variables.$bright-secondary-color
     height: 30vh
-    color: $primary-color
+    color: variables.$primary-color
     display: flex
     justify-content: space-evenly
     align-items: center
 
-@media screen and (max-width: $screen-sm)
+@media screen and (max-width: variables.$screen-sm)
     .banner
         height: fit-content
         display: grid

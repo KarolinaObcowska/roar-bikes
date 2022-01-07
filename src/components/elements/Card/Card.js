@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./card.sass";
+import "./Card.sass";
 
 const Card = ({ icon, description, title }) => {
   return (

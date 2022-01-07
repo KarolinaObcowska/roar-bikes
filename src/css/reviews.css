@@ -1,0 +1,2 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Oswald:wght@400;500;700&display=swap");.reviews{background-color:#ffd200}.reviews .reviews__title{text-align:center;padding:1rem;background-color:#fff}.reviews .reviews__container{height:fit-content;width:80%;background-color:#ffd200;display:flex;justify-content:space-evenly;margin:auto;align-items:center}@media screen and (max-width: 1024px){.reviews .reviews__container{flex-direction:column}}
+/*# sourceMappingURL=reviews.css.map */

@@ -1,0 +1,84 @@
+@use '../../../../styles/_variables'
+
+.header
+    background-color: variables.$bright-color-opacity
+    width: 100%
+    position: sticky
+    top: 0
+    z-index: 1
+    header
+        .navbar
+            display: flex
+            justify-content: space-around
+            .navbar-list,
+            .icons-list
+                display: flex
+                margin: 1rem auto
+                justify-content: space-between
+                padding: 0
+                align-items: center
+                list-style-type: none
+                .logo-text
+                    cursor: not-allowed
+                    pointer-events: none
+                    margin-bottom: 2rem
+                .logo
+                    cursor: not-allowed
+                    pointer-events: none
+                    font-size: 2.5rem
+                    margin-right: 0.5rem
+                .mobile-menu
+                    display: none
+                .mobile-menu-icon
+                    display: none
+                    cursor: not-allowed
+                    pointer-events: none
+                .link,
+                a
+                    color: variables.$dark-primary-color
+                    font-weight: variables.$regular-font
+                    text-decoration: none
+                    margin-right: 3rem
+                    cursor: pointer
+                    padding: 0rem 1rem
+                a
+                    span
+                        font-weight: variables.$bold-font
+                    .icon
+                        font-size: 1.5rem
+                .link:hover
+                    color: variables.$primary-color
+
+@media screen and (max-width: variables.$screen-lg)
+    .header,
+    .active
+        header
+            .navbar
+                justify-content: space-between
+                .navbar-list li:not(:nth-child(2))
+                    display: none
+                .navbar-list,
+                .icons-list
+                    margin: 1rem
+                .navbar-list
+                    .logo-text,
+                    .logo
+                        cursor: pointer
+                        pointer-events: auto
+                    .mobile-menu-icon
+                        display: inline
+                        cursor: pointer
+                        pointer-events: auto
+
+@media (max-width: variables.$screen-md)
+    .header,
+    .active
+        header
+            .navbar
+                justify-content: left
+                .navbar-list
+                    margin: 1rem 1rem
+                .icons-list
+                    display: none
+            .mobile-menu
+                z-index: 3

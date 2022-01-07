@@ -1,8 +1,7 @@
-@import '../../../sassStyles/_variables'
-@import '../../../sassStyles/_mixins'
+@use '../../../styles/_variables'
 
 .models
-    background-color: $bright-primary-color
+    background-color: variables.$bright-primary-color
     width: 100%
     display: flex
     height: fit-content
@@ -15,7 +14,7 @@
         grid-column-gap: 40px
         grid-row-gap: 10rem
 
-@media screen and (max-width: $screen-md)
+@media screen and (max-width: variables.$screen-md)
     .models
         .models__container
             display: grid

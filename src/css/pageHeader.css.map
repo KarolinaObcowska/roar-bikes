@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,mHAAI,CDEZ,AAAA,YAAY,AAAC,CACT,KAAK,CAAE,IAAI,CAS8B,AARxC,AAAD,kBAAO,AAAC,CACJ,MAAM,CAAE,KAAK,CACb,gBAAgB,CCHR,OAAO,CDIf,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,eAAe,CAAE,MAAM,CAGY,AAFlC,AAAD,wBAAO,AAAC,CACJ,cAAc,CAAE,SAAS,CACzB,KAAK,CCNI,IAAI,CDMgB",
+    "sources": [
+        "../components/elements/PageHeader/pageHeader.sass",
+        "../sassStyles/_variables.sass"
+    ],
+    "names": [],
+    "file": "pageHeader.css"
+}

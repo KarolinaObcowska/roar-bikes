@@ -1,16 +1,16 @@
-import "./cart.sass";
+import "./Cart.sass";
 import Layout from "@Layout/Layout/Layout";
 import PageHeader from "@Elements/PageHeader/PageHeader";
-import ShopOrder from "@Partials/Order/Order";
-import ShopSummary from "@Partials/Summary/Summary";
+import CartOrder from "@Partials/CartOrder/CartOrder";
+import CartSummary from "@Partials/CartSummary/CartSummary";
 const Cart = () => {
   return (
     <Layout>
       <section className="cart">
         <PageHeader title="cart" />
         <div className="cart-container">
-          <ShopSummary />
-          <ShopOrder />
+          <CartSummary />
+          <CartOrder />
         </div>
       </section>
     </Layout>

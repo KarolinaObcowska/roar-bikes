@@ -1,4 +1,4 @@
-import "./customerphoto.sass";
+import "./CustomerPhoto.sass";
 import PageTitle from "@Elements/PageTitle/PageTitle";
 import { Photo1, Photo2, Photo3, Photo4, Photo5, Photo6 } from "@Images/customer-photo";
 import Fade from "react-reveal/Fade";

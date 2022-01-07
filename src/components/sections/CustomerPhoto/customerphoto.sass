@@ -1,7 +1,7 @@
-@import '../../../sassStyles/_variables'
+@use '../../../styles/_variables'
 
 .customer-photo
-    background-color: $bright-primary-color
+    background-color: variables.$bright-primary-color
     width: 100%
     height: 100vh
     padding: 1rem 0rem
@@ -23,10 +23,10 @@
     .text-container
         margin: 3rem 0rem
     .text-container__text
-        font-family: $secondary-font
-        font-weight: $regular-font
+        font-family: variables.$secondary-font
+        font-weight: variables.$regular-font
 
-@media screen and (max-width: $screen-lg)
+@media screen and (max-width: variables.$screen-lg)
     .customer-photo
         height: fit-content
         .customer-photo__container
@@ -34,7 +34,7 @@
                 grid-template-columns: repeat(2, 50%)
                 grid-template-rows: repeat(3, 40vw)
 
-@media screen and (max-width: $screen-md)
+@media screen and (max-width: variables.$screen-md)
     .customer-photo
         height: fit-content
         .customer-photo__container

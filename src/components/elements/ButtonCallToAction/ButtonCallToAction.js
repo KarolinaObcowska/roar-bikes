@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
-import "./button.sass";
+import "./ButtonCallToAction.sass";
 import { Link } from "react-router-dom";
 
 const ButtonCallToAction = ({ location, title }) => {

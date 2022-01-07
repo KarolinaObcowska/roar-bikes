@@ -1,0 +1,17 @@
+@use '../../../styles/_variables'
+
+.footer__card
+    color: variables.$bright-primary-color
+    font-family: variables.$secondary-font
+    font-weight: variables.$regular-font
+    font-size: 0.8rem
+    line-height: 4
+
+@media screen and (max-width: variables.$screen-lg)
+    .footer__card
+        font-size: 0.5rem
+
+@media screen and (max-width: variables.$screen-sm)
+    .footer__card
+        line-height: 2
+        margin: 0.5rem

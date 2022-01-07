@@ -1,12 +1,11 @@
-@import "../../../sassStyles/_variables"
-@import "../../../sassStyles/_mixins"
+@use '../../../styles/_variables'
 
 .card
     display: flex
     flex-direction: column
     align-items: center
     .card__container
-        background-color: $primary-color
+        background-color: variables.$primary-color
         width: 5rem
         height: 5rem
         border-radius: 1.7rem
@@ -19,11 +18,11 @@
     .card__title
         margin: 0
         margin-top: 0.6rem
-        color: $dark-primary-color
+        color: variables.$dark-primary-color
     .card__description
         margin: 0
-        font-weight: $regular-font
-        color: $dark-secondary-color
+        font-weight: variables.$regular-font
+        color: variables.$dark-secondary-color
         font-size: 0.7rem
 
 @media (prefers-reduced-motion: no-preference)
@@ -38,7 +37,7 @@
         animation-duration: 3s
         animation-iteration-count: 1
 
-@media screen and (max-width: $screen-sm)
+@media screen and (max-width: variables.$screen-sm)
     .card
         margin: 1rem
         .card__container

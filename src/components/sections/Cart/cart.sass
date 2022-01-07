@@ -1,5 +1,5 @@
-@import '../../../sassStyles/_variables'
-@import '../../../sassStyles/_mixins'
+@use '../../../styles/_variables'
+
 .cart
     padding-bottom: 2rem
     position: relative
@@ -8,14 +8,14 @@
         flex-direction: column
         margin: auto
         width: 75%
-@media screen and (max-width: $screen-lg)
+@media screen and (max-width: variables.$screen-lg)
     .cart
         .cart__banner-container
         .cart-container
             width: 97%
             padding: 1rem 0rem
 
-@media screen and (max-width: $screen-md)
+@media screen and (max-width: variables.$screen-md)
     .cart
         .cart__banner-container
         .cart-container

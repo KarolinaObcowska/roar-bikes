@@ -1,12 +1,20 @@
-@import "../../../sassStyles/_variables"
+@use '../../../styles/_variables'
 
-.btn
-    background-color: $dark-primary-color
-    color: $bright-primary-color
+button
+    background-color: variables.$dark-primary-color
+    color: variables.$bright-primary-color
     padding: 1rem 3rem
     border: none
-    font-family: $primary-font
+    font-family: variables.$primary-font
     align-self: center
     text-transform: uppercase
     margin-top: .5rem
     width: 100%
+.rounded-white
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+    background-color: variables.$bright-primary-color
+    color: variables.$dark-primary-color
+.rounded-black
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./tracker.sass";
+import "./Tracker.sass";
 import { BsDot } from "react-icons/bs";
 
 const Tracker = ({ name }) => {

@@ -6,8 +6,9 @@ module.exports = function override(config) {
     "@Elements": "src/components/elements",
     "@Layout": "src/components/layout",
     "@Sections": "src/components/sections",
-    "@Partials": "src/components/sections/partials",
-    "@Images": "src/img"
+    "@Partials": "src/components/partials",
+    "@Images": "src/img",
+    "@Style": "src/styles"
   })(config);
 
   return config;

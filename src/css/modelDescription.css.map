@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,mHAAI,CDEZ,AAAA,oBAAoB,AAAC,CACjB,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,KAAK,CAAE,KAAK,CAOyB,AAVzC,AAII,oBAJgB,CAIhB,kBAAkB,AAAC,CACf,MAAM,CAAE,CAAC,CAAG,AALpB,AAMI,oBANgB,CAMhB,kBAAkB,AAAC,CACf,MAAM,CAAE,SAAS,CACjB,WAAW,CCMJ,GAAG,CDLV,WAAW,CCIF,QAAQ,CDHjB,KAAK,CCLU,OAAO,CDKS",
+    "sources": [
+        "../components/partials/ModelDescription/modelDescription.sass",
+        "../sassStyles/_variables.sass"
+    ],
+    "names": [],
+    "file": "modelDescription.css"
+}

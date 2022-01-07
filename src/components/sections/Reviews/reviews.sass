@@ -1,21 +1,21 @@
-@import "../../../sassStyles/_variables"
+@use '../../../styles/_variables'
 
 .reviews
-    background-color: $primary-color
+    background-color: variables.$primary-color
     .reviews__title
         text-align: center
         padding: 1rem
-        background-color: $bright-primary-color
+        background-color: variables.$bright-primary-color
     .reviews__container
         height: fit-content
         width: 80%
-        background-color: $primary-color
+        background-color: variables.$primary-color
         display: flex
         justify-content: space-evenly
         margin: auto
         align-items: center
 
-@media screen and (max-width: $screen-lg)
+@media screen and (max-width: variables.$screen-lg)
     .reviews
         .reviews__container
             flex-direction: column

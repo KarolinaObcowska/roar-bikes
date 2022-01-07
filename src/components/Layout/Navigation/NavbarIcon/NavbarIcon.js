@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
-import "./style.sass";
 import { Link } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
-import "./style.sass";
+import "./NavbarIcon.sass";
 
 const NavbarIcon = ({ styles }) => {
   return (

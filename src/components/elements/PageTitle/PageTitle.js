@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./pageTitle.sass";
+import "./PageTitle.sass";
 
 const PageTitle = ({ title }) => {
   return <h3 className="title">{title}</h3>;

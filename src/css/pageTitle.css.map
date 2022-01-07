@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,mHAAI,CDEZ,AAAA,MAAM,AAAC,CACH,UAAU,CAAE,MAAM,CAClB,WAAW,CCYA,GAAG,CDXd,cAAc,CAAE,SAAS,CAAG",
+    "sources": [
+        "../components/elements/PageTitle/pageTitle.sass",
+        "../sassStyles/_variables.sass"
+    ],
+    "names": [],
+    "file": "pageTitle.css"
+}

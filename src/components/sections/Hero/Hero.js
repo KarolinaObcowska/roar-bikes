@@ -1,4 +1,4 @@
-import "./hero.sass";
+import "./Hero.sass";
 import Banner from "@Elements/Banner/Banner";
 import Slide from "react-reveal/Slide";
 import ButtonCallToAction from "@Elements/ButtonCallToAction/ButtonCallToAction";
