@@ -3,8 +3,8 @@
 import "./productListItem.sass";
 import { useState } from "react";
 import Tracker from "../../components/Tracker/Tracker";
-import InfoCard from "../../components/InfoCard/InfoCard";
-import CardDetails from "../../components/CardDetails/CardDetails";
+import CartInfo from "../../components/CartInfo/CartInfo";
+import CartDetails from "../../components/CartDetails/CartDetails";
 
 const ProductListItem = ({ price, name, mainPhoto, data }) => {
   const [images, setImages] = useState(null);
@@ -21,9 +21,9 @@ const ProductListItem = ({ price, name, mainPhoto, data }) => {
             ))}
           </div>
         </figure>
-        <InfoCard name={name} price={price} />
+        <CartInfo name={name} price={price} />
       </div>
-      <CardDetails name={name} />
+      <CartDetails name={name} />
     </section>
   );
 };

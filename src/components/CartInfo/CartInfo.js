@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import { BsFillCircleFill } from "react-icons/bs";
 import Button from "../Button/Button";
-import "./infoCard.sass";
+import "./cartInfo.sass";
 
-const InfoCard = ({ name, price }) => {
+const CartInfo = ({ name, price }) => {
   return (
     <div className="item__info">
       <div className="info">
@@ -27,4 +27,4 @@ const InfoCard = ({ name, price }) => {
   );
 };
 
-export default InfoCard;
+export default CartInfo;

@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
-import "./reviews.sass";
+import "./review.sass";
 import { AiFillStar } from "react-icons/ai";
 import Fade from "react-reveal/Fade";
-const ReviewCard = ({ name, avatar, stars, review }) => {
+
+const Review = ({ name, avatar, stars, review }) => {
   const tab = new Array(stars);
   tab.fill(0, 0, stars);
 
@@ -30,4 +31,4 @@ const ReviewCard = ({ name, avatar, stars, review }) => {
   );
 };
 
-export default ReviewCard;
+export default Review;

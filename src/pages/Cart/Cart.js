@@ -1,14 +1,11 @@
 import "./cart.sass";
+import PageHeader from "../../components/PageHeader/PageHeader";
 import ShopOrder from "./components/Order/Order";
 import ShopSummary from "./components/Summary/Summary";
 const Cart = () => {
   return (
     <section className="cart">
-      <div className="cart__banner-container">
-        <div className="banner">
-          <h2 className="banner__title">CART</h2>
-        </div>
-      </div>
+      <PageHeader title="cart" />
       <div className="cart-container">
         <ShopSummary />
         <ShopOrder />

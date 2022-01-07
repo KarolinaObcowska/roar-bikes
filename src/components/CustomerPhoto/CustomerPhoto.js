@@ -1,11 +1,12 @@
 import "./customerphoto.sass";
+import PageTitle from "../PageTitle/PageTitle";
 import { Photo1, Photo2, Photo3, Photo4, Photo5, Photo6 } from "../../img/customer-photo";
 import Fade from "react-reveal/Fade";
 
 const CustomerPhoto = () => {
   return (
     <section className="customer-photo">
-      <h3 className="customer-photo__title">CUSTOMER PHOTO</h3>
+      <PageTitle title="customer photo" />
       <div className="customer-photo__container">
         <div className="photo-container">
           <Fade left>

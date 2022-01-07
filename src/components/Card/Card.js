@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import "./HeroBanner";
+import "./card.sass";
 
-const Banner = ({ icon, description, title }) => {
+const Card = ({ icon, description, title }) => {
   return (
     <div className="card">
       <div className="card__container">{icon}</div>
@@ -11,4 +11,4 @@ const Banner = ({ icon, description, title }) => {
   );
 };
 
-export default Banner;
+export default Card;

@@ -6,8 +6,10 @@
     background-color: $bright-secondary-color
     display: flex
     justify-content: center
+    align-items: center
+    flex-direction: column
     .form-container
-        padding: 1rem
+        padding: 2rem
         width: 80%
         display: flex
         justify-content: center
@@ -15,15 +17,9 @@
             display: flex
             width: 50%
             flex-direction: column
-            &__title
-                text-align: center
-                width: 100%
-                background-color: $primary-color
 
 @media screen and (max-width: $screen-lg)
     .container
         .form-container
             .form
-                width: 80%
-                button
-                    width: 100%
+                width: 100%

@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { Photo1, Photo2 } from "../../img/customer-photo";
-import "./cardDetails.sass";
+import "./cartDetails.sass";
 
-const CardDetails = ({ name }) => {
+const CartDetails = ({ name }) => {
   return (
     <>
       <div className="details__buttons">
@@ -41,4 +41,4 @@ const CardDetails = ({ name }) => {
   );
 };
 
-export default CardDetails;
+export default CartDetails;

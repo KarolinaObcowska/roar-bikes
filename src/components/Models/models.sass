@@ -3,90 +3,23 @@
 
 .models
     background-color: $bright-primary-color
-    width: 80%
+    width: 100%
     display: flex
     height: fit-content
     flex-direction: column
     margin: auto
-    .models__title-container
-        .models__title
-            margin: 3rem 2rem
-            font-weight: $regular-font
     .models__container
         display: grid
         grid-template-columns: repeat(2, 1fr)
         grid-template-rows: repeat(3, 1fr)
         grid-column-gap: 40px
         grid-row-gap: 10rem
-        .models__item
-            display: flex
-            justify-content: center
-            margin: auto
-            align-items: center
-            .models__figure
-                width: 320px
-                height: 250px
-                background-color: $primary-color
-            .models__figure--1,
-            .models__figure--3
-                border-radius: 50px 75px 75px 150px
-            .models__figure--2
-                border-radius: 75px 150px 50px 75px
-            .models__photo
-                width: 400px
-                height: 280px
-        .models__description
-            display: flex
-            flex-direction: column
-            width: 400px
-            .description__name
-                margin: 0
-            .description__text
-                margin: 1rem 1rem
-                font-weight: $regular-font
-                font-family: $secondary-font
-                color: $dark-secondary-color
-            .description__btn
-                @include btn-cta
 
 @media screen and (max-width: $screen-md)
     .models
-        .models__title-container
-            text-align: center
         .models__container
             display: grid
             grid-template-columns: 1fr
             grid-template-rows: repeat(6, 1fr)
             grid-column-gap: px
             grid-row-gap: 20px
-            .models__item--1
-                grid-area: 1 / 1 / 2 / 2
-            .models__description--1
-                grid-area: 2 / 1 / 3 / 2
-            .models__item--2
-                grid-area: 3 / 1 / 4 / 2
-            .models__description--2
-                grid-area: 4 / 1 / 5 / 2
-            .models__item--3
-                grid-area: 5 / 1 / 6 / 2
-            .models__description--3
-                grid-area: 6 / 1 / 7 / 2
-            .models__item
-                .models__figure
-                    width: 280px
-                    height: 180px
-                .models__photo
-                    width: 300px
-                    height: 180px
-
-@media screen and (max-width: $screen-lg)
-    .models
-        width: 100%
-        .models__container
-            .models__item
-                .models__figure
-                    width: 300px
-                    height: 220px
-                .models__photo
-                    width: 350px
-                    height: 230px

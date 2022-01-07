@@ -1,7 +1,7 @@
 import "./hero.sass";
-import { Link } from "react-router-dom";
-import HeroBanner from "../HeroBanner/HeroBanner";
+import Banner from "../Banner/Banner";
 import Slide from "react-reveal/Slide";
+import ButtonCallToAction from "../ButtonCallToAction/ButtonCallToAction";
 
 const Hero = () => {
   return (
@@ -12,14 +12,12 @@ const Hero = () => {
             <div className="hero__item">
               <h2 className="hero__subtitle">NEW MODEL</h2>
               <h1 className="hero__title">SIAMESE</h1>
-              <Link to="/product/siamese" className="hero__btn">
-                SHOP NOW
-              </Link>
+              <ButtonCallToAction location="/product/siamese" title="shop now" />
             </div>
           </div>
         </Slide>
       </section>
-      <HeroBanner />
+      <Banner />
     </div>
   );
 };
