@@ -1,0 +1,37 @@
+@import "../../../../sassStyles/_variables"
+
+.review__wrapper
+    display: flex
+    flex-direction: column
+    width: 300px
+    .review--main
+        display: flex
+        margin-top: 2rem
+        .review__avatar
+            width: 100px
+            height: 100px
+            border-radius: 100%
+            object-fit: cover
+        .review__name,
+        .review__star
+            margin: 0.5rem
+        .review__star
+            color: $secondary-color
+        .review__name
+            font-weight: $medium-font
+    .review__description-wrapper
+        color: $dark-primary-color
+        font-family: $secondary-font
+        font-weight: $regular-font
+        line-height: 1.75
+        min-height: 200px
+
+@media screen and (max-width: $screen-lg)
+    .review__wrapper
+        width: 100%
+        align-items: center
+        .review--main
+            margin-top: 1rem
+        .review__description-wrapper
+            min-height: fit-content
+            margin-bottom: 1rem
