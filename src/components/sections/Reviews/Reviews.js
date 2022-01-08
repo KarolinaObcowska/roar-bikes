@@ -7,7 +7,7 @@ const Reviews = () => {
   return (
     <section className={styles.reviews}>
       <div className={styles.title}>
-        <PageTitle title={styles.reviews} />
+        <PageTitle title="reviews" />
       </div>
       <div className={styles.reviewsContainer}>
         <Review

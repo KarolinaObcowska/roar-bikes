@@ -9,7 +9,7 @@ const Hero = () => {
       <section className={styles.hero}>
         <Slide left>
           <div className={styles.heroContainer}>
-            <div className={styles.tem}>
+            <div className={styles.item}>
               <h2 className={styles.subtitle}>NEW MODEL</h2>
               <h1 className={styles.title}>SIAMESE</h1>
               <ButtonCallToAction location="/product/siamese" title="shop now" />
