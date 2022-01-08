@@ -5,39 +5,39 @@
     width: 100%
     height: 100vh
     padding: 1rem 0rem
-    .customer-photo__container
+    .customer_photo__container
         height: fit-content
         width: 80%
         margin: auto
-        .photo-container
+        .photo_container
             justify-content: center
             margin: auto
             display: grid
             grid-template-columns: repeat(3, 32.7%)
             grid-template-rows: repeat(2, 15vw)
             grid-gap: 10px
-        .photo-container__image
+        .photo_container__image
             width: 100%
             height: 100%
             object-fit: cover
     .text-container
         margin: 3rem 0rem
-    .text-container__text
+    .text_container__text
         font-family: variables.$secondary-font
         font-weight: variables.$regular-font
 
 @media screen and (max-width: variables.$screen-lg)
-    .customer-photo
+    .customer_photo
         height: fit-content
-        .customer-photo__container
-            .photo-container
+        .customer_photo__container
+            .photo_container
                 grid-template-columns: repeat(2, 50%)
                 grid-template-rows: repeat(3, 40vw)
 
 @media screen and (max-width: variables.$screen-md)
-    .customer-photo
+    .customer_photo
         height: fit-content
-        .customer-photo__container
-            .photo-container
+        .customer_photo__container
+            .photo_container
                 grid-template-columns: repeat(1, 100%)
                 grid-template-rows: repeat(6, 50vw)

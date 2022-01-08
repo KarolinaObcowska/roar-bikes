@@ -1,13 +1,17 @@
-/* eslint-disable react/prop-types */
-import "./FooterCard.sass";
-const FooterCard = ({ titleOne, titleTwo, titleThree }) => {
+import PropTypes from "prop-types";
+import styles from "./FooterCard.module.sass";
+const FooterCard = ({ titles }) => {
   return (
-    <div className="footer__card">
-      <p>{titleOne}</p>
-      <p>{titleTwo}</p>
-      <p>{titleThree}</p>
+    <div className={styles.footer__card}>
+      {titles.map((title) => (
+        <p key={title.id}>{title}</p>
+      ))}
     </div>
   );
+};
+
+FooterCard.propTypes = {
+  titles: PropTypes.array.isRequired
 };
 
 export default FooterCard;

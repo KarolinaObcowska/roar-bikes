@@ -1,15 +1,20 @@
-/* eslint-disable react/prop-types */
-import "./ModelDescription.sass";
+import PropTypes from "prop-types";
+import styles from "./ModelDescription.module.sass";
 import ButtonCallToAction from "@Elements/ButtonCallToAction/ButtonCallToAction";
 
 const ModelDescription = ({ name, description }) => {
   return (
-    <div className="models__description models__item">
-      <h2 className="description__name">{name}</h2>
-      <p className="description__text">{description}</p>
+    <div className={`${styles.description} ${styles.item}`}>
+      <h2 className={styles.name}>{name}</h2>
+      <p className={styles.text}>{description}</p>
       <ButtonCallToAction location={`/product/${name}`} title="learn more" />
     </div>
   );
+};
+
+ModelDescription.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 };
 
 export default ModelDescription;

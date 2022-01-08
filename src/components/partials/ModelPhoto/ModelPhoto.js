@@ -1,14 +1,18 @@
-/* eslint-disable react/prop-types */
-import "./ModelPhoto.sass";
+import PropTypes from "prop-types";
+import styles from "./ModelPhoto.module.sass";
 
 const ModelPhoto = ({ photo }) => {
   return (
-    <div className="models__item">
-      <figure className="models__figure">
-        <img src={photo} className="models__photo" alt="Picutre of Siaseme model bike." />
+    <div className={styles.item}>
+      <figure className={styles.figure}>
+        <img src={photo} className={styles.photo} alt="Picutre of Siaseme model bike." />
       </figure>
     </div>
   );
+};
+
+ModelPhoto.propTypes = {
+  photo: PropTypes.string.isRequired
 };
 
 export default ModelPhoto;

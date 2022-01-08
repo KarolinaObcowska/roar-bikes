@@ -1,15 +1,15 @@
 import { Avatar1, Avatar2, Avatar3 } from "@Images/avatars";
 import PageTitle from "@Elements/PageTitle/PageTitle";
 import Review from "./Review//Review";
-import "./reviews.sass";
+import styles from "./Reviews.module.sass";
 
 const Reviews = () => {
   return (
-    <section className="reviews">
-      <div className="reviews__title">
-        <PageTitle title="reviews" />
+    <section className={styles.reviews}>
+      <div className={styles.reviews__title}>
+        <PageTitle title={styles.reviews} />
       </div>
-      <div className="reviews__container">
+      <div className={styles.reviews__container}>
         <Review
           name="Brandon Short"
           avatar={Avatar1}

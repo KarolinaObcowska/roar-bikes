@@ -1,18 +1,18 @@
 import Button from "@Elements/Button/Button";
-import "./CartOrder.sass";
+import styles from "./CartOrder.module.sass";
 
 const CartOrder = () => {
   return (
-    <div className="cart__order">
-      <div className="order__request-container">
-        <h4 className="request__title">REQUEST NOTE</h4>
-        <textarea className="request__textarea"></textarea>
+    <div className={styles.cart__order}>
+      <div className={styles.order__requestContainer}>
+        <h4 className={styles.request__title}>REQUEST NOTE</h4>
+        <textarea className={styles.request__textarea}></textarea>
       </div>
-      <div className="order__totals-container">
-        <h4 className="totals__title">CART TOTALS</h4>
-        <div className="totals">
-          <table className="totals__table">
-            <tr className="table__row--1">
+      <div className={styles.order__totalsContainer}>
+        <h4 className={styles.totals__title}>CART TOTALS</h4>
+        <div className={styles.totals}>
+          <table className={styles.totals__table}>
+            <tr className={styles.table__row1}>
               <td>
                 <h4>Shipping</h4>
               </td>
@@ -20,7 +20,7 @@ const CartOrder = () => {
                 <p>Lorem ipsum dolor sit amet</p>
               </td>
             </tr>
-            <tr className="table__row--2">
+            <tr className={styles.table__row2}>
               <td>
                 <h4>TOTAL</h4>
               </td>
@@ -28,7 +28,7 @@ const CartOrder = () => {
             </tr>
           </table>
         </div>
-        <div className="totals__buttons">
+        <div className={styles.totals__buttons}>
           <Button text="PROCEED TO CHECKOUT" />
         </div>
       </div>

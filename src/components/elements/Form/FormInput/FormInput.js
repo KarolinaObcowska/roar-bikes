@@ -1,13 +1,17 @@
-/* eslint-disable react/prop-types */
-import "./FormInput.sass";
+import PropTypes from "prop-types";
+import styles from "./FormInput.module.sass";
 
 const FormInput = ({ name }) => {
   return (
     <div className="form__group">
-      <label className="form__group-title">{name}</label>
-      <input className="form__group-input" type="text" />
+      <label className={styles.form__groupTitle}>{name}</label>
+      <input className={styles.form__groupInput} type="text" />
     </div>
   );
+};
+
+FormInput.propTypes = {
+  name: PropTypes.string.isRequired
 };
 
 export default FormInput;

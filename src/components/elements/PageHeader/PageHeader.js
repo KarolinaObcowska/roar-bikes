@@ -1,14 +1,18 @@
-/* eslint-disable react/prop-types */
-import "./PageHeader.sass";
+import PropTypes from "prop-types";
+import styles from "./PageHeader.module.sass";
 
 const PageHeader = ({ title }) => {
   return (
-    <div className="page-header">
-      <div className="page-header__item">
-        <h2 className="page-header__item-title">{title}</h2>
+    <div className={styles.pageHeader}>
+      <div className={styles.pageHeader__item}>
+        <h2 className={styles.pageHeader__itemTitle}>{title}</h2>
       </div>
     </div>
   );
+};
+
+PageHeader.propTypes = {
+  title: PropTypes.string.isRequired
 };
 
 export default PageHeader;

@@ -1,12 +1,12 @@
-import "./CartSummary.sass";
+import styles from "./CartSummary.module.sass";
 import { Bike1 } from "@Images/bike-main-picks";
 import Button from "@Elements/Button/Button";
 
 const CartSummary = () => {
   return (
-    <div className="cart__summary">
-      <table className="summary__table">
-        <thead className="summary__table-header">
+    <div className={styles.cart__summary}>
+      <table className={styles.summary__table}>
+        <thead className={styles.summary__tableHeader}>
           <tr>
             <th>PRODUCT</th>
             <th>PRICE</th>
@@ -14,10 +14,10 @@ const CartSummary = () => {
             <th>SUBTOTAL</th>
           </tr>
         </thead>
-        <tbody className="summary__table-body">
-          <tr className="table__row--2">
+        <tbody className={styles.summary__tableBody}>
+          <tr>
             <td>
-              <figure className="product-container">
+              <figure className={styles.product_container}>
                 <img src={Bike1} />
                 <figcaption>
                   Siamese <br /> Color: Black <br /> Size: Medium
@@ -30,7 +30,7 @@ const CartSummary = () => {
           </tr>
         </tbody>
       </table>
-      <div className="summary__buttons">
+      <div className={styles.summary__buttons}>
         <Button text="CLEAR SHOPPING CART" width="fit-content" />
         <Button text="ADD TO CART" width="fit-content" />
       </div>

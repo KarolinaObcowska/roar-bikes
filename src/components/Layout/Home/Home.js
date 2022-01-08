@@ -1,4 +1,4 @@
-import Layout from "../Layout/Layout";
+import Layout from "@Layout/Layout/Layout";
 import Hero from "@Sections/Hero/Hero";
 import Models from "@Sections/Models/Models";
 import Reviews from "@Sections/Reviews/Reviews";
