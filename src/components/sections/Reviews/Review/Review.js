@@ -8,23 +8,23 @@ const Review = ({ name, avatar, stars, review }) => {
   tab.fill(0, 0, stars);
 
   return (
-    <section className={styles.review__wrapper}>
-      <div className={styles.review_main}>
+    <section className={styles.review}>
+      <div className={styles.reviewContainer}>
         <Fade left>
-          <img src={avatar} alt={`${name} 's avatar`} className={styles.review__avatar} />
+          <img src={avatar} alt={`${name} 's avatar`} className={styles.avatar} />
         </Fade>
         <Fade top>
           <div>
-            <h3 className={styles.review__name}>{name}</h3>
+            <h3 className={styles.name}>{name}</h3>
             {tab.map((el, id) => {
-              return <AiFillStar className={styles.review__star} key={id} />;
+              return <AiFillStar className={styles.star} key={id} />;
             })}
           </div>
         </Fade>
       </div>
       <Fade bottom>
-        <div className={styles.review__description_wrapper}>
-          <p className={styles.review__description}>{review}</p>
+        <div className={styles.description}>
+          <p>{review}</p>
         </div>
       </Fade>
     </section>

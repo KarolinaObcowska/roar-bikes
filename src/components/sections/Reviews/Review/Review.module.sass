@@ -1,25 +1,25 @@
 @use '../../../../styles/_variables'
 
-.review__wrapper
+.review
     display: flex
     flex-direction: column
     width: 300px
-    .review_main
+    .reviewContainer
         display: flex
         margin-top: 2rem
-        .review__avatar
+        .avatar
             width: 100px
             height: 100px
             border-radius: 100%
             object-fit: cover
-        .review__name,
-        .review__star
+        .name,
+        .star
             margin: 0.5rem
-        .review__star
+        .star
             color: variables.$secondary-color
-        .review__name
+        .rname
             font-weight: variables.$medium-font
-    .review__description_wrapper
+    .description
         color: variables.$dark-primary-color
         font-family: variables.$secondary-font
         font-weight: variables.$regular-font
@@ -27,11 +27,11 @@
         min-height: 200px
 
 @media screen and (max-width: variables.$screen-lg)
-    .review__wrapper
+    .review
         width: 100%
         align-items: center
-        .review_main
+        .reviewContainer
             margin-top: 1rem
-        .review__description_wrapper
+        .description
             min-height: fit-content
             margin-bottom: 1rem

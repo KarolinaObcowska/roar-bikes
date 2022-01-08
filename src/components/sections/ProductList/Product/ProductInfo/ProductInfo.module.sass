@@ -1,29 +1,29 @@
 @use '../../../styles/_variables'
 
-.item__info
+.info
     width: 25%
     margin-left: 2rem
-    .info
+    .infoContainer
         width: 5rem
         height: 4rem
         text-align: center
         background-color: variables.$primary-color
         border-radius: 50px 75px 75px 150px
         padding: .5rem
-        .info__name,
-        .info__price
+        .productName,
+        .productPrice
             margin: 0
             text-transform: uppercase
-        .info__price
+        .productPrice
             color: variables.$bright-primary-color
-    .info__color_item
+    .productColor
         border: 2px solid variables.$dark-secondary-color
         border-radius: 50%
         font-size: 1.5rem
         margin: 0.5rem
         padding: 0
-    .info__select,
-    .info__input
+    .sizeSelect,
+    .quantityInput
         box-sizing: border-box
         font-family: variables.$secondary-font
         width: 100%
@@ -31,19 +31,18 @@
         padding: .5rem
         border: .5px solid variables.$dark-secondary-color
         background-color: variables.$bright-secondary-color
-    .info__input
+    .quantityInput
         -moz-appearance: textfield
         appearance: textfield
-    .info__quantity,
-    .info__size,
-    .info__color
+    .productQuantity,
+    .productSize,
+    .productColor
         margin-bottom: 0
 
 @media screen and (max-width: variables.$screen-md)
-    .item__info
+    .info
         margin-left: 0
         width: 90%
-        .info__select,
-        .info__input,
-        .info__btn
+        .sizeInput,
+        .quantityInput,
             display: block

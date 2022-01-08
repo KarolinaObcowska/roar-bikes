@@ -11,22 +11,22 @@ const Banner = () => {
       <Card
         title="SAFETY BY DESIGN"
         description="Safety first"
-        icon={<AiOutlineSafety className={styles.card__icon} color="#000000" />}
+        icon={<AiOutlineSafety className={styles.cardIcon} color="#000000" />}
       />
       <Card
         title="SUPPORT 24/7"
         description="We support 24h a day"
-        icon={<MdHeadsetMic className={styles.card__icon} color="#000000" />}
+        icon={<MdHeadsetMic className={styles.cardIcon} color="#000000" />}
       />
       <Card
         title="EXPERT SERVICE"
         description="Professionals who know"
-        icon={<GrBike className={styles.card__icon} color="#000000" />}
+        icon={<GrBike className={styles.cardIcon} color="#000000" />}
       />
       <Card
         title="REAPIR"
         description="Expert Mechanics"
-        icon={<BsTools className={styles.card__icon} color="#000000" />}
+        icon={<BsTools className={styles.cardIcon} color="#000000" />}
       />
     </div>
   );

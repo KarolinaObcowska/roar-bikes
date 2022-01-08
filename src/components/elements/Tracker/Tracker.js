@@ -4,9 +4,9 @@ import { BsDot } from "react-icons/bs";
 
 const Tracker = ({ name }) => {
   return (
-    <div className={styles.trackerContainer}>
+    <div className={styles.wrapper}>
       <div className={styles.tracker}>
-        <p className={styles.tracker__item}>
+        <p className={styles.text}>
           Home <BsDot /> Products <BsDot /> {name}
         </p>
       </div>

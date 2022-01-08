@@ -3,7 +3,7 @@ import styles from "./Button.module.sass";
 
 const Button = ({ text, width, variant }) => {
   return (
-    <button className={styles[variant]} style={{ width: width }}>
+    <button className={`${styles[variant]} ${styles.button}`} style={{ width: width }}>
       {text}
     </button>
   );

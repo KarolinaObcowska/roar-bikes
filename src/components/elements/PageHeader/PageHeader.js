@@ -3,9 +3,9 @@ import styles from "./PageHeader.module.sass";
 
 const PageHeader = ({ title }) => {
   return (
-    <div className={styles.pageHeader}>
-      <div className={styles.pageHeader__item}>
-        <h2 className={styles.pageHeader__itemTitle}>{title}</h2>
+    <div className={styles.header}>
+      <div className={styles.wrapper}>
+        <h2 className={styles.title}>{title}</h2>
       </div>
     </div>
   );

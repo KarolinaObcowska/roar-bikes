@@ -1,14 +1,14 @@
 import styles from "./Cart.module.sass";
 import Layout from "@Layout/Layout/Layout";
 import PageHeader from "@Elements/PageHeader/PageHeader";
-import CartOrder from "@Partials/CartOrder/CartOrder";
-import CartSummary from "@Partials/CartSummary/CartSummary";
+import CartOrder from "./CartOrder/CartOrder";
+import CartSummary from "./CartSummary/CartSummary";
 const Cart = () => {
   return (
     <Layout>
       <section className={styles.cart}>
         <PageHeader title="cart" />
-        <div className={styles.cart_container}>
+        <div className={styles.cartContainer}>
           <CartSummary />
           <CartOrder />
         </div>

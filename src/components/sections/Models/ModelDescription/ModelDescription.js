@@ -5,8 +5,8 @@ import ButtonCallToAction from "@Elements/ButtonCallToAction/ButtonCallToAction"
 const ModelDescription = ({ name, description }) => {
   return (
     <div className={`${styles.description} ${styles.item}`}>
-      <h2 className={styles.name}>{name}</h2>
-      <p className={styles.text}>{description}</p>
+      <h2 className={styles.modelName}>{name}</h2>
+      <p className={styles.modelDescription}>{description}</p>
       <ButtonCallToAction location={`/product/${name}`} title="learn more" />
     </div>
   );

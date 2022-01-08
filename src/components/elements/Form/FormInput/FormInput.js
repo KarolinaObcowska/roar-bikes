@@ -3,9 +3,9 @@ import styles from "./FormInput.module.sass";
 
 const FormInput = ({ name }) => {
   return (
-    <div className="form__group">
-      <label className={styles.form__groupTitle}>{name}</label>
-      <input className={styles.form__groupInput} type="text" />
+    <div className={styles.group}>
+      <label className={styles.title}>{name}</label>
+      <input className={styles.input} type="text" />
     </div>
   );
 };

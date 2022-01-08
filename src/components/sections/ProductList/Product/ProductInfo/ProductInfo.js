@@ -5,23 +5,23 @@ import styles from "./ProductInfo.module.sass";
 
 const ProductInfo = ({ name, price }) => {
   return (
-    <div className={styles.item__info}>
-      <div className={styles.info}>
-        <h3 className={styles.info__name}>{name}</h3>
-        <h3 className={styles.info__price}>${price}</h3>
+    <div className={styles.info}>
+      <div className={styles.infoContainer}>
+        <h3 className={styles.productName}>{name}</h3>
+        <h3 className={styles.productPrice}>${price}</h3>
       </div>
-      <p className={styles.info__color}>Color:</p>
-      <BsFillCircleFill color="#e21f50" className={styles.info__color_item} />
-      <BsFillCircleFill color="#152891" className={styles.info__color_item} />
-      <p className={styles.info__size}>Size:</p>
-      <select className={styles.info__select}>
+      <p className={styles.productColor}>Color:</p>
+      <BsFillCircleFill color="#e21f50" className={styles.colorIcon} />
+      <BsFillCircleFill color="#152891" className={styles.colorIcon} />
+      <p className={styles.productSize}>Size:</p>
+      <select className={styles.sizeSelect}>
         <option value="-">Please select</option>
         <option value="S">S</option>
         <option value="M">M</option>
         <option value="L">L</option>
       </select>
-      <p className={styles.info__quantity}>Quantity:</p>
-      <input type="number" className={styles.info__input} />
+      <p className={styles.productQuantity}>Quantity:</p>
+      <input type="number" className={styles.quantityInput} />
       <Button text="add to cart" width="100%" />
     </div>
   );

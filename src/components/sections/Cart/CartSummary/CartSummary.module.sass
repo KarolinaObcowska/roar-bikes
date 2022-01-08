@@ -1,22 +1,22 @@
 @use '../../../styles/_variables'
 
-.cart__summary
+.summary
     margin-top: 2rem
     display: flex
     flex-direction: column
     align-items: center
     width: 100%
-    .summary__table
+    .table
         width: 100%
         border-collapse: collapse
-        .summary__tableHeader
+        .tableHeader
             border-bottom: 1px solid variables.$dark-secondary-color
             height: 5rem
             th:first-of-type
                 text-align: left
             th
                 padding: 1rem
-        .summary__tableBody
+        .tableBody
             height: 5rem
             border-bottom: 1px solid variables.$dark-secondary-color
             td
@@ -26,7 +26,7 @@
             td:first-of-type
                 text-align: left
             td
-                .product_container
+                .product
                     display: flex
                     img
                         filter: grayscale(100%)
@@ -40,29 +40,29 @@
                         font-size: 0.8rem
                         margin: .5rem
 
-    .summary__buttons
+    .buttons
         margin: 1rem 0rem
         width: 100%
         display: flex
         justify-content: space-between
 
 @media screen and (max-width: variables.$screen-md)
-    .cart__summary
+    .summary
         width: 100%
-        .summary__table
+        .table
             font-size: 0.7rem
-            .summary__tableHeader
+            .tableHeader
                 height: 3rem
                 th
                     padding: 0
                     padding-left: .5rem
                 th:first-of-type
                     text-align: left
-                    .summary__tableBody
+                    .tableBody
                         td:first-of-type
                             text-align: left
                         td
-                            .product_container
+                            .product
                                 img
                                     width: 100px
                                     height: 60px
@@ -70,7 +70,7 @@
                                 figcaption
                                     font-size: 0.5rem
                                     margin: .5rem
-        .summary__buttons
+        .buttons
             margin: 1rem 0rem
             width: 90%
             display: flex

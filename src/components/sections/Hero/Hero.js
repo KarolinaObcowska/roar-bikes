@@ -8,10 +8,10 @@ const Hero = () => {
     <div>
       <section className={styles.hero}>
         <Slide left>
-          <div className={styles.hero__container}>
-            <div className={styles.hero__item}>
-              <h2 className={styles.hero__subtitle}>NEW MODEL</h2>
-              <h1 className={styles.hero__title}>SIAMESE</h1>
+          <div className={styles.heroContainer}>
+            <div className={styles.tem}>
+              <h2 className={styles.subtitle}>NEW MODEL</h2>
+              <h1 className={styles.title}>SIAMESE</h1>
               <ButtonCallToAction location="/product/siamese" title="shop now" />
             </div>
           </div>

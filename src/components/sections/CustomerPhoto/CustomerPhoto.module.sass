@@ -1,43 +1,43 @@
 @use '../../../styles/_variables'
 
-.customer-photo
+.customerPhoto
     background-color: variables.$bright-primary-color
     width: 100%
     height: 100vh
     padding: 1rem 0rem
-    .customer_photo__container
+    .container
         height: fit-content
         width: 80%
         margin: auto
-        .photo_container
+        .images
             justify-content: center
             margin: auto
             display: grid
             grid-template-columns: repeat(3, 32.7%)
             grid-template-rows: repeat(2, 15vw)
             grid-gap: 10px
-        .photo_container__image
+        .photo
             width: 100%
             height: 100%
             object-fit: cover
-    .text-container
+    .textContainer
         margin: 3rem 0rem
-    .text_container__text
-        font-family: variables.$secondary-font
-        font-weight: variables.$regular-font
+        .text
+            font-family: variables.$secondary-font
+            font-weight: variables.$regular-font
 
 @media screen and (max-width: variables.$screen-lg)
-    .customer_photo
+    .customerPhoto
         height: fit-content
-        .customer_photo__container
-            .photo_container
+        .container
+            .images
                 grid-template-columns: repeat(2, 50%)
                 grid-template-rows: repeat(3, 40vw)
 
 @media screen and (max-width: variables.$screen-md)
-    .customer_photo
+    .customerPhoto
         height: fit-content
-        .customer_photo__container
-            .photo_container
+        .container
+            .images
                 grid-template-columns: repeat(1, 100%)
                 grid-template-rows: repeat(6, 50vw)

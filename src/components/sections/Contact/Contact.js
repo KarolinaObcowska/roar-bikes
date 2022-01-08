@@ -8,10 +8,10 @@ import styles from "./Contact.module.sass";
 const Contact = () => {
   return (
     <Layout>
-      <section className={styles.container}>
+      <section className={styles.contact}>
         <PageHeader title="contact us" />
-        <div className={styles.form_container}>
-          <form className="form">
+        <div className={styles.formContainer}>
+          <form className={styles.form}>
             <FormInput name="First Name" />
             <FormInput name="Last Name" />
             <FormInput name="E-mail" />

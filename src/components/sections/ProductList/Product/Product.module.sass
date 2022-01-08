@@ -1,16 +1,16 @@
 @use '../../../../styles/_variables'
 
-.item_container
+.product
     width: 100%
     display: flex
     flex-direction: column
     align-items: center
-    .item__info_container
+    .productContainer
         width: 80%
         display: flex
         height: fit-content
         margin-top: 5rem
-        .item__photo_container
+        .images
             margin: 0
             width: 75%
             display: flex
@@ -20,46 +20,46 @@
             .photo
                 width: 450px
                 height: 300px
-            .photo__gallery
+            .photoGallery
                 height: 10rem
-                .photo__gallery_item
+                .galleryItem
                     border: 1px solid variables.$dark-secondary-color
                     margin: 0.5rem
                     width: 100px
                     height: 100px
 
 @media screen and (max-width: variables.$screen-lg)
-    .item-container
+    .product
         align-items: none
-        .item__info_container
+        .productontainer
             width: 90%
             justify-content: space-around
-            .item__photo_container
+            .images
                 width: 50%
                 .photo
                     width: 425px
                     height: 275px
-                .photo__gallery
+                .photoGallery
                     .photo__gallery_item
                         width: 75px
                         height: 75px
 
 @media screen and (max-width: variables.$screen-md)
-    .item-container
-        .item__info_container
+    .product
+        .productContainer
             padding-top: 4rem
             width: 100%
             justify-content: center
             align-items: center
             margin: auto
             flex-direction: column
-            .item__photo_container
+            .images
                 width: 90%
                 height: fit-content
                 .photo
                     width: 375px
                     height: 225px
-                .photo__gallery
-                    .photo__gallery_item
+                .photoGallery
+                    .galleryItem
                         width: 50px
                         height: 50px

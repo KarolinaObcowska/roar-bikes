@@ -6,10 +6,10 @@ import styles from "./Reviews.module.sass";
 const Reviews = () => {
   return (
     <section className={styles.reviews}>
-      <div className={styles.reviews__title}>
+      <div className={styles.title}>
         <PageTitle title={styles.reviews} />
       </div>
-      <div className={styles.reviews__container}>
+      <div className={styles.reviewsContainer}>
         <Review
           name="Brandon Short"
           avatar={Avatar1}

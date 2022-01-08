@@ -2,15 +2,15 @@
 import styles from "./Models.module.sass";
 import { Bike1, Bike2, Bike3 } from "@Images/bike-main-picks";
 import Slide from "react-reveal/Slide";
-import ModelPhoto from "@Partials/ModelPhoto/ModelPhoto";
-import ModelDescription from "@Partials/ModelDescription/ModelDescription";
+import ModelPhoto from "./ModelPhoto/ModelPhoto";
+import ModelDescription from "./ModelDescription/ModelDescription";
 import PageTitle from "@Elements/PageTitle/PageTitle";
 
 const Models = () => {
   return (
     <section className={styles.models}>
       <PageTitle title="models" />
-      <div className={styles.models__container}>
+      <div className={styles.modelsContainer}>
         <Slide left>
           <ModelPhoto photo={Bike1} />
         </Slide>

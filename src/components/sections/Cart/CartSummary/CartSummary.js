@@ -4,9 +4,9 @@ import Button from "@Elements/Button/Button";
 
 const CartSummary = () => {
   return (
-    <div className={styles.cart__summary}>
-      <table className={styles.summary__table}>
-        <thead className={styles.summary__tableHeader}>
+    <div className={styles.summary}>
+      <table className={styles.table}>
+        <thead className={styles.tableHeader}>
           <tr>
             <th>PRODUCT</th>
             <th>PRICE</th>
@@ -14,10 +14,10 @@ const CartSummary = () => {
             <th>SUBTOTAL</th>
           </tr>
         </thead>
-        <tbody className={styles.summary__tableBody}>
+        <tbody className={styles.tableBody}>
           <tr>
             <td>
-              <figure className={styles.product_container}>
+              <figure className={styles.product}>
                 <img src={Bike1} />
                 <figcaption>
                   Siamese <br /> Color: Black <br /> Size: Medium
@@ -30,7 +30,7 @@ const CartSummary = () => {
           </tr>
         </tbody>
       </table>
-      <div className={styles.summary__buttons}>
+      <div className={styles.buttons}>
         <Button text="CLEAR SHOPPING CART" width="fit-content" />
         <Button text="ADD TO CART" width="fit-content" />
       </div>
