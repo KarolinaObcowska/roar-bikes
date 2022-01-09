@@ -1,5 +1,5 @@
 @use '../../../styles/_variables'
-
+@use '../../../styles/_mixins'
 .contact
     width: 100%
     background-color: variables.$bright-secondary-color
@@ -16,9 +16,5 @@
             display: flex
             width: 50%
             flex-direction: column
-
-@media screen and (max-width: variables.$screen-lg)
-    .contact
-        .formContainer
-            .form
+            @include mixins.breakpoint(large)
                 width: 100%

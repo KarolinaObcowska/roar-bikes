@@ -1,14 +1,15 @@
 @use '../../../../styles/_variables'
+@use '../../../../styles/_mixins'
 
-@media screen and (max-width: variables.$screen-lg)
-    .mobile-menu-icons-list
+.mobile-menu-icons-list
+    @include mixins.breakpoint(large)
         display: none
-@media screen and (max-width: variables.$screen-md)
-    .mobile-menu-icons-list
+    @include mixins.breakpoint(medium)
         display: flex
         flex-direction: row
         list-style: none
         li .link
+            @include mixins.breakpoint(medium)
             padding: 0.5rem
             font-size: 2rem
             text-decoration: none

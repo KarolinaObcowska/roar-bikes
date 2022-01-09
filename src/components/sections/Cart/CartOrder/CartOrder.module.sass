@@ -1,9 +1,18 @@
 @use '../../../../styles/_variables'
-
+@use '../../../../styles/_mixins'
 .order
     margin-top: 2rem
     background-color: variables.$bright-secondary-color
     display: flex
+    @include mixins.breakpoint(medium)
+        width: 90vw
+        flex-direction: column
+        align-items: center
+    .requestContainer,
+    .totalsContainer
+        @include mixins.breakpoint(medium)
+            width: 90%
+            padding: 0rem
     .requestContainer
         display: flex
         flex-direction: column
@@ -43,13 +52,3 @@
                         font-weight: variables.$regular-font
         .buttons
             width: 100%
-
-@media screen and (max-width: variables.$screen-md)
-    .order
-        width: 90vw
-        flex-direction: column
-        align-items: center
-        .requestContainer,
-        .totalsContainer
-            width: 90%
-            padding: 0rem

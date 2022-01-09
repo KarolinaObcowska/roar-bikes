@@ -1,10 +1,9 @@
 @use '../../../../styles/_variables'
+@use '../../../../styles/_mixins'
 
 .mobile-menu
     display: none
-
-@media screen and (max-width: variables.$screen-lg)
-    .mobile-menu
+    @include mixins.breakpoint(large)
         background-color: variables.$bright-secondary-color-opacity
         width: 100vw
         display: inline
@@ -12,21 +11,21 @@
         top: 72px
         height: calc( 100vh - 72px )
         .mobile-menu-list
-            font-size: 2rem
-            display: flex
-            flex-direction: column
-            list-style: none
+            @include mixins.breakpoint(large)
+                font-size: 2rem
+                display: flex
+                flex-direction: column
+                list-style: none
             .link
-                text-decoration: none
-                color: variables.$dark-primary-color
+                @include mixins.breakpoint(large)
+                    text-decoration: none
+                    color: variables.$dark-primary-color
             .product
-                margin: 1rem 0rem
+                @include mixins.breakpoint(large)
+                    margin: 1rem 0rem
             .product .link
-                background-color: variables.$primary-color
-                color: variables.$dark-primary-color
-                border-radius: 20px 90px 75px 190px
-                text-decoration: none
-
-@media (max-width: variables.$screen-md)
-    .mobile-menu
-        z-index: 3
+                @include mixins.breakpoint(large)
+                    background-color: variables.$primary-color
+                    color: variables.$dark-primary-color
+                    border-radius: 20px 90px 75px 190px
+                    text-decoration: none

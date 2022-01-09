@@ -1,8 +1,11 @@
 @use '../../../../../styles/_variables'
-
+@use '../../../../../styles/_mixins'
 .info
     width: 25%
     margin-left: 2rem
+    @include mixins.breakpoint(medium)
+        margin-left: 0
+        width: 90%
     .infoContainer
         width: 5rem
         height: 4rem
@@ -31,6 +34,10 @@
         padding: .5rem
         border: .5px solid variables.$dark-secondary-color
         background-color: variables.$bright-secondary-color
+    .sizeInput,
+    .quantityInput
+        @include mixins.breakpoint(medium)
+        display: block
     .quantityInput
         -moz-appearance: textfield
         appearance: textfield
@@ -38,11 +45,3 @@
     .productSize,
     .productColor
         margin-bottom: 0
-
-@media screen and (max-width: variables.$screen-md)
-    .info
-        margin-left: 0
-        width: 90%
-        .sizeInput,
-        .quantityInput
-            display: block

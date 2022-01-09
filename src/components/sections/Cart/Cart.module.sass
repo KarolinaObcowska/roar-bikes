@@ -1,5 +1,5 @@
 @use '../../../styles/_variables'
-
+@use '../../../styles/_mixins'
 .cart
     padding-bottom: 2rem
     position: relative
@@ -8,13 +8,8 @@
         flex-direction: column
         margin: auto
         width: 75%
-@media screen and (max-width: variables.$screen-lg)
-    .cart
-        .cartContainer
+        @include mixins.breakpoint(large)
             width: 97%
             padding: 1rem 0rem
-
-@media screen and (max-width: variables.$screen-md)
-    .cart
-        .cartContainer
+        @include mixins.breakpoint(medium)
             align-items: center

@@ -1,5 +1,5 @@
 @use '../../../styles/_variables'
-
+@use '../../../styles/_mixins'
 .models
     background-color: variables.$bright-primary-color
     width: 100%
@@ -13,12 +13,8 @@
         grid-template-rows: repeat(3, 1fr)
         grid-column-gap: 40px
         grid-row-gap: 10rem
-
-@media screen and (max-width: variables.$screen-md)
-    .models
-        .modelsContainer
-            display: grid
+        @include mixins.breakpoint(medium)
             grid-template-columns: 1fr
             grid-template-rows: repeat(6, 1fr)
-            grid-column-gap: px
+            grid-column-gap: 0px
             grid-row-gap: 20px

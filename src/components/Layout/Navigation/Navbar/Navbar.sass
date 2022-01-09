@@ -1,4 +1,5 @@
 @use '../../../../styles/_variables'
+@use '../../../../styles/_mixins'
 
 .header
     background-color: variables.$bright-color-opacity
@@ -10,7 +11,21 @@
         .navbar
             display: flex
             justify-content: space-around
-            .navbar-list,
+            @include mixins.breakpoint(large)
+                justify-content: space-between
+            @include mixins.breakpoint(medium)
+                justify-content: left
+            .navbar-list
+                display: flex
+                margin: 1rem auto
+                justify-content: space-between
+                padding: 0
+                align-items: center
+                list-style-type: none
+                @include mixins.breakpoint(large)
+                    margin: 1rem
+                    li:not(:nth-child(2))
+                        display: none
             .icons-list
                 display: flex
                 margin: 1rem auto
@@ -18,21 +33,37 @@
                 padding: 0
                 align-items: center
                 list-style-type: none
+                @include mixins.breakpoint(large)
+                    margin: 1rem
+                @include mixins.breakpoint(medium)
+                    display: none
+            .icons-list,
+            .navbar-list
                 .logo-text
                     cursor: not-allowed
                     pointer-events: none
                     margin-bottom: 2rem
+                @include mixins.breakpoint(large)
+                    cursor: pointer
+                    pointer-events: auto
                 .logo
                     cursor: not-allowed
                     pointer-events: none
                     font-size: 2.5rem
                     margin-right: 0.5rem
+                    @include mixins.breakpoint(large)
+                        cursor: pointer
+                        pointer-events: auto
                 .mobile-menu
                     display: none
                 .mobile-menu-icon
                     display: none
                     cursor: not-allowed
                     pointer-events: none
+                    @include mixins.breakpoint(large)
+                        display: inline
+                        cursor: pointer
+                        pointer-events: auto
                 .link,
                 a
                     color: variables.$dark-primary-color
@@ -49,36 +80,23 @@
                 .link:hover
                     color: variables.$primary-color
 
-@media screen and (max-width: variables.$screen-lg)
-    .header,
-    .active
-        header
-            .navbar
-                justify-content: space-between
-                .navbar-list li:not(:nth-child(2))
-                    display: none
-                .navbar-list,
-                .icons-list
-                    margin: 1rem
-                .navbar-list
-                    .logo-text,
-                    .logo
-                        cursor: pointer
-                        pointer-events: auto
-                    .mobile-menu-icon
-                        display: inline
-                        cursor: pointer
-                        pointer-events: auto
+// @media screen and (max-width: variables.$screen-lg)
+//     .header,
+//     .active
+//         header
+//             .navbar
+//                 .navbar-list li:not(:nth-child(2))
+//                     display: none
 
-@media (max-width: variables.$screen-md)
-    .header,
-    .active
-        header
-            .navbar
-                justify-content: left
-                .navbar-list
-                    margin: 1rem 1rem
-                .icons-list
-                    display: none
-            .mobile-menu
-                z-index: 3
+// @media (max-width: variables.$screen-md)
+//     .header,
+//     .active
+//         header
+//             .navbar
+//                 justify-content: left
+//                 .navbar-list
+//                     margin: 1rem 1rem
+//                 .icons-list
+//                     display: none
+//             .mobile-menu
+//                 z-index: 3

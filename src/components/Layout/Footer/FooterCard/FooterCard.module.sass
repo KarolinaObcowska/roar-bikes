@@ -1,17 +1,13 @@
 @use '../../../../styles/_variables'
-
+@use '../../../../styles/_mixins'
 .card
     color: variables.$bright-primary-color
     font-family: variables.$secondary-font
     font-weight: variables.$regular-font
     font-size: 0.8rem
     line-height: 4
-
-@media screen and (max-width: variables.$screen-lg)
-    .card
+    @include mixins.breakpoint(large)
         font-size: 0.5rem
-
-@media screen and (max-width: variables.$screen-sm)
-    .card
+    @include mixins.breakpoint(small)
         line-height: 2
         margin: 0.5rem

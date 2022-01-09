@@ -1,5 +1,5 @@
 @use '../../../../styles/_variables'
-
+@use '../../../../styles/_mixins'
 .item
     display: flex
     justify-content: center
@@ -10,24 +10,15 @@
         width: 320px
         height: 250px
         background-color: variables.$primary-color
-        .photo
-            width: 400px
-            height: 240px
-
-@media screen and (max-width: variables.$screen-lg)
-    .item
-        .figure
+        @include mixins.breakpoint(large)
             width: 300px
             height: 220px
-        .photo
-            width: 350px
-            height: 200px
-
-@media screen and (max-width: variables.$screen-md)
-    .item
-        .figure
+        @include mixins.breakpoint(medium)
             width: 280px
             height: 180px
         .photo
-            width: 350px
-            height: 180px
+            width: 400px
+            height: 240px
+            @include mixins.breakpoint(large)
+                width: 350px
+                height: 200px

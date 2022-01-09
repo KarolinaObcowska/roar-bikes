@@ -1,12 +1,17 @@
 @use '../../../../styles/_variables'
-
+@use '../../../../styles/_mixins'
 .review
     display: flex
     flex-direction: column
     width: 300px
+    @include mixins.breakpoint(large)
+        width: 100%
+        align-items: center
     .reviewContainer
         display: flex
         margin-top: 2rem
+        @include mixins.breakpoint(large)
+            margin-top: 1rem
         .avatar
             width: 100px
             height: 100px
@@ -25,13 +30,6 @@
         font-weight: variables.$regular-font
         line-height: 1.75
         min-height: 200px
-
-@media screen and (max-width: variables.$screen-lg)
-    .review
-        width: 100%
-        align-items: center
-        .reviewContainer
-            margin-top: 1rem
-        .description
+        @include mixins.breakpoint(large)
             min-height: fit-content
             margin-bottom: 1rem

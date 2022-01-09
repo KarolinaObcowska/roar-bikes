@@ -1,33 +1,58 @@
 @use '../../../styles/_variables'
-
+@use '../../../styles/_mixins'
 .footer
     background-color: variables.$dark-primary-color
     padding: .5rem 0rem
     width: 100vw
     position: relative
+    @include mixins.breakpoint(large)
+        height: fit-content
     .footerContainer
         width: 80%
         display: flex
         justify-content: space-evenly
         margin: auto
         align-items: top
+        @include mixins.breakpoint(large)
+            width: 100%
+            padding: 1rem 0rem
         .address
             color: variables.$bright-primary-color
             font-family: variables.$secondary-font
             font-weight: variables.$regular-font
             font-size: 0.8rem
             line-height: 3
+            @include mixins.breakpoint(large)
+                font-size: 0.5rem
             .socials
                 font-size: 2rem
+                @include mixins.breakpoint(large)
+                    line-height: 2
+                    font-size: 1rem
+                @include mixins.breakpoint(small)
+                    height: fit-content
                 .socialIcon
                     margin: 0rem 1rem
+                    @include mixins.breakpoint(small)
+                        margin: 0rem 0.3rem
+
             .form
+                @include mixins.breakpoint(small)
+                    padding: 0
+                    margin-right: 0.5rem
+                .title
+                    @include mixins.breakpoint(small)
+                        margin: 0
                 .input,
                 .submit
                     height: 2.7rem
                     margin: 0
                     font-family: variables.$primary-font
-                .finput
+                    @include mixins.breakpoint(large)
+                        height: 1.5rem
+                    @include mixins.breakpoint(small)
+                        width: 5rem
+                .input
                     background-color: variables.$dark-primary-color
                     color: variables.$bright-primary-color
                     border: 0.5px solid variables.$bright-primary-color
@@ -41,38 +66,39 @@
                     border-bottom-right-radius: 5px
                     border-top-right-radius: 5px
                     font-weight: variables.$semibold-font
-
-@media screen and (max-width: variables.$screen-lg)
-    .footer
-        height: fit-content
-        .footerContainer
-            width: 100%
-            padding: 1rem 0rem
-            .address
-                font-size: 0.5rem
-                .socials
-                    line-height: 2
-                    font-size: 1rem
-                .form
-                    .input,
-                    .submit
-                        height: 1.5rem
-                    .submit
+                    @include mixins.breakpoint(large)
                         width: 2rem
+// @media screen and (max-width: variables.$screen-lg)
+//     .footer
+//         height: fit-content
+//         .footerContainer
+//             width: 100%
+//             padding: 1rem 0rem
+//             .address
+//                 font-size: 0.5rem
+//                 .socials
+//                     line-height: 2
+//                     font-size: 1rem
+//                 .form
+//                     .input,
+//                     .submit
+//                         height: 1.5rem
+//                     .submit
+//                         width: 2rem
 
-@media screen and (max-width: variables.$screen-sm)
-    .footer
-        .footerContainer
-            .address
-                .socials
-                    height: fit-content
-                    .socialIcon
-                        margin: 0rem 0.3rem
-            .form
-                padding: 0
-                margin-right: 0.5rem
-                .title
-                    margin: 0
-                .input,
-                .submit
-                    width: 5rem
+// @media screen and (max-width: variables.$screen-sm)
+//     .footer
+//         .footerContainer
+//             .address
+//                 .socials
+//                     height: fit-content
+//                     .socialIcon
+//                         margin: 0rem 0.3rem
+//             .form
+//                 padding: 0
+//                 margin-right: 0.5rem
+//                 .title
+//                     margin: 0
+//                 .input,
+//                 .submit
+//                     width: 5rem

@@ -1,15 +1,27 @@
 @use '../../../../styles/_variables'
-
+@use '../../../../styles/_mixins'
 .product
     width: 100%
     display: flex
     flex-direction: column
     align-items: center
+    @include mixins.breakpoint(large)
+        align-items: none
     .productContainer
         width: 80%
         display: flex
         height: fit-content
         margin-top: 5rem
+        @include mixins.breakpoint(large)
+            width: 90%
+            justify-content: space-around
+        @include mixins.breakpoint(medium)
+            padding-top: 4rem
+            width: 100%
+            justify-content: center
+            align-items: center
+            margin: auto
+            flex-direction: column
         .images
             margin: 0
             width: 75%
@@ -17,9 +29,17 @@
             flex-direction: column
             align-items: center
             justify-content: center
+            @include mixins.breakpoint(large)
+                width: 50%
+            @include mixins.breakpoint(medium)
+                width: 90%
+                height: fit-content
             .photo
                 width: 450px
                 height: 300px
+                @include mixins.breakpoint(large)
+                    width: 425px
+                    height: 275px
             .photoGallery
                 height: 10rem
                 .galleryItem
@@ -27,39 +47,9 @@
                     margin: 0.5rem
                     width: 100px
                     height: 100px
-
-@media screen and (max-width: variables.$screen-lg)
-    .product
-        align-items: none
-        .productontainer
-            width: 90%
-            justify-content: space-around
-            .images
-                width: 50%
-                .photo
-                    width: 425px
-                    height: 275px
-                .photoGallery
-                    .photo__gallery_item
+                    @include mixins.breakpoint(large)
                         width: 75px
                         height: 75px
-
-@media screen and (max-width: variables.$screen-md)
-    .product
-        .productContainer
-            padding-top: 4rem
-            width: 100%
-            justify-content: center
-            align-items: center
-            margin: auto
-            flex-direction: column
-            .images
-                width: 90%
-                height: fit-content
-                .photo
-                    width: 375px
-                    height: 225px
-                .photoGallery
-                    .galleryItem
+                    @include mixins.breakpoint(medium)
                         width: 50px
                         height: 50px

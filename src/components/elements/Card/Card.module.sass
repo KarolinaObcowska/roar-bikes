@@ -1,10 +1,12 @@
 @use '../../../styles/_variables'
 @use '../../../styles/_animations'
-
+@use '../../../styles/_mixins'
 .card
     display: flex
     flex-direction: column
     align-items: center
+    @include mixins.breakpoint(small)
+        margin: 1rem
     .iconContainer
         background-color: variables.$primary-color
         width: 5rem
@@ -13,15 +15,22 @@
         display: flex
         align-items: center
         justify-content: center
+        @include mixins.breakpoint(small)
+            width: 10rem
+            height: 10rem
     .title
         margin: 0
         margin-top: 0.6rem
         color: variables.$dark-primary-color
+        @include mixins.breakpoint(small)
+            font-size: 1rem
     .description
         margin: 0
         font-weight: variables.$regular-font
         color: variables.$dark-secondary-color
         font-size: 0.7rem
+        @include mixins.breakpoint(small)
+            font-size: 0.9rem
 
 @media (prefers-reduced-motion: no-preference)
     .card
@@ -29,13 +38,13 @@
         animation-duration: 1s
         animation-iteration-count: 1
 
-@media screen and (max-width: variables.$screen-sm)
-    .card
-        margin: 1rem
-        .iconContainer
-            width: 10rem
-            height: 10rem
-        .title
-            font-size: 1rem
-        .description
-            font-size: 0.9rem
+// @media screen and (max-width: variables.$screen-sm)
+//     .card
+//         margin: 1rem
+//         .iconContainer
+//             width: 10rem
+//             height: 10rem
+//         .title
+//             font-size: 1rem
+//         .description
+//             font-size: 0.9rem
