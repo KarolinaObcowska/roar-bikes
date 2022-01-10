@@ -1,0 +1,32 @@
+@use '../../../../styles/_variables'
+@use '../../../../styles/_mixins'
+
+.listItem
+    .productDetails
+        justify-content: space-between
+        display: flex
+        width: 100%
+        .name,
+        .price
+            font-size: 2rem
+            color: variables.$dark-secondary-color
+            font-family: variables.$secondary-font
+            font-weight: variables.$regular-font
+            text-transform: uppercase
+
+    .product
+        padding: 1rem 0rem 3rem 0rem
+        border-bottom: 1px solid black
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @include mixins.breakpoint(small)
+            flex-direction: column
+        .productPhoto
+            border-radius: 50px 75px 75px 150px
+            background-color: variables.$primary-color
+            @include mixins.breakpoint(small)
+                margin-bottom: 2rem
+            .photo
+                width: 250px
+                height: 150px

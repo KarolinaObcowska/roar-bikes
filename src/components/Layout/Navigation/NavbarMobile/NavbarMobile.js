@@ -10,7 +10,7 @@ const NavbarMobile = () => {
         </Link>
       </li>
       <li className={styles.product}>
-        <Link to="/products" className={styles.link}>
+        <Link to="/product" className={styles.link}>
           PRODUCTS
         </Link>
       </li>
