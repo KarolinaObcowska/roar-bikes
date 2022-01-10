@@ -4,7 +4,7 @@ const FooterCard = ({ titles }) => {
   return (
     <div className={styles.card}>
       {titles.map((title) => (
-        <p key={title.id}>{title}</p>
+        <p key={title}>{title}</p>
       ))}
     </div>
   );

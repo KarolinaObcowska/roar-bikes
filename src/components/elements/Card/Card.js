@@ -14,7 +14,7 @@ const Card = ({ icon, description, title }) => {
 Card.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
-  icon: PropTypes.string
+  icon: PropTypes.object
 };
 
 export default Card;

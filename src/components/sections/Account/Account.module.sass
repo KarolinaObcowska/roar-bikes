@@ -1,0 +1,48 @@
+@use '../../../styles/_variables'
+@use '../../../styles/_mixins'
+
+.container
+    width: 100%
+    align-items: top
+    display: flex
+    justify-content: center
+    position: relative
+    margin-bottom: 2rem
+    .account
+        padding-top: 2rem
+        width: 80%
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-items: center
+        .accountHeader
+            color: variables.$dark-primary-color
+            display: flex
+            align-items: center
+            width: 50%
+            .avatar
+                width: 130px
+                height: 130px
+                border-radius: 100%
+                object-fit: cover
+                border: 2px solid variables.$dark-primary-color
+            .name
+                background-color: variables.$primary-color
+                border-radius: 20px 90px 75px 190px
+                text-align: center
+                margin: 0 2rem
+                padding: .2rem
+                font-weight: variables.$regular-font
+                @include mixins.breakpoint(small)
+                    color: variables.$bright-primary-color
+        .details
+            width: 50%
+            margin-top: 1rem
+            color: variables.$dark-secondary-color
+        .accountHeader,
+        .details
+            @include mixins.breakpoint(large)
+                width: 80%
+                height: fit-content
+            @include mixins.breakpoint(medium)
+                width: 100%

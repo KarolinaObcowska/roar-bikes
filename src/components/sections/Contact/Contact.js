@@ -4,11 +4,13 @@ import PageHeader from "@Elements/PageHeader/PageHeader";
 import FormInput from "@Elements/Form/FormInput/FormInput";
 import FormTextarea from "@Elements/Form/FormTextarea/FormTextarea";
 import styles from "./Contact.module.sass";
+import Tracker from "../../elements/Tracker/Tracker";
 
 const Contact = () => {
   return (
     <Layout>
       <section className={styles.contact}>
+        <Tracker />
         <PageHeader title="contact us" />
         <div className={styles.formContainer}>
           <form className={styles.form}>
