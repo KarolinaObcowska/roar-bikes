@@ -1,0 +1,22 @@
+@use '../../../../styles/_variables'
+@use '../../../../styles/_mixins'
+
+.mobileList
+    @include mixins.breakpoint(large)
+        font-size: 2rem
+        display: flex
+        flex-direction: column
+        list-style: none
+        .link
+            @include mixins.breakpoint(large)
+                text-decoration: none
+                color: variables.$dark-primary-color
+        .product
+            @include mixins.breakpoint(large)
+                margin: 1rem 0rem
+        .product .link
+            @include mixins.breakpoint(large)
+                background-color: variables.$primary-color
+                color: variables.$dark-primary-color
+                border-radius: 20px 90px 75px 190px
+                text-decoration: none

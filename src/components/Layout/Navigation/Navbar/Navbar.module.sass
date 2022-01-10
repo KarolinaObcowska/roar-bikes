@@ -15,7 +15,7 @@
                 justify-content: space-between
             @include mixins.breakpoint(medium)
                 justify-content: left
-            .navbar-list
+            .list
                 display: flex
                 margin: 1rem auto
                 justify-content: space-between
@@ -26,20 +26,7 @@
                     margin: 1rem
                     li:not(:nth-child(2))
                         display: none
-            .icons-list
-                display: flex
-                margin: 1rem auto
-                justify-content: space-between
-                padding: 0
-                align-items: center
-                list-style-type: none
-                @include mixins.breakpoint(large)
-                    margin: 1rem
-                @include mixins.breakpoint(medium)
-                    display: none
-            .icons-list,
-            .navbar-list
-                .logo-text
+                .text
                     cursor: not-allowed
                     pointer-events: none
                     margin-bottom: 2rem
@@ -54,9 +41,15 @@
                     @include mixins.breakpoint(large)
                         cursor: pointer
                         pointer-events: auto
-                .mobile-menu
+                .mobile_Menu
                     display: none
-                .mobile-menu-icon
+                    @include mixins.breakpoint(large)
+                        background-color: variables.$bright-secondary-color-opacity
+                        width: 100vw
+                        position: absolute
+                        z-index: 3
+                        height: 50vh
+                .mobileIcon
                     display: none
                     cursor: not-allowed
                     pointer-events: none

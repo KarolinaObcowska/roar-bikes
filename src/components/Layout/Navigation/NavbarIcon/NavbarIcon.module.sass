@@ -1,0 +1,37 @@
+@use '../../../../styles/_variables'
+@use '../../../../styles/_mixins'
+.iconsList
+    display: flex
+    margin: 1rem auto
+    justify-content: space-between
+    padding: 0
+    font-size: 1.5rem
+    align-items: center
+    list-style-type: none
+    @include mixins.breakpoint(large)
+        margin: 1rem
+    @include mixins.breakpoint(medium)
+        display: none
+    .link,
+    a
+        color: variables.$dark-primary-color
+        font-weight: variables.$regular-font
+        text-decoration: none
+        margin-right: 3rem
+        cursor: pointer
+        padding: 0rem 1rem
+    .link:hover
+        color: variables.$primary-color
+.mobileIconsList
+    @include mixins.breakpoint(large)
+        display: none
+    @include mixins.breakpoint(medium)
+        display: flex
+        flex-direction: row
+        list-style: none
+        li .link
+            @include mixins.breakpoint(medium)
+            padding: 0.5rem
+            font-size: 2rem
+            text-decoration: none
+            color: variables.$dark-primary-color

@@ -1,4 +1,4 @@
-import "./Navbar.sass";
+import styles from "./Navbar.module.sass";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { GiLion } from "react-icons/gi";
@@ -10,39 +10,39 @@ const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
-    <div className="header">
+    <div className={styles.header}>
       <header>
-        <nav className="navbar">
-          <ul className="navbar-list">
-            <GiLion className="logo" />
+        <nav className={styles.navbar}>
+          <ul className={styles.list}>
+            <GiLion className={styles.logo} />
             <li>
-              <a className="logo-text" onClick={() => setMobileMenu(!mobileMenu)}>
-                <span>ROAR</span>BIKES <IoIosArrowDown className="mobile-menu-icon" />{" "}
+              <a className={styles.text} onClick={() => setMobileMenu(!mobileMenu)}>
+                <span>ROAR</span>BIKES <IoIosArrowDown className={styles.mobileIcon} />{" "}
               </a>
             </li>
             <li>
-              <Link to="/" className="link">
+              <Link to="/" className={styles.link}>
                 HOME
               </Link>
             </li>
             <li>
-              <Link to="/products" className="link">
+              <Link to="/products" className={styles.link}>
                 PRODUCTS
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="link">
+              <Link to="/contact" className={styles.link}>
                 CONTACT
               </Link>
             </li>
           </ul>
-          <NavbarIcon styles="icons-list" />
+          <NavbarIcon variant="iconsList" className={styles.iconsList} />
         </nav>
         {/* MOBILE MENU*/}
         {mobileMenu ? (
-          <div className="mobile-menu" onClick={() => setMobileMenu(!mobileMenu)}>
+          <div className={styles.mobile_Menu} onClick={() => setMobileMenu(!mobileMenu)}>
             <NavbarMobile />
-            <NavbarIcon styles="mobile-menu-icons-list" />
+            <NavbarIcon variant="mobileIconsList" className={styles.mobileIconsList} />
           </div>
         ) : null}
       </header>

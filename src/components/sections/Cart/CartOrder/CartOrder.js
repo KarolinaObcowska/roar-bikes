@@ -12,20 +12,24 @@ const CartOrder = () => {
         <h4>CART TOTALS</h4>
         <div className={styles.totals}>
           <table className={styles.table}>
-            <tr className={styles.ow1}>
-              <td>
-                <h4>Shipping</h4>
-              </td>
-              <td>
-                <p>Lorem ipsum dolor sit amet</p>
-              </td>
-            </tr>
-            <tr className={styles.row2}>
-              <td>
-                <h4>TOTAL</h4>
-              </td>
-              <td>$3400.00</td>
-            </tr>
+            <thead>
+              <tr className={styles.ow1}>
+                <td>
+                  <h4>Shipping</h4>
+                </td>
+                <td>
+                  <p>Lorem ipsum dolor sit amet</p>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className={styles.row2}>
+                <td>
+                  <h4>TOTAL</h4>
+                </td>
+                <td>$3400.00</td>
+              </tr>
+            </tbody>
           </table>
         </div>
         <div className={styles.buttons}>
