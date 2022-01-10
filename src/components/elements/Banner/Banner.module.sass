@@ -9,16 +9,16 @@
     display: flex
     justify-content: space-evenly
     align-items: center
-    @inclue mixins.breakpoint(small)
+    @include mixins.breakpoint(medium)
         height: fit-content
         display: grid
         padding: 1rem
     .cardIcon
         width: 4rem
         height: 4rem
-    @inclue mixins.breakpoint(small)
-        width: 8rem
-        height: 8rem
+        @include mixins.breakpoint(small)
+            width: 8rem
+            height: 8rem
 
 @media (prefers-reduced-motion: no-preference)
     .cardIcon
