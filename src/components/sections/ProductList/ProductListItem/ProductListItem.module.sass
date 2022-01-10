@@ -2,31 +2,53 @@
 @use '../../../../styles/_mixins'
 
 .listItem
-    .productDetails
-        justify-content: space-between
-        display: flex
+    border: 1px solid variables.$dark-secondary-color
+    margin: .5rem
+    padding-top: 2rem
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    .link
         width: 100%
-        .name,
-        .price
-            font-size: 2rem
-            color: variables.$dark-secondary-color
-            font-family: variables.$secondary-font
-            font-weight: variables.$regular-font
-            text-transform: uppercase
-
-    .product
-        padding: 1rem 0rem 3rem 0rem
-        border-bottom: 1px solid black
+        height: 3rem
+        background-color: variables.$secondary-color
+        color: variables.$bright-primary-color
+        text-decoration: none
+        font-family: variables.$secondary-font
         display: flex
         align-items: center
+        justify-content: center
+    .product
+        display: flex
+        width: 100%
+        height: 100%
+        align-items: center
+        flex-direction: column
         justify-content: space-between
         @include mixins.breakpoint(small)
             flex-direction: column
+
         .productPhoto
             border-radius: 50px 75px 75px 150px
             background-color: variables.$primary-color
             @include mixins.breakpoint(small)
                 margin-bottom: 2rem
             .photo
-                width: 250px
-                height: 150px
+                width: 350px
+                height: 250px
+        .productDetails
+            justify-content: space-around
+            align-items: center
+            height: 3rem
+            margin-top: 1rem
+            border-top: 1px solid variables.$dark-secondary-color
+            display: flex
+            width: 100%
+            .name,
+            .price
+                color: variables.$dark-secondary-color
+                font-family: variables.$secondary-font
+                font-weight: variables.$regular-font
+                text-transform: uppercase
+                font-size: 1rem

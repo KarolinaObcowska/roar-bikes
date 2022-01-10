@@ -1,31 +1,18 @@
 @use '../../../styles/_variables'
-
+@use '../../../styles/_mixins'
 .container
     display: flex
     justify-content: center
+    padding: 3rem 0rem
     .list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: 1fr
+        grid-column-gap: 0px
+        grid-row-gap: 0px
         list-style: none
         margin: 0
         padding: 0
         width: 80%
-        .listItem
-            .productDetails
-                justify-content: space-between
-                display: flex
-                width: 100%
-                .name,
-                .price
-                    font-size: 2rem
-
-        .product
-            padding: 1rem 0rem 3rem 0rem
-            border-bottom: 1px solid black
-            display: flex
-            align-items: center
-            justify-content: space-between
-            .productPhoto
-                border-radius: 50px 75px 75px 150px
-                background-color: variables.$primary-color
-                .photo
-                    width: 250px
-                    height: 150px
+        @include mixins.breakpoint(medium)
+            grid-template-columns: repeat(1, 1fr)
