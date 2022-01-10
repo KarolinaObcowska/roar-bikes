@@ -1,5 +1,5 @@
 @use '../../../../styles/_variables'
-
+@use '../../../../styles/_animations'
 .description
     display: flex
     flex-direction: column
@@ -16,3 +16,9 @@
         font-weight: variables.$regular-font
         font-family: variables.$secondary-font
         color: variables.$dark-secondary-color
+
+@media (prefers-reduced-motion: no-preference)
+    .item
+        animation-name: slide-right
+        animation-duration: 1s
+        animation-iteration-count: 1

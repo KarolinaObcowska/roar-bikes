@@ -1,6 +1,6 @@
 @use '../../../../styles/_variables'
 @use '../../../../styles/_mixins'
-
+@use '../../../../styles/_animations'
 .header
     background-color: variables.$bright-color-opacity
     width: 100%
@@ -70,24 +70,3 @@
                         font-size: 1.5rem
                 .link:hover
                     color: variables.$primary-color
-
-// @media screen and (max-width: variables.$screen-lg)
-//     .header,
-//     .active
-//         header
-//             .navbar
-//                 .navbar-list li:not(:nth-child(2))
-//                     display: none
-
-// @media (max-width: variables.$screen-md)
-//     .header,
-//     .active
-//         header
-//             .navbar
-//                 justify-content: left
-//                 .navbar-list
-//                     margin: 1rem 1rem
-//                 .icons-list
-//                     display: none
-//             .mobile-menu
-//                 z-index: 3

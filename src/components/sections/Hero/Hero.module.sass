@@ -1,5 +1,6 @@
 @use '../../../styles/_variables'
 @use '../../../styles/_typography'
+@use '../../../styles/_animations'
 @use '../../../styles/_mixins'
 .hero
     height: 60vh
@@ -45,26 +46,10 @@
             .subtitle
                 color: variables.$bright-primary-color
                 margin: 0
+                overflow: hidden
 
-// @media screen and (max-width: variables.$screen-lg)
-//     .hero
-//         height: 75vh
-//         .heroContainer
-//             width: 700px
-// @media screen and (max-width: variables.$screen-md)
-//     .hero
-//         height: 75vh
-//         .heroContainer
-//             height: fit-content
-//             width: 100vw
-//             border-radius: 0px
-//             margin: 0
-//             display: flex
-//             justify-content: center
-//             .item
-//                 padding: 1rem
-//                 position: relative
-//                 display: flex
-//                 flex-direction: column
-//                 align-items: center
-//                 width: 400px
+@media (prefers-reduced-motion: no-preference)
+    .item
+        animation-name: animate-pop,
+        animation-iteration-count: 1
+        animation-duration: 1.5s
