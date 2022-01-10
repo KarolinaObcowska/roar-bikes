@@ -2,21 +2,34 @@
 @use '../../../../styles/_mixins'
 
 .mobileList
+    .link
+        @include mixins.breakpoint(large)
+            text-decoration: none
+            color: variables.$dark-primary-color
+    .product
+        @include mixins.breakpoint(large)
+            margin: 1rem 0rem
+    .product .link
+        @include mixins.breakpoint(large)
+            background-color: variables.$primary-color
+            color: variables.$dark-primary-color
+            border-radius: 20px 90px 75px 190px
+            text-decoration: none
     @include mixins.breakpoint(large)
         font-size: 2rem
+        margin: 0
+        padding: 3rem 2rem
+        height: 100vh
+        background-color: variables.$bright-primary-color
+        width: 200x
         display: flex
         flex-direction: column
+        border-bottom: 6px solid variables.$primary-color
         list-style: none
-        .link
-            @include mixins.breakpoint(large)
-                text-decoration: none
-                color: variables.$dark-primary-color
-        .product
-            @include mixins.breakpoint(large)
-                margin: 1rem 0rem
-        .product .link
-            @include mixins.breakpoint(large)
-                background-color: variables.$primary-color
-                color: variables.$dark-primary-color
-                border-radius: 20px 90px 75px 190px
-                text-decoration: none
+        position: fixed
+    @include mixins.breakpoint(small)
+        width: 100vw
+        height: 100vh
+        align-items: center
+        padding: 0rem
+        padding-top: 4rem

@@ -9,14 +9,21 @@ import NavbarMobile from "../NavbarMobile/NavbarMobile";
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
+  const handleClick = (event) => {
+    event.preventDefault();
+    setMobileMenu(!mobileMenu);
+    const body = document.getElementById("body");
+    body.classList.toggle("disableScroll");
+  };
+
   return (
     <div className={styles.header}>
       <header>
         <nav className={styles.navbar}>
           <ul className={styles.list}>
             <GiLion className={styles.logo} />
-            <li>
-              <a className={styles.text} onClick={() => setMobileMenu(!mobileMenu)}>
+            <li onClick={handleClick}>
+              <a className={styles.text}>
                 <span>ROAR</span>BIKES <IoIosArrowDown className={styles.mobileIcon} />{" "}
               </a>
             </li>
@@ -40,9 +47,8 @@ const Navbar = () => {
         </nav>
         {/* MOBILE MENU*/}
         {mobileMenu ? (
-          <div className={styles.mobile_Menu} onClick={() => setMobileMenu(!mobileMenu)}>
+          <div className={styles.mobile_Menu} onClick={handleClick}>
             <NavbarMobile />
-            <NavbarIcon variant="mobileIconsList" className={styles.mobileIconsList} />
           </div>
         ) : null}
       </header>

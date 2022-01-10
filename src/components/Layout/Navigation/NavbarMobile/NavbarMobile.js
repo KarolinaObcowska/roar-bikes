@@ -1,6 +1,6 @@
 import styles from "./NavbarMobile.module.sass";
 import { Link } from "react-router-dom";
-
+import NavbarIcon from "../NavbarIcon/NavbarIcon";
 const NavbarMobile = () => {
   return (
     <ul className={styles.mobileList}>
@@ -19,6 +19,7 @@ const NavbarMobile = () => {
           CONTACT
         </Link>
       </li>
+      <NavbarIcon variant="mobileIconsList" className={styles.mobileIconsList} />
     </ul>
   );
 };
