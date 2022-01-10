@@ -6,14 +6,14 @@ const CartOrder = () => {
     <div className={styles.order}>
       <div className={styles.requestContainer}>
         <h4>REQUEST NOTE</h4>
-        <textarea className={styles.extarea}></textarea>
+        <textarea className={styles.textarea}></textarea>
       </div>
       <div className={styles.totalsContainer}>
         <h4>CART TOTALS</h4>
         <div className={styles.totals}>
           <table className={styles.table}>
             <thead>
-              <tr className={styles.ow1}>
+              <tr className={styles.row1}>
                 <td>
                   <h4>Shipping</h4>
                 </td>
