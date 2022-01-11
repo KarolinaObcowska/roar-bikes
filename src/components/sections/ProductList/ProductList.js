@@ -9,7 +9,14 @@ const ProductList = () => {
     <Layout>
       <Tracker />
       <div className={styles.container}>
+        <div className={styles.sortList}>
+          <select></select>
+        </div>
         <ul className={styles.list}>
+          <ProductListItem name="Siamese" price={3400} photo={Bike1} />
+          <ProductListItem name="Siamese" price={3400} photo={Bike1} />
+          <ProductListItem name="Siamese" price={3400} photo={Bike1} />
+          <ProductListItem name="Siamese" price={3400} photo={Bike1} />
           <ProductListItem name="Siamese" price={3400} photo={Bike1} />
           <ProductListItem name="Sphynx" price={2700} photo={Bike2} />
           <ProductListItem name="Bengal" price={3100} photo={Bike3} />
