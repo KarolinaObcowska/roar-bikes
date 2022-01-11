@@ -1,6 +1,6 @@
 import styles from "./Account.module.sass";
 import Layout from "@Layout/Layout/Layout";
-import { Avatar1 } from "../../../img/avatars";
+import { Avatar1 } from "@Images/avatars";
 import Tracker from "../../elements/Tracker/Tracker";
 import FormInput from "@Elements/Form/FormInput/FormInput";
 import Button from "@Elements/Button/Button";

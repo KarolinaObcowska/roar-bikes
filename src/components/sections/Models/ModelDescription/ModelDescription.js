@@ -2,18 +2,18 @@ import PropTypes from "prop-types";
 import styles from "./ModelDescription.module.sass";
 import ButtonCallToAction from "@Elements/ButtonCallToAction/ButtonCallToAction";
 
-const ModelDescription = ({ name, description }) => {
+const ModelDescription = ({ model, description }) => {
   return (
     <div className={`${styles.description} ${styles.item}`}>
-      <h2 className={styles.modelName}>{name}</h2>
+      <h2 className={styles.modelName}>{model}</h2>
       <p className={styles.modelDescription}>{description}</p>
-      <ButtonCallToAction location={`/product/${name}`} title="learn more" />
+      <ButtonCallToAction location={`/product/${model}`} title="learn more" />
     </div>
   );
 };
 
 ModelDescription.propTypes = {
-  name: PropTypes.string.isRequired,
+  model: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
 };
 

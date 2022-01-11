@@ -7,7 +7,7 @@ module.exports = function override(config) {
     "@Layout": "src/components/layout",
     "@Sections": "src/components/sections",
     "@Partials": "src/components/partials",
-    "@Images": "src/img",
+    "@Images": "src/assets/img",
     "@Style": "src/styles"
   })(config);
 

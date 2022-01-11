@@ -5,10 +5,15 @@
     width: 80%
     margin: auto
     padding: 3rem 0rem
+    @include mixins.breakpoint(large)
+        width: 90%
     .sortList
         width: 250px
+        height: fit-content
+        padding: 1rem
         margin-right: 1rem
-        background-color: variables.$dark-primary-color
+        background-color: variables.$bright-primary-color
+        border: .5px solid variables.$dark-secondary-color
         @include mixins.breakpoint(large)
             width: 100%
             margin-bottom: 1rem
@@ -22,9 +27,40 @@
         list-style: none
         margin: 0
         padding: 0
-        @include mixins.breakpoint(large)
-
-        // @include mixins.breakpoint(medium)
-        //     grid-template-columns: repeat(1, 100%)
+        .listItem
+            background-color: variables.$bright-secondary-color
+            border: .5px solid variables.$dark-secondary-color
+            display: flex
+            flex-direction: column
+            flex: 1 25%
+            @include mixins.breakpoint(large)
+                flex: 1 40%
+            @include mixins.breakpoint(medium)
+                flex: 1 100%
+            .link
+                width: 100%
+            .product
+                .productPhoto
+                    padding: 1rem 0
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    .photo
+                        width: 80%
+                        object-fit: contain
+                .productDetails
+                    text-align: right
+                    background-color: variables.$bright-secondary-color
+                    display: flex
+                    justify-content: space-around
+                    padding: .5rem 0rem
+                    margin-bottom: .5rem
+                    .name,
+                    .price
+                        color: variables.$dark-primary-color
+                        font-weight: variables.$regular-font
+                        text-transform: uppercase
+                        font-size: 1rem
+                        margin: 0
     @include mixins.breakpoint(large)
         flex-direction: column
