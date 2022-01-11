@@ -1,5 +1,5 @@
 import styles from "./ProductListItem.module.sass";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Button from "@Elements/Button/Button";
 const ProductListItem = ({ name, price, photo }) => {
@@ -14,7 +14,9 @@ const ProductListItem = ({ name, price, photo }) => {
           <img src={photo} className={styles.photo} />
         </div>
       </div>
-      <Button location={`/product/${name}`} text="SHOW MORE" />
+      <Link to={`/product/${name}`} className={styles.link}>
+        <Button text="SHOW MORE" />
+      </Link>
     </li>
   );
 };

@@ -3,16 +3,15 @@
 
 .listItem
     background-color: variables.$bright-secondary-color
-    overflow: hidden
+    min-width: 100%
+    max-height: 100%
     display: flex
     justify-content: center
     flex-direction: column
     align-items: center
+    .link
+        width: 100%
     .product
-        display: flex
-        align-items: center
-        flex-direction: column
-        justify-content: space-between
         @include mixins.breakpoint(small)
             flex-direction: column
         .productPhoto
@@ -27,22 +26,24 @@
                 max-height: 120px
                 max-width: 220px
                 object-fit: cover
+                @include mixins.breakpoint(large)
+                    max-height: 180px
+                    max-width: 280px
         .productDetails
-            justify-content: space-around
-            align-items: center
-            height: 3rem
-            border-bottom: 1px solid variables.$dark-secondary-color
-            display: flex
-            width: 100%
+            width: fit-content
+            text-align: right
+            background-color: variables.$primary-color
+            border-radius: 50px 75px 75px 150px
+            padding: .5rem
+            @include mixins.breakpoint(large)
+                max-height: 180px
+                max-width: 280px
             .name,
             .price
                 color: variables.$dark-primary-color
-                font-family: variables.$secondary-font
                 font-weight: variables.$regular-font
                 text-transform: uppercase
                 font-size: 1rem
+                margin: 0
             .price
-                background-color: variables.$primary-color
-                border-radius: 50px 75px 75px 150px
-                padding: 0.5rem
                 color: variables.$bright-primary-color
