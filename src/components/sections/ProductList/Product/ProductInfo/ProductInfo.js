@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import { useReducer, useState } from "react";
+import { useReducer, useState, useContext } from "react";
 import PropTypes from "prop-types";
 import Button from "@Elements/Button/Button";
 import styles from "./ProductInfo.module.sass";
-import Modal from "@Elements/Modal/Modal";
+import { ModalContext } from "../../../../../assets/context/modalContext";
 
 const formReducer = (state, event) => {
   if (event.reset) {
@@ -22,11 +22,7 @@ const formReducer = (state, event) => {
 const ProductInfo = ({ name, price }) => {
   const [formData, setFormData] = useReducer(formReducer, {});
   const [submitting, setSubmitting] = useState(false);
-  const [modal, setModal] = useState(false);
-
-  const toggle = () => {
-    setModal(!modal);
-  };
+  const { handleModal } = useContext(ModalContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -37,9 +33,8 @@ const ProductInfo = ({ name, price }) => {
       formData.quantity === "0" ||
       formData.color === ""
     ) {
-      setModal(true);
+      handleModal("Fill in all the fields of the form.");
     } else {
-      setModal(false);
       alert("bleble");
       setFormData({
         reset: true
@@ -60,11 +55,6 @@ const ProductInfo = ({ name, price }) => {
         <h3 className={styles.productName}>{name}</h3>
         <h3 className={styles.productPrice}>${price}</h3>
       </div>
-      {modal && (
-        <Modal open={modal} close={toggle}>
-          <p>Fill in all the fields of the form.</p>
-        </Modal>
-      )}
       <label className={styles.productColor}>
         Color:
         <select

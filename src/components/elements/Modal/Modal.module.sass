@@ -1,4 +1,4 @@
-@use '../../../styles/_variables'
+@use '../../../styles/variables'
 
 .bg
     z-index: 9998
@@ -7,15 +7,19 @@
     height: 100%
     top: 0
     left: 0
-    background: rgba(0, 0, 0, 0.3)
+    background: variables.$dark-secondary-color-opacity
     .modal
         z-index: 9999
         position: absolute
         top: 50%
         left: 50%
-        min-width: 250px
-        min-height: 100px
+        text-transform: uppercase
+        font-family: variables.$secondary-font
+        font-weight: variables.$regular-font
+        font-size: 1rem
+        text-align: center
         padding: 15px
-        border-radius: 10px
         transform: translate(-50%, -50%)
-        background: variables.$primary-color
+        background: variables.$bright-primary-color
+    .modal:first-child
+        padding: 3rem
