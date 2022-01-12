@@ -30,7 +30,7 @@ const products = [
   },
   {
     id: 4,
-    model: "Sphynx 3.0",
+    model: "Sphynx",
     description:
       "The Sphinx is the worlds most versatile big-tire machine. Compatibile with almost every wheel size available, from 26 and 27.5 Fat to 27.5+ to 29er, the LES Fat is a four-season handtrail that can take you from a single track to snow to sand with no compromises.",
     price: 2700,
