@@ -2,7 +2,7 @@ import styles from "./ProductList.module.sass";
 import { Link } from "react-router-dom";
 import Layout from "@Layout/Layout/Layout";
 import Tracker from "@Elements/Tracker/Tracker";
-import ProductForm from "./ProductForm/ProductForm";
+import SortProductForm from "./SortProductForm/SortProductForm";
 import Button from "@Elements/Button/Button";
 import products from "../../../assets/data/products";
 
@@ -12,8 +12,8 @@ const ProductList = () => {
       <Tracker />
       <div className={styles.container}>
         <form className={styles.sortList}>
-          <ProductForm labels={["Siamese", "Sphynx", "Bengal"]} text="select model" />
-          <ProductForm labels={["S", "M", "L"]} text="select size" />
+          <SortProductForm labels={["Siamese", "Sphynx", "Bengal"]} text="select model" />
+          <SortProductForm labels={["S", "M", "L"]} text="select size" />
           <Button text="search" />
         </form>
         <ul className={styles.list}>

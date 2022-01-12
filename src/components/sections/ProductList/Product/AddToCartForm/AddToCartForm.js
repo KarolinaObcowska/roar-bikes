@@ -1,50 +1,35 @@
 /* eslint-disable no-unused-vars */
-import { useReducer, useState, useContext } from "react";
+import { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import Button from "@Elements/Button/Button";
-import styles from "./ProductInfo.module.sass";
+import styles from "./AddToCartForm.module.sass";
 import { ModalContext } from "../../../../../assets/context/modalContext";
 
-const formReducer = (state, event) => {
-  if (event.reset) {
-    return {
-      size: "",
-      quantity: "",
-      color: ""
-    };
-  }
-  return {
-    ...state,
-    [event.name]: event.value
-  };
-};
-
-const ProductInfo = ({ name, price }) => {
-  const [formData, setFormData] = useReducer(formReducer, {});
+const AddToCartForm = ({ name, price }) => {
   const { handleModal } = useContext(ModalContext);
+  const [values, setValues] = useState({
+    color: "",
+    size: "",
+    quantity: ""
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (
-      formData.size === "" ||
-      formData.quantity === "" ||
-      formData.quantity === "0" ||
-      formData.color === ""
+      values.color === "" ||
+      values.size === "" ||
+      values.quantity === "" ||
+      values.quantity === "0"
     ) {
       handleModal("Fill in all the fields of the form.");
     } else {
-      handleModal("Product has been added to your cart.");
-      setFormData({
-        reset: true
-      });
+      handleModal("Product has been added to cart.");
+      event.target.reset();
     }
   };
 
-  const handleChange = (event) => {
-    setFormData({
-      name: event.target.name,
-      value: event.target.value
-    });
+  const handleChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
   };
 
   return (
@@ -58,7 +43,7 @@ const ProductInfo = ({ name, price }) => {
         <select
           name="color"
           className={styles.formSelect}
-          value={formData.color || ""}
+          value={values[name]}
           onChange={handleChange}>
           <option>Please select</option>
           <option value="Black">Black</option>
@@ -73,7 +58,7 @@ const ProductInfo = ({ name, price }) => {
         <select
           name="size"
           className={styles.formSelect}
-          value={formData.size || ""}
+          value={values[name]}
           onChange={handleChange}>
           <option>Please select</option>
           <option value="S">S</option>
@@ -86,7 +71,7 @@ const ProductInfo = ({ name, price }) => {
         <input
           name="quantity"
           type="number"
-          value={formData.quantity || ""}
+          value={values[name]}
           className={styles.quantityInput}
           onChange={handleChange}
         />
@@ -96,9 +81,9 @@ const ProductInfo = ({ name, price }) => {
   );
 };
 
-ProductInfo.propTypes = {
+AddToCartForm.propTypes = {
   name: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired
 };
 
-export default ProductInfo;
+export default AddToCartForm;

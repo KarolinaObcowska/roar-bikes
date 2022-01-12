@@ -7,6 +7,58 @@
     align-items: center
     @include mixins.breakpoint(large)
         align-items: none
+    .buttons
+        margin-top: 3rem
+        display: flex
+        width: 80%
+    .details
+        width: 100%
+        background-color: variables.$dark-primary-color
+        justify-content: center
+        display: flex
+        @include mixins.breakpoint(medium)
+            padding-bottom: 2rem
+            padding-top: 2rem
+        .detailsContainer
+            height: 100%
+            width: 70%
+            display: flex
+            justify-content: center
+            @include mixins.breakpoint(medium)
+                flex-direction: column
+            .text
+                padding: 2rem
+                width: 40%
+                color: variables.$bright-primary-color
+                font-weight: variables.$regular-font
+                @include mixins.breakpoint(medium)
+                    padding: 0
+                    width: 100%
+                .title
+                    font-weight: variables.$regular-font
+                .description
+                    font-family: variables.$secondary-font
+                    font-weight: variables.$regular-font
+                    font-size: 0.7rem
+                    line-height: 1.5
+            .images
+                width: 40%
+                display: flex
+                flex-direction: column
+                padding: 2rem
+                @include mixins.breakpoint(medium)
+                    width: 100%
+                    padding: 0
+                .photo
+                    height: 150px
+                    width: 80%
+                    margin: 1rem
+                    @include mixins.breakpoint(medium)
+                        height: 150px
+                        width: 100%
+                        margin: 0
+                        margin-top: 1rem
+
     .productContainer
         width: 80%
         display: flex

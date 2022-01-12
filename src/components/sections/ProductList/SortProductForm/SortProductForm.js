@@ -1,7 +1,7 @@
-import styles from "./ProductForm.module.sass";
+import styles from "./SortProductForm.module.sass";
 import PropTypes from "prop-types";
 
-const ProductForm = ({ text, labels }) => {
+const SortProductForm = ({ text, labels }) => {
   return (
     <>
       <p className={styles.title}>{text}</p>
@@ -15,9 +15,9 @@ const ProductForm = ({ text, labels }) => {
   );
 };
 
-ProductForm.propTypes = {
+SortProductForm.propTypes = {
   text: PropTypes.string.isRequired,
   labels: PropTypes.array.isRequired
 };
 
-export default ProductForm;
+export default SortProductForm;
