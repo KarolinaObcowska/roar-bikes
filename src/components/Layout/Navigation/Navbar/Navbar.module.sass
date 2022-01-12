@@ -47,6 +47,9 @@
                         pointer-events: auto
                 .mobile_Menu
                     display: none
+                    @include mixins.breakpoint(large)
+                        display: block
+                        height: fit-content
                 .mobileIcon
                     display: none
                     cursor: not-allowed

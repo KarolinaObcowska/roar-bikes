@@ -10,6 +10,7 @@ import { ModalContext } from "../../../assets/context/modalContext";
 
 const Contact = () => {
   const { handleModal } = useContext(ModalContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     handleModal("The message has been sent.");
@@ -21,11 +22,21 @@ const Contact = () => {
         <PageHeader title="contact us" />
         <div className={styles.formContainer}>
           <form onSubmit={handleSubmit} className={styles.form}>
-            <FormInput name="First Name" />
-            <FormInput name="Last Name" />
-            <FormInput name="E-mail" />
-            <FormTextarea name="Message" />
-            <Button text="send message" type="submit" />
+            <FormInput
+              isRequired={true}
+              inputName="firstname"
+              labelName="First Name"
+              inputType="text"
+            />
+            <FormInput
+              isRequired={true}
+              inputName="lastname"
+              labelName="Last Name"
+              inputType="text"
+            />
+            <FormInput isRequired={true} inputName="email" labelName="E-mail" inputType="email" />
+            <FormTextarea isRequired={true} textareaName="message" labelName="Message" />
+            <Button text="send message" buttonType="submit" />
           </form>
         </div>
       </section>

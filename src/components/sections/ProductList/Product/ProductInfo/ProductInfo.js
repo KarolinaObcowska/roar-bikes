@@ -21,12 +21,10 @@ const formReducer = (state, event) => {
 
 const ProductInfo = ({ name, price }) => {
   const [formData, setFormData] = useReducer(formReducer, {});
-  const [submitting, setSubmitting] = useState(false);
   const { handleModal } = useContext(ModalContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setSubmitting(true);
     if (
       formData.size === "" ||
       formData.quantity === "" ||
@@ -35,7 +33,7 @@ const ProductInfo = ({ name, price }) => {
     ) {
       handleModal("Fill in all the fields of the form.");
     } else {
-      alert("bleble");
+      handleModal("Product has been added to your cart.");
       setFormData({
         reset: true
       });

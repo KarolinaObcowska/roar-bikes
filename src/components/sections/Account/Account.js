@@ -1,10 +1,20 @@
+import { useContext } from "react";
 import styles from "./Account.module.sass";
 import Layout from "@Layout/Layout/Layout";
 import { Avatar1 } from "@Images/avatars";
 import Tracker from "../../elements/Tracker/Tracker";
 import FormInput from "@Elements/Form/FormInput/FormInput";
 import Button from "@Elements/Button/Button";
+import { ModalContext } from "../../../assets/context/modalContext";
+
 const Account = () => {
+  const { handleModal } = useContext(ModalContext);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    handleModal("The data has been updated.");
+  };
+
   return (
     <Layout>
       <Tracker />
@@ -14,14 +24,17 @@ const Account = () => {
             <img src={Avatar1} className={styles.avatar} />
             <h2 className={styles.name}>Brandon Short</h2>
           </div>
-          <from className={styles.details}>
-            <FormInput name="E-mail" />
-            <FormInput name="Name" />
-            <FormInput name="Location" />
-            <FormInput name="Address (Streeet, Number)" />
-            <FormInput name="Address (City, Postcode)" />
-            <Button text="edit profile" />
-          </from>
+          <form className={styles.details} onSubmit={handleSubmit}>
+            <FormInput labelName="E-mail" inputName="email" inputType="email" />
+            <FormInput labelName="Name" inputName="name" inputType="text" />
+            <FormInput
+              labelName="Address (Streeet, Number)"
+              inputName="address1"
+              inputType="text"
+            />
+            <FormInput labelName="Address (City, Postcode)" inputName="address2" inputType="text" />
+            <Button text="edit profile" buttonType="submit" />
+          </form>
         </div>
       </section>
     </Layout>

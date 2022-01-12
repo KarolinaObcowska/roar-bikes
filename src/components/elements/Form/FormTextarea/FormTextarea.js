@@ -1,17 +1,18 @@
 import PropTypes from "prop-types";
 import styles from "./FormTextarea.module.sass";
 
-const FormTextarea = ({ name }) => {
+const FormTextarea = ({ textareaName, labelName }) => {
   return (
     <div className={styles.group}>
-      <label className={styles.title}>{name}</label>
-      <textarea className={styles.textarea} />
+      <label className={styles.title}>{labelName}</label>
+      <textarea name={textareaName} className={styles.textarea} />
     </div>
   );
 };
 
 FormTextarea.propTypes = {
-  name: PropTypes.string.isRequired
+  labelName: PropTypes.string.isRequired,
+  textareaName: PropTypes.string.isRequired
 };
 
 export default FormTextarea;
