@@ -3,12 +3,13 @@ import { useReducer, useState } from "react";
 import PropTypes from "prop-types";
 import Button from "@Elements/Button/Button";
 import styles from "./ProductInfo.module.sass";
+import Modal from "@Elements/Modal/Modal";
 
 const formReducer = (state, event) => {
   if (event.reset) {
     return {
       size: "",
-      quantity: 0,
+      quantity: "",
       color: ""
     };
   }
@@ -21,14 +22,29 @@ const formReducer = (state, event) => {
 const ProductInfo = ({ name, price }) => {
   const [formData, setFormData] = useReducer(formReducer, {});
   const [submitting, setSubmitting] = useState(false);
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => {
+    setModal(!modal);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitting(true);
-    alert("bleble");
-    setFormData({
-      reset: true
-    });
+    if (
+      formData.size === "" ||
+      formData.quantity === "" ||
+      formData.quantity === "0" ||
+      formData.color === ""
+    ) {
+      setModal(true);
+    } else {
+      setModal(false);
+      alert("bleble");
+      setFormData({
+        reset: true
+      });
+    }
   };
 
   const handleChange = (event) => {
@@ -44,14 +60,19 @@ const ProductInfo = ({ name, price }) => {
         <h3 className={styles.productName}>{name}</h3>
         <h3 className={styles.productPrice}>${price}</h3>
       </div>
+      {modal && (
+        <Modal open={modal} close={toggle}>
+          <p>Fill in all the fields of the form.</p>
+        </Modal>
+      )}
       <label className={styles.productColor}>
         Color:
         <select
           name="color"
           className={styles.formSelect}
-          value={formData.color}
+          value={formData.color || ""}
           onChange={handleChange}>
-          <option value="">Please select</option>
+          <option>Please select</option>
           <option value="Black">Black</option>
           <option value="Green">Green</option>
           <option value="Blue">Blue</option>
@@ -64,9 +85,9 @@ const ProductInfo = ({ name, price }) => {
         <select
           name="size"
           className={styles.formSelect}
-          value={formData.size}
+          value={formData.size || ""}
           onChange={handleChange}>
-          <option value="-">Please select</option>
+          <option>Please select</option>
           <option value="S">S</option>
           <option value="M">M</option>
           <option value="L">L</option>
@@ -77,7 +98,7 @@ const ProductInfo = ({ name, price }) => {
         <input
           name="quantity"
           type="number"
-          value={formData.quantity}
+          value={formData.quantity || ""}
           className={styles.quantityInput}
           onChange={handleChange}
         />

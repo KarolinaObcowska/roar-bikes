@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
 import products from "../../../../assets/data/products";
 import styles from "./Product.module.sass";
@@ -10,7 +9,6 @@ import ProductDetails from "./ProductDetails/ProductDetails";
 const Product = () => {
   const { id } = useParams();
   const product = products.find((el) => el.id == id);
-  console.log(product);
 
   return (
     <Layout>
@@ -31,10 +29,6 @@ const Product = () => {
       </section>
     </Layout>
   );
-};
-
-Product.propTypes = {
-  id: PropTypes.number.isRequired
 };
 
 export default Product;
