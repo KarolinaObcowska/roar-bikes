@@ -33,8 +33,8 @@ export const productValidations = {
 
 export const contactValidations = {
   firstname: {
-    custom: {
-      isValid: (value) => value.toString().length > 3,
+    pattern: {
+      value: "[a-z]",
       message: "Please provide valid First Name"
     },
     required: {
@@ -43,8 +43,8 @@ export const contactValidations = {
     }
   },
   lastname: {
-    custom: {
-      isValid: (value) => value.toString().length > 3,
+    pattern: {
+      value: "[a-z]",
       message: "Please provide valid First Name"
     },
     required: {
@@ -53,8 +53,8 @@ export const contactValidations = {
     }
   },
   email: {
-    custom: {
-      isValid: (value) => value.toString().length > 3,
+    pattern: {
+      value: "[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$",
       message: "Please provide valid email"
     },
     required: {
@@ -64,7 +64,7 @@ export const contactValidations = {
   },
   message: {
     custom: {
-      isValid: (value) => value.length > 35,
+      value: "^[a-z]{0,10}$",
       message: "The message must contain at least 35 characters"
     },
     required: {
@@ -72,4 +72,54 @@ export const contactValidations = {
       message: "This field is required"
     }
   }
+};
+
+export const accountValidations = {
+  name: {
+    pattern: {
+      value: "[a-z]",
+      message: "Please provide valid First Name"
+    },
+    required: {
+      value: true,
+      message: "This field is required"
+    }
+  },
+  address1: {
+    pattern: {
+      value: "[a-zA-Z0-9s,'-]*$",
+      message: "Please provide valid address"
+    },
+    required: {
+      value: true,
+      message: "This field is required"
+    }
+  },
+  address2: {
+    pattern: {
+      value: "[a-zA-Z0-9s,'-]*$",
+      message: "Please provide valid address"
+    },
+    required: {
+      value: true,
+      message: "This field is required"
+    }
+  },
+  email: {
+    pattern: {
+      value: "[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$",
+      message: "Please provide valid email"
+    },
+    required: {
+      value: true,
+      message: "This field is required"
+    }
+  }
+};
+
+export const accountState = {
+  email: "email@email.com",
+  name: "John Doe",
+  address1: "Sreet, 15/6",
+  address2: "London, 90-121"
 };
