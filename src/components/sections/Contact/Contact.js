@@ -7,37 +7,32 @@ import FormTextarea from "@Elements/Form/FormTextarea/FormTextarea";
 import styles from "./Contact.module.sass";
 import Tracker from "../../elements/Tracker/Tracker";
 import useForm from "../../../assets/hooks/useForm";
+import { contactValidations as validations } from "../../../assets/data/validations";
 
 const Contact = () => {
-  const { handleChange, values, errors, handleSubmit } = useForm();
+  const { handleChange, values, handleSubmit, errors } = useForm({ validations });
 
   const inputs = [
     {
       id: 1,
       inputName: "firstname",
       labelName: "First Name",
-      inputType: "text",
-      errorMessage: "Invalid First Name",
-      required: true
+      inputType: "text"
     },
     {
       id: 2,
       inputName: "lastname",
       labelName: "Last Name",
-      inputType: "text",
-      errorMessage: "Invalid Last Name",
-      required: true
+      inputType: "text"
     },
     {
       id: 3,
       inputName: "email",
       labelName: "E-mail",
-      inputType: "email",
-      errorMessage: "Invalid E-mail",
-      required: true
+      inputType: "email"
     }
   ];
-
+  console.log(errors);
   return (
     <Layout>
       <section className={styles.contact}>
@@ -46,16 +41,29 @@ const Contact = () => {
         <div className={styles.formContainer}>
           <form onSubmit={handleSubmit} className={styles.form}>
             {inputs.map((input) => (
-              <FormInput key={input.id} {...input} handleChange={handleChange} />
+              <>
+                <FormInput
+                  key={input.id}
+                  {...input}
+                  handleChange={handleChange}
+                  errors={errors}
+                  values={values}
+                  onChange={handleChange}
+                />
+                {errors[input.inputName] && (
+                  <small className={styles.errMessage}>{errors[input.inputName]}</small>
+                )}
+              </>
             ))}
             <FormTextarea
               errors={errors}
+              values={values}
               handleChange={handleChange}
               textareaName="message"
               labelName="Message"
               onChange={handleChange}
             />
-            {errors.message && <small className={styles.errorMsg}>{errors.message}</small>}
+            {errors.message && <small className={styles.errMessage}>{errors.message}</small>}
 
             <Button text="send message" buttonType="submit" />
           </form>

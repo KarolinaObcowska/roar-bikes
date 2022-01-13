@@ -3,42 +3,9 @@ import useForm from "../../../../../assets/hooks/useForm";
 import PropTypes from "prop-types";
 import Button from "@Elements/Button/Button";
 import styles from "./AddToCartForm.module.sass";
-
+import { productValidations as validations } from "../../../../../assets/data/validations";
 const AddToCartForm = ({ name, price }) => {
-  const { handleChange, values, handleSubmit, errors } = useForm({
-    validations: {
-      color: {
-        custom: {
-          isValid: (value) => value !== "",
-          message: "Please check your color"
-        },
-        required: {
-          value: true,
-          message: "This field is required"
-        }
-      },
-      size: {
-        custom: {
-          isValid: (value) => value !== "",
-          message: "Please check your size"
-        },
-        required: {
-          value: true,
-          message: "This field is required"
-        }
-      },
-      quantity: {
-        pattern: {
-          value: "^[1-9]*$",
-          message: "Please provide valid quantity"
-        },
-        required: {
-          value: true,
-          message: "This field is required"
-        }
-      }
-    }
-  });
+  const { handleChange, values, handleSubmit, errors } = useForm({ validations });
   return (
     <form className={styles.info} onSubmit={handleSubmit}>
       <div className={styles.infoContainer}>
@@ -59,6 +26,7 @@ const AddToCartForm = ({ name, price }) => {
           <option value="Red">Red</option>
           <option value="White">White</option>
         </select>
+        {errors.color && <small className={styles.errMessage}>{errors.color}</small>}
       </label>
       <label className={styles.productSize}>
         Size:
@@ -72,6 +40,7 @@ const AddToCartForm = ({ name, price }) => {
           <option value="M">M</option>
           <option value="L">L</option>
         </select>
+        {errors.size && <small className={styles.errMessage}>{errors.size}</small>}
       </label>
       <label className={styles.productQuantity}>
         Quantity:
@@ -82,6 +51,7 @@ const AddToCartForm = ({ name, price }) => {
           className={styles.quantityInput}
           onChange={handleChange}
         />
+        {errors.quantity && <small className={styles.errMessage}>{errors.quantity}</small>}
       </label>
       <Button text="add to cart" width="100%" type="submit" />
     </form>

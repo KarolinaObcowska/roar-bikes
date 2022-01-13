@@ -21,11 +21,13 @@ const useForm = (options) => {
       const newErrors = {};
       for (const key in validations) {
         const value = values[key];
-        //REQUIRED
         const validation = validations[key];
-        if (validation?.required?.value && !value) {
+
+        //REQUIRED
+        const required = validation?.required;
+        if (required?.value && !value) {
           valid = false;
-          newErrors[key] = validations?.required?.message;
+          newErrors[key] = required.message;
         }
         //PATTERN
         const pattern = validation?.pattern;
@@ -48,6 +50,7 @@ const useForm = (options) => {
         setErrors({});
         handleModal("Form has been sent");
         event.target.reset();
+        setValues(options?.initialCalues || {});
       }
     }
   };
