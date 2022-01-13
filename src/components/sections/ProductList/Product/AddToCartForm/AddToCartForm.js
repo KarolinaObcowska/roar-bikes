@@ -1,37 +1,44 @@
 /* eslint-disable no-unused-vars */
-import { useState, useContext } from "react";
+import useForm from "../../../../../assets/hooks/useForm";
 import PropTypes from "prop-types";
 import Button from "@Elements/Button/Button";
 import styles from "./AddToCartForm.module.sass";
-import { ModalContext } from "../../../../../assets/context/modalContext";
 
 const AddToCartForm = ({ name, price }) => {
-  const { handleModal } = useContext(ModalContext);
-  const [values, setValues] = useState({
-    color: "",
-    size: "",
-    quantity: ""
-  });
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (
-      values.color === "" ||
-      values.size === "" ||
-      values.quantity === "" ||
-      values.quantity === "0"
-    ) {
-      handleModal("Fill in all the fields of the form.");
-    } else {
-      handleModal("Product has been added to cart.");
-      event.target.reset();
+  const { handleChange, values, handleSubmit, errors } = useForm({
+    validations: {
+      color: {
+        custom: {
+          isValid: (value) => value !== "",
+          message: "Please check your color"
+        },
+        required: {
+          value: true,
+          message: "This field is required"
+        }
+      },
+      size: {
+        custom: {
+          isValid: (value) => value !== "",
+          message: "Please check your size"
+        },
+        required: {
+          value: true,
+          message: "This field is required"
+        }
+      },
+      quantity: {
+        pattern: {
+          value: "^[1-9]*$",
+          message: "Please provide valid quantity"
+        },
+        required: {
+          value: true,
+          message: "This field is required"
+        }
+      }
     }
-  };
-
-  const handleChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
-
+  });
   return (
     <form className={styles.info} onSubmit={handleSubmit}>
       <div className={styles.infoContainer}>

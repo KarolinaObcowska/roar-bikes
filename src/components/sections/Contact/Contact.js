@@ -1,4 +1,4 @@
-import { useContext } from "react";
+/* eslint-disable no-unused-vars */
 import Layout from "@Layout/Layout/Layout";
 import Button from "@Elements/Button/Button";
 import PageHeader from "@Elements/PageHeader/PageHeader";
@@ -6,36 +6,11 @@ import FormInput from "@Elements/Form/FormInput/FormInput";
 import FormTextarea from "@Elements/Form/FormTextarea/FormTextarea";
 import styles from "./Contact.module.sass";
 import Tracker from "../../elements/Tracker/Tracker";
-import { ModalContext } from "../../../assets/context/modalContext";
-import { useState } from "react/cjs/react.development";
+import useForm from "../../../assets/hooks/useForm";
 
 const Contact = () => {
-  const { handleModal } = useContext(ModalContext);
-  const [values, setValues] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    message: ""
-  });
+  const { handleChange, values, errors, handleSubmit } = useForm();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (
-      values.firstname === "" ||
-      values.lastname === "" ||
-      values.email === "" ||
-      values.message === ""
-    ) {
-      handleModal("Fill in all the fields of the form.");
-    } else {
-      handleModal("Message has been sent.");
-      event.target.reset();
-    }
-  };
-
-  const handleChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
   const inputs = [
     {
       id: 1,
@@ -71,20 +46,17 @@ const Contact = () => {
         <div className={styles.formContainer}>
           <form onSubmit={handleSubmit} className={styles.form}>
             {inputs.map((input) => (
-              <FormInput
-                key={input.id}
-                {...input}
-                value={values[input.inputName]}
-                handleChange={handleChange}
-              />
+              <FormInput key={input.id} {...input} handleChange={handleChange} />
             ))}
             <FormTextarea
+              errors={errors}
               handleChange={handleChange}
-              value={values.message}
               textareaName="message"
               labelName="Message"
               onChange={handleChange}
             />
+            {errors.message && <small className={styles.errorMsg}>{errors.message}</small>}
+
             <Button text="send message" buttonType="submit" />
           </form>
         </div>
