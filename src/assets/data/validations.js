@@ -116,10 +116,3 @@ export const accountValidations = {
     }
   }
 };
-
-export const accountState = {
-  email: "email@email.com",
-  name: "John Doe",
-  address1: "Sreet, 15/6",
-  address2: "London, 90-121"
-};

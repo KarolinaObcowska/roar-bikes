@@ -14,7 +14,7 @@ const ProductList = () => {
         <form className={styles.sortList}>
           <SortProductForm labels={["Siamese", "Sphynx", "Bengal"]} text="select model" />
           <SortProductForm labels={["S", "M", "L"]} text="select size" />
-          <Button text="search" />
+          <Button className={styles.button} text="search" />
         </form>
         <ul className={styles.list}>
           {products.map((el) => (

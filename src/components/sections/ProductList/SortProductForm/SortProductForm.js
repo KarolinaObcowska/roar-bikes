@@ -11,6 +11,16 @@ const SortProductForm = ({ text, labels }) => {
           <input type="checkbox" className={styles.input} />
         </div>
       ))}
+      <div className={styles.selectGroup}>
+        <label className={styles.selectLabel}>
+          <select type="checkbox" className={styles.select}>
+            <option>{text}</option>
+            {labels.map((el) => (
+              <option key={el}>{el}</option>
+            ))}
+          </select>
+        </label>
+      </div>
     </>
   );
 };

@@ -17,7 +17,12 @@
         @include mixins.breakpoint(large)
             width: 100%
             margin-bottom: 1rem
-            height: 4rem
+            display: flex
+        @include mixins.breakpoint(medium)
+            width: 100%
+            margin-bottom: 1rem
+            display: inline
+
     .list
         display: flex
         flex-wrap: wrap

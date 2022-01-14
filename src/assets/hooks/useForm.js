@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import { ModalContext } from "../context/modalContext";
 
 const useForm = (options) => {
-  const [values, setValues] = useState(options?.initialCalues || {});
+  const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
 
   const { handleModal } = useContext(ModalContext);
@@ -50,7 +50,7 @@ const useForm = (options) => {
         setErrors({});
         handleModal("Form has been sent");
         event.target.reset();
-        setValues(options?.initialCalues || {});
+        setValues({});
       }
     }
   };

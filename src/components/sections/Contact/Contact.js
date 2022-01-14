@@ -48,7 +48,6 @@ const Contact = () => {
                   handleChange={handleChange}
                   errors={errors}
                   values={values}
-                  onChange={handleChange}
                 />
                 {errors[input.inputName] && (
                   <small className={styles.errMessage}>{errors[input.inputName]}</small>
@@ -61,7 +60,6 @@ const Contact = () => {
               handleChange={handleChange}
               textareaName="message"
               labelName="Message"
-              onChange={handleChange}
             />
             {errors.message && <small className={styles.errMessage}>{errors.message}</small>}
 
