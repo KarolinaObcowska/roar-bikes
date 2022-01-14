@@ -12,7 +12,7 @@ const Hero = () => {
             <div className={styles.item}>
               <h2 className={styles.subtitle}>NEW MODEL</h2>
               <h1 className={styles.title}>SIAMESE</h1>
-              <ButtonCallToAction location="/product/siamese" title="shop now" />
+              <ButtonCallToAction location="/product/1" title="shop now" />
             </div>
           </div>
         </Slide>
