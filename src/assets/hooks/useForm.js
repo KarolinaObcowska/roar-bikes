@@ -48,6 +48,8 @@ const useForm = (options) => {
         return;
       } else {
         setErrors({});
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${window.scrollY}px`;
         handleModal("Form has been sent");
         event.target.reset();
         setValues({});

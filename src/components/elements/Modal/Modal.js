@@ -8,8 +8,7 @@ import { ModalContext } from "../../../assets/context/modalContext";
 const modalRoot = document.getElementById("modal");
 
 const Modal = () => {
-  const { modalContent, handleModal, modal } = useContext(ModalContext);
-
+  const { modalContent, modal, closeModal } = useContext(ModalContext);
   const el = document.createElement("div");
   useEffect(() => {
     modalRoot.appendChild(el);
@@ -19,8 +18,8 @@ const Modal = () => {
   }, [el]);
   return modal
     ? createPortal(
-        <div className={styles.bg} onClick={handleModal}>
-          <div className={styles.modal} onClick={handleModal}>
+        <div className={styles.bg} onClick={closeModal}>
+          <div className={styles.modal} onClick={closeModal}>
             <p>{modalContent}</p>
           </div>
         </div>,

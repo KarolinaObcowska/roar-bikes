@@ -7,13 +7,12 @@ import Product from "@Sections/ProductList/Product/Product";
 import Contact from "@Sections/Contact/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ModalProvider } from "./assets/context/modalContext";
-
 function App() {
   return (
     <ModalProvider>
       <div className="app">
         <Router>
-          <Routes>
+          <Routes onUpdate={() => window.scrollTo(0, 0)}>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
