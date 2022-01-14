@@ -1,5 +1,5 @@
 @use '../../../styles/_variables'
-
+@use '../../../styles/_animations'
 .button
     background-color: variables.$dark-primary-color
     color: variables.$bright-primary-color
@@ -10,6 +10,9 @@
     text-transform: uppercase
     margin-top: .5rem
     width: 100%
+    &:active
+        box-shadow: 0 5px #fff
+        transform: translateY(4px)
 .rounded-white
     border-top-left-radius: 20px
     border-top-right-radius: 20px

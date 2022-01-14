@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ButtonCallToAction = ({ location, title }) => {
   return (
     <Link to={location} className={styles.button}>
-      {title}
+      <span>{title}</span>
     </Link>
   );
 };
