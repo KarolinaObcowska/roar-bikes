@@ -1,7 +1,7 @@
 import styles from "./SortProductForm.module.sass";
 import PropTypes from "prop-types";
 
-const SortProductForm = ({ text, labels, handleChange }) => {
+const SortProductForm = ({ inputName, text, labels, handleChange }) => {
   return (
     <>
       <p className={styles.title}>{text}</p>
@@ -13,7 +13,7 @@ const SortProductForm = ({ text, labels, handleChange }) => {
           <input
             type="radio"
             value={el}
-            name="model"
+            name={inputName}
             onChange={handleChange}
             className={styles.input}
           />
@@ -34,6 +34,7 @@ const SortProductForm = ({ text, labels, handleChange }) => {
 };
 
 SortProductForm.propTypes = {
+  inputName: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   labels: PropTypes.array.isRequired,
   handleChange: PropTypes.func.isRequired

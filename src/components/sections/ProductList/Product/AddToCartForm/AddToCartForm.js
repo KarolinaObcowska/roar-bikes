@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Button from "@Elements/Button/Button";
 import styles from "./AddToCartForm.module.sass";
 import { productValidations as validations } from "../../../../../assets/data/validations";
-const AddToCartForm = ({ name, price }) => {
+const AddToCartForm = ({ name, price, sizes }) => {
   const { handleChange, values, handleSubmit, errors } = useForm({ validations });
   return (
     <form className={styles.info} onSubmit={handleSubmit}>
@@ -36,9 +36,12 @@ const AddToCartForm = ({ name, price }) => {
           value={values[name]}
           onChange={handleChange}>
           <option>Please select</option>
-          <option value="S">S</option>
-          <option value="M">M</option>
-          <option value="L">L</option>
+          {sizes.map((size) => (
+            <option key={size} value={size}>
+              {size}
+            </option>
+          ))}
+          ;
         </select>
         {errors.size && <small className={styles.errMessage}>{errors.size}</small>}
       </label>
@@ -60,7 +63,8 @@ const AddToCartForm = ({ name, price }) => {
 
 AddToCartForm.propTypes = {
   name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired
+  price: PropTypes.number.isRequired,
+  sizes: PropTypes.array.isRequired
 };
 
 export default AddToCartForm;

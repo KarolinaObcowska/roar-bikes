@@ -24,7 +24,7 @@ const Product = () => {
               ))}
             </div>
           </figure>
-          <AddToCartForm name={product.name} price={product.price} />
+          <AddToCartForm sizes={product.sizes} name={product.name} price={product.price} />
         </div>
         <div className={styles.buttons}>
           <Button text="DESCRIPTION" variant="rounded-black" />

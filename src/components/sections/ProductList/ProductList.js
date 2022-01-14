@@ -10,21 +10,35 @@ import { useState } from "react/cjs/react.development";
 
 const ProductList = () => {
   const [items, setItems] = useState(products);
-  const [selectedValue, setSelectedValue] = useState({});
+  const [selectedModel, setSelectedModel] = useState({});
+  const [selectedSize, setSelectedSize] = useState({});
 
-  const handleChange = (e) => {
-    setSelectedValue({ [e.target.name]: e.target.value });
+  const handleChangeModel = (e) => {
+    setSelectedModel({ [e.target.name]: e.target.value });
+  };
+  const handleChangeSize = (e) => {
+    setSelectedSize({ [e.target.name]: e.target.value });
   };
 
   const handleFilter = (event) => {
+    let filterProducts;
     event.preventDefault();
-    if (selectedValue.model === "All") {
+    if (selectedModel.model === "All" && selectedSize.size === "All") {
       setItems(products);
+    } else if (selectedModel.model === "All" && selectedSize.size !== "All") {
+      filterProducts = products.filter((prod) => prod.sizes.includes(selectedSize.size));
+      setItems(filterProducts);
+    } else if (selectedSize.size === "All" && selectedModel.model) {
+      filterProducts = products.filter((prod) => prod.model === selectedModel.model);
+      setItems(filterProducts);
     } else {
-      const filteredProducts = products.filter((prod) => prod.model === selectedValue.model);
-      setItems(filteredProducts);
+      filterProducts = products.filter(
+        (prod) => prod.model === selectedModel.model && prod.sizes.includes(selectedSize.size)
+      );
+      setItems(filterProducts);
     }
-    console.log(selectedValue.model);
+    console.log(selectedModel.model);
+    console.log(selectedSize.size);
     console.log(items);
   };
 
@@ -34,14 +48,16 @@ const ProductList = () => {
       <div className={styles.container}>
         <form className={styles.sortList} onSubmit={handleFilter}>
           <SortProductForm
-            handleChange={handleChange}
+            handleChange={handleChangeModel}
             labels={["Siamese", "Sphynx", "Bengal", "All"]}
             text="select model"
+            inputName="model"
           />
           <SortProductForm
-            handleChange={handleChange}
-            labels={["S", "M", "L"]}
+            handleChange={handleChangeSize}
+            labels={["S", "M", "L", "All"]}
             text="select size"
+            inputName="size"
           />
           <Button className={styles.button} text="search" />
         </form>
