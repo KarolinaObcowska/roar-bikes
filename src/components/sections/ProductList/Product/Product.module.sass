@@ -21,11 +21,12 @@
             padding-top: 2rem
         .detailsContainer
             height: 100%
-            width: 70%
+            width: 100%
             display: flex
             justify-content: center
             @include mixins.breakpoint(medium)
                 flex-direction: column
+                width: 80%
             .text
                 padding: 2rem
                 width: 40%
@@ -34,6 +35,11 @@
                 @include mixins.breakpoint(medium)
                     padding: 0
                     width: 100%
+                .selected
+                    display: block !important
+                .desc,
+                .spec
+                    display: none
                 .title
                     font-weight: variables.$regular-font
                 .description

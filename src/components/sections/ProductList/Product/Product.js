@@ -27,8 +27,7 @@ const Product = () => {
           <AddToCartForm sizes={product.sizes} name={product.name} price={product.price} />
         </div>
         <div className={styles.buttons}>
-          <Button text="DESCRIPTION" variant="rounded-black" />
-          <Button text="specification" variant="rounded-white" />
+          <Button text="DESCRIPTION" variant="rounded-black" width="300px" />
         </div>
         <div className={styles.details}>
           <div className={styles.detailsContainer}>
