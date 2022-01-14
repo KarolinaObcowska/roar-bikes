@@ -47,19 +47,23 @@ const ProductList = () => {
       <Tracker />
       <div className={styles.container}>
         <form className={styles.sortList} onSubmit={handleFilter}>
-          <SortProductForm
-            handleChange={handleChangeModel}
-            labels={["Siamese", "Sphynx", "Bengal", "All"]}
-            text="select model"
-            inputName="model"
-          />
-          <SortProductForm
-            handleChange={handleChangeSize}
-            labels={["S", "M", "L", "All"]}
-            text="select size"
-            inputName="size"
-          />
-          <Button className={styles.button} text="search" />
+          <div className={styles.wrapper}>
+            <SortProductForm
+              handleChange={handleChangeModel}
+              labels={["Siamese", "Sphynx", "Bengal", "All"]}
+              text="select model"
+              inputName="model"
+            />
+            <SortProductForm
+              handleChange={handleChangeSize}
+              labels={["S", "M", "L", "All"]}
+              text="select size"
+              inputName="size"
+            />
+          </div>
+          <div className={styles.button}>
+            <Button className={styles.button} text="search" />
+          </div>
         </form>
         <ul className={styles.list}>
           {items.map((el) => (

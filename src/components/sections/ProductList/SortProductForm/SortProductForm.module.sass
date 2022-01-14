@@ -1,58 +1,35 @@
 @use '../../../../styles/_variables'
 @use '../../../../styles/_mixins'
 
-.title
-    color: variables.$dark-primary-color
-    background-color: variables.$primary-color
-    border-radius: 50px 75px 75px 150px
-    text-transform: uppercase
-    display: block
-    width: fit-content
-    font-size: 1.5rem
-    margin-bottom: 1rem
+.container
     @include mixins.breakpoint(large)
-        display: none
-.group,
-.selectGroup
-    display: flex
-    width: 100%
-    align-items: center
-    justify-content: space-between
-.selectGroup
-    display: none
-    @include mixins.breakpoint(large)
+        justify-content: center
+        align-items: center
         display: flex
-        flex-direction: columns
-    .selectLabel
-        display: none
-        @include mixins.breakpoint(large)
-            display: inline
-            width: 100%
-            margin-top: .5rem
-        .select
-            display: none
-            @include mixins.breakpoint(large)
-                display: inline
-                width: 90%
-                padding: .9rem 3rem
-                height: fit-content
-                border: .5px solid variables.$dark-secondary-color
-                text-transform: uppercase
-                background-color: variables.$primary-color
-                font-family: variables.$primary-font
-            @include mixins.breakpoint(medium)
-                padding: .3rem
-                width: 100%
-                text-align: center
-.group
-    @include mixins.breakpoint(large)
-        display: none
-    .label
+        flex-direction: column
+        width: 100%
+        margin-bottom: 1rem
+    .title
+        color: variables.$dark-primary-color
+        background-color: variables.$primary-color
+        border-radius: 50px 75px 75px 150px
         text-transform: uppercase
-        font-weight: variables.$regular-font
+        display: block
+        width: fit-content
+        font-size: 1.5rem
+        margin-bottom: 1rem
+    .group
+        display: flex
+        flex-direction: row
+        width: 100%
+        align-items: center
+        justify-content: space-between
         @include mixins.breakpoint(large)
-            display: none
-    .input
-        border: .5px solid variables.$dark-secondary-color
-        @include mixins.breakpoint(large)
-            display: none
+            width: 50%
+
+        .label
+            text-transform: uppercase
+            font-weight: variables.$regular-font
+
+        .input
+            border: .5px solid variables.$dark-secondary-color

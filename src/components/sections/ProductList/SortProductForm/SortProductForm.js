@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const SortProductForm = ({ inputName, text, labels, handleChange }) => {
   return (
-    <>
+    <div className={styles.container}>
       <p className={styles.title}>{text}</p>
       {labels.map((el) => (
         <div key={el} className={styles.group}>
@@ -19,17 +19,7 @@ const SortProductForm = ({ inputName, text, labels, handleChange }) => {
           />
         </div>
       ))}
-      <div className={styles.selectGroup}>
-        <label className={styles.selectLabel}>
-          <select type="checkbox" className={styles.select}>
-            <option>{text}</option>
-            {labels.map((el) => (
-              <option key={el}>{el}</option>
-            ))}
-          </select>
-        </label>
-      </div>
-    </>
+    </div>
   );
 };
 
