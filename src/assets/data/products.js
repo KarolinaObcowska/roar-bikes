@@ -10,7 +10,7 @@ const products = [
       "The Siamese looks a lot like out other Trail and Enduro models because it is - it has the same type vof progressive geometry, ultra-capable suspension, and a state-of-the-art lightweight carbon-fiber chassis that magically makes you a better rider in the most demanding terrain.",
     price: 3400,
     mainPhoto: Bike1,
-    photo: [bike1]
+    photo: bike1
   },
   {
     id: 5,
@@ -21,7 +21,7 @@ const products = [
       "The Siamese looks a lot like out other Trail and Enduro models because it is - it has the same type vof progressive geometry, ultra-capable suspension, and a state-of-the-art lightweight carbon-fiber chassis that magically makes you a better rider in the most demanding terrain.",
     price: 3400,
     mainPhoto: Bike1,
-    photo: [bike1]
+    photo: bike1
   },
   {
     id: 8,
@@ -32,7 +32,7 @@ const products = [
       "The Siamese looks a lot like out other Trail and Enduro models because it is - it has the same type vof progressive geometry, ultra-capable suspension, and a state-of-the-art lightweight carbon-fiber chassis that magically makes you a better rider in the most demanding terrain.",
     price: 3400,
     mainPhoto: Bike1,
-    photo: [bike1]
+    photo: bike1
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ const products = [
       "The Sphinx is the worlds most versatile big-tire machine. Compatibile with almost every wheel size available, from 26 and 27.5 Fat to 27.5+ to 29er, the LES Fat is a four-season handtrail that can take you from a single track to snow to sand with no compromises.",
     price: 2700,
     mainPhoto: Bike2,
-    photo: [bike2]
+    photo: bike2
   },
   {
     id: 7,
@@ -54,7 +54,7 @@ const products = [
       "The Sphinx is the worlds most versatile big-tire machine. Compatibile with almost every wheel size available, from 26 and 27.5 Fat to 27.5+ to 29er, the LES Fat is a four-season handtrail that can take you from a single track to snow to sand with no compromises.",
     price: 2700,
     mainPhoto: Bike2,
-    photo: [bike2]
+    photo: bike2
   },
   {
     model: "Sphynx",
@@ -65,7 +65,7 @@ const products = [
       "The Sphinx is the worlds most versatile big-tire machine. Compatibile with almost every wheel size available, from 26 and 27.5 Fat to 27.5+ to 29er, the LES Fat is a four-season handtrail that can take you from a single track to snow to sand with no compromises.",
     price: 2700,
     mainPhoto: Bike2,
-    photo: [bike2]
+    photo: bike2
   },
   {
     id: 3,
@@ -76,7 +76,7 @@ const products = [
       "The Sphinx is the worlds most versatile big-tire machine. Compatibile with almost every wheel size available, from 26 and 27.5 Fat to 27.5+ to 29er, the LES Fat is a four-season handtrail that can take you from a single track to snow to sand with no compromises.",
     price: 3100,
     mainPhoto: Bike3,
-    photo: [bike3]
+    photo: bike3
   },
   {
     id: 10,
@@ -87,7 +87,7 @@ const products = [
       "The Sphinx is the worlds most versatile big-tire machine. Compatibile with almost every wheel size available, from 26 and 27.5 Fat to 27.5+ to 29er, the LES Fat is a four-season handtrail that can take you from a single track to snow to sand with no compromises.",
     price: 3100,
     mainPhoto: Bike3,
-    photo: [bike3]
+    photo: bike3
   },
   {
     id: 1,
@@ -98,7 +98,7 @@ const products = [
       "The Sphinx is the worlds most versatile big-tire machine. Compatibile with almost every wheel size available, from 26 and 27.5 Fat to 27.5+ to 29er, the LES Fat is a four-season handtrail that can take you from a single track to snow to sand with no compromises.",
     price: 3100,
     mainPhoto: Bike3,
-    photo: [bike3]
+    photo: bike3
   }
 ];
 

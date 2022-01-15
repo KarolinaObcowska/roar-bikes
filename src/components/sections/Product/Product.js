@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useParams } from "react-router-dom";
 import products from "../../../assets/data/products";
 import { Photo1, Photo2 } from "@Images/customer-photo";
@@ -6,24 +7,31 @@ import Layout from "@Layout/Layout/Layout";
 import Tracker from "@Elements/Tracker/Tracker";
 import AddToCartForm from "./AddToCartForm/AddToCartForm";
 import Button from "@Elements/Button/Button";
+import ActivePhoto from "./ActivePhoto/ActivePhoto";
+import { useState } from "react/cjs/react.development";
+import PhotoGallery from "./PhotoGallery/PhotoGallery";
 
 const Product = () => {
   const { id } = useParams();
   const product = products.find((el) => el.id == id);
 
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [thumbnails, setThumbnails] = useState(product.photo);
+
+  const handleClick = (e) => {
+    const index = e.target.getAttribute("data-index");
+    console.log(index);
+    setActiveIndex(index);
+  };
   return (
     <Layout>
       <section className={styles.product}>
         <Tracker name={product.model} />
         <div className={styles.productContainer}>
-          <figure className={styles.images}>
-            <img className={styles.photo} src={product.mainPhoto} />
-            <div className={styles.photoGallery}>
-              {product.photo[0].map((el) => (
-                <img className={styles.galleryItem} key={el} src={el} />
-              ))}
-            </div>
-          </figure>
+          <div className={styles.mainPhoto}>
+            <ActivePhoto activePhoto={thumbnails[activeIndex]} />
+            <PhotoGallery thumbnails={thumbnails} handleClick={handleClick} />
+          </div>
           <AddToCartForm sizes={product.sizes} name={product.name} price={product.price} />
         </div>
         <div className={styles.buttons}>

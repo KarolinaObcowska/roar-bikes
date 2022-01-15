@@ -1,0 +1,22 @@
+@use "../../../../styles/_mixins"
+@use "../../../../styles/_variables"
+
+.photoGallery
+    height: fit-content
+    .galleryItem
+        border: 1px solid variables.$dark-secondary-color
+        margin: 0.5rem
+        width: 100px
+        height: 100px
+        @include mixins.breakpoint(large)
+            width: 75px
+            height: 75px
+        @include mixins.breakpoint(medium)
+            width: 50px
+            height: 50px
+        &:hover
+            transition: all 200ms ease-in
+            transform: scale(1.1)
+            box-shadow: 0px 0px 10px #444
+            z-index: 2
+            background-color: variables.$bright-primary-color
