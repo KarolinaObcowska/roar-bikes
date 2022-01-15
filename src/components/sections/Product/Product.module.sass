@@ -111,3 +111,9 @@
                     @include mixins.breakpoint(medium)
                         width: 50px
                         height: 50px
+                    &:hover
+                        transition: all 200ms ease-in
+                        transform: scale(2.1)
+                        box-shadow: 0px 0px 10px #444
+                        z-index: 2
+                        background-color: variables.$bright-primary-color
