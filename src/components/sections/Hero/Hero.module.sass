@@ -24,9 +24,12 @@
         @include mixins.breakpoint(large)
             width: 700px
         @include mixins.breakpoint(medium)
-            height: fit-content
+            height: 100%
             width: 100vw
             border-radius: 0px
+            position: relative
+
+            bottom: 0
             margin: 0
             display: flex
             justify-content: center
@@ -41,6 +44,7 @@
                 display: flex
                 flex-direction: column
                 align-items: center
+                justify-content: center
                 width: 400px
             .title,
             .subtitle

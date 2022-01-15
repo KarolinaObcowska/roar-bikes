@@ -84,5 +84,8 @@
             flex-direction: column
         .mainPhoto
             display: flex
+            width: fit-content
             flex-direction: column
-            align-items: center
+            align-items: left
+            @include mixins.breakpoint(large)
+                align-items: center
