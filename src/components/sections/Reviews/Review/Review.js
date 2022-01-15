@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import styles from "./Review.module.sass";
 import { AiFillStar } from "react-icons/ai";
-import Fade from "react-reveal/Fade";
 
 const Review = ({ name, avatar, stars, review }) => {
   const tab = new Array(stars);
@@ -10,23 +9,17 @@ const Review = ({ name, avatar, stars, review }) => {
   return (
     <section className={styles.review}>
       <div className={styles.reviewContainer}>
-        <Fade left>
-          <img src={avatar} alt={`${name} 's avatar`} className={styles.avatar} />
-        </Fade>
-        <Fade top>
-          <div>
-            <h3 className={styles.name}>{name}</h3>
-            {tab.map((el, id) => {
-              return <AiFillStar className={styles.star} key={id} />;
-            })}
-          </div>
-        </Fade>
-      </div>
-      <Fade bottom>
-        <div className={styles.description}>
-          <p>{review}</p>
+        <img src={avatar} alt={`${name} 's avatar`} className={styles.avatar} />
+        <div>
+          <h3 className={styles.name}>{name}</h3>
+          {tab.map((el, id) => {
+            return <AiFillStar className={styles.star} key={id} />;
+          })}
         </div>
-      </Fade>
+      </div>
+      <div className={styles.description}>
+        <p>{review}</p>
+      </div>
     </section>
   );
 };

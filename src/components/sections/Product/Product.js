@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import products from "../../../../assets/data/products";
+import products from "../../../assets/data/products";
 import { Photo1, Photo2 } from "@Images/customer-photo";
 import styles from "./Product.module.sass";
 import Layout from "@Layout/Layout/Layout";

@@ -28,7 +28,7 @@ const ProductList = () => {
     } else if (selectedModel.model === "All" && selectedSize.size !== "All") {
       filterProducts = products.filter((prod) => prod.sizes.includes(selectedSize.size));
       setItems(filterProducts);
-    } else if (selectedSize.size === "All" && selectedModel.model) {
+    } else if (selectedSize.size === "All" && selectedModel.model !== "All") {
       filterProducts = products.filter((prod) => prod.model === selectedModel.model);
       setItems(filterProducts);
     } else {

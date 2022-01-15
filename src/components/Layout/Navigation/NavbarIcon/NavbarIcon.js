@@ -2,17 +2,11 @@
 import { Link } from "react-router-dom";
 import { BsCart3 } from "react-icons/bs";
 import { MdOutlineAccountCircle } from "react-icons/md";
-import { FiSearch } from "react-icons/fi";
 import styles from "./NavbarIcon.module.sass";
 
 const NavbarIcon = ({ variant }) => {
   return (
     <ul className={styles[variant]}>
-      <li>
-        <Link to="/" className={styles.link}>
-          <FiSearch className={styles.icon} />
-        </Link>
-      </li>
       <li>
         <Link to="/cart" className={styles.link}>
           <BsCart3 className={styles.icon} />

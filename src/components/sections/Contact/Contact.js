@@ -32,7 +32,6 @@ const Contact = () => {
       inputType: "email"
     }
   ];
-  console.log(errors);
   return (
     <Layout>
       <section className={styles.contact}>
@@ -41,18 +40,12 @@ const Contact = () => {
         <div className={styles.formContainer}>
           <form onSubmit={handleSubmit} className={styles.form}>
             {inputs.map((input) => (
-              <>
-                <FormInput
-                  key={input.id}
-                  {...input}
-                  handleChange={handleChange}
-                  errors={errors}
-                  values={values}
-                />
+              <div key={input.id}>
+                <FormInput {...input} handleChange={handleChange} errors={errors} values={values} />
                 {errors[input.inputName] && (
                   <small className={styles.errMessage}>{errors[input.inputName]}</small>
                 )}
-              </>
+              </div>
             ))}
             <FormTextarea
               errors={errors}

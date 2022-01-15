@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable react/no-unescaped-entities */
 import styles from "./Models.module.sass";
 import products from "../../../assets/data/products";
@@ -12,10 +13,10 @@ const Models = () => {
       <PageTitle title="models" />
       <div className={styles.modelsContainer}>
         {models.map((el) => (
-          <>
+          <div key={el.id}>
             <ModelPhoto photo={el.mainPhoto} />
             <ModelDescription model={el.model} description={el.description} id={el.id} />
-          </>
+          </div>
         ))}
       </div>
     </section>

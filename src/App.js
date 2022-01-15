@@ -3,7 +3,7 @@ import Home from "@Layout/Home/Home";
 import Account from "@Sections/Account/Account";
 import ProductList from "@Sections/ProductList/ProductList";
 import Cart from "@Sections/Cart/Cart";
-import Product from "@Sections/ProductList/Product/Product";
+import Product from "@Sections/Product/Product";
 import Contact from "@Sections/Contact/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ModalProvider } from "./assets/context/modalContext";

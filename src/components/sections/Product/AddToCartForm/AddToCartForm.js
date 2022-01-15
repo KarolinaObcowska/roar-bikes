@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import useForm from "../../../../../assets/hooks/useForm";
+import useForm from "../../../../assets/hooks/useForm";
 import PropTypes from "prop-types";
 import Button from "@Elements/Button/Button";
 import styles from "./AddToCartForm.module.sass";
-import { productValidations as validations } from "../../../../../assets/data/validations";
+import { productValidations as validations } from "../../../../assets/data/validations";
 const AddToCartForm = ({ name, price, sizes }) => {
   const { handleChange, values, handleSubmit, errors } = useForm({ validations });
   return (
@@ -29,6 +29,7 @@ const AddToCartForm = ({ name, price, sizes }) => {
         {errors.color && <small className={styles.errMessage}>{errors.color}</small>}
       </label>
       <label className={styles.productSize}>
+        {" "}
         Size:
         <select
           name="size"
@@ -46,6 +47,7 @@ const AddToCartForm = ({ name, price, sizes }) => {
         {errors.size && <small className={styles.errMessage}>{errors.size}</small>}
       </label>
       <label className={styles.productQuantity}>
+        {" "}
         Quantity:
         <input
           name="quantity"

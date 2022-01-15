@@ -5,4 +5,5 @@ import Photo4 from "./photo-4.jpg";
 import Photo5 from "./photo-5.jpg";
 import Photo6 from "./photo-6.jpg";
 
-export { Photo1, Photo2, Photo3, Photo4, Photo5, Photo6 };
+const images = [Photo1, Photo2, Photo3, Photo4, Photo5, Photo6];
+export { images, Photo1, Photo2, Photo3, Photo4, Photo5, Photo6 };
