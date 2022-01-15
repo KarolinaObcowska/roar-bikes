@@ -7,7 +7,7 @@ import ModelDescription from "./ModelDescription/ModelDescription";
 import PageTitle from "@Elements/PageTitle/PageTitle";
 
 const Models = () => {
-  const models = [products[0], products[3], products[6]];
+  const models = [products[0], products[3], products[6], products[9]];
   return (
     <section className={styles.models}>
       <PageTitle title="models" />

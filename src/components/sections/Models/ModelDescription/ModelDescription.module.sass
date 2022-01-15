@@ -1,5 +1,7 @@
 @use '../../../../styles/_variables'
 @use '../../../../styles/_animations'
+@use '../../../../styles/_mixins'
+
 .description
     display: flex
     flex-direction: column
@@ -9,6 +11,8 @@
     justify-content: center
     margin: auto
     align-items: center
+    @include mixins.breakpoint(medium)
+        text-align: center
     .modelName
         text-transform: uppercase
         margin: 0
