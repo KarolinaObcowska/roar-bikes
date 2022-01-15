@@ -4,6 +4,8 @@ RoarBike is a modern and responsive landing page and store for a fictional bike 
 
 ## Live Demo
 
+![](./demo/demo.gif)
+
 ## Tools
 
 - React
