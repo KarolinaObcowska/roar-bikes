@@ -6,7 +6,7 @@ import Tracker from "@Elements/Tracker/Tracker";
 import SortProductForm from "./SortProductForm/SortProductForm";
 import Button from "@Elements/Button/Button";
 import products from "../../../assets/data/products";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 const ProductList = () => {
   const [items, setItems] = useState(products);

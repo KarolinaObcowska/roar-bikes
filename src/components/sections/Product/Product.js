@@ -8,7 +8,7 @@ import Tracker from "@Elements/Tracker/Tracker";
 import AddToCartForm from "./AddToCartForm/AddToCartForm";
 import Button from "@Elements/Button/Button";
 import ActivePhoto from "./ActivePhoto/ActivePhoto";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import PhotoGallery from "./PhotoGallery/PhotoGallery";
 
 const Product = () => {
