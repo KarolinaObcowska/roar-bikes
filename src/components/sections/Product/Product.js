@@ -20,7 +20,6 @@ const Product = () => {
 
   const handleClick = (e) => {
     const index = e.target.getAttribute("data-index");
-    console.log(index);
     setActiveIndex(index);
   };
   return (

@@ -4,7 +4,7 @@ import styles from "./ActivePhoto.module.sass";
 
 const ActivePhoto = ({ activePhoto }) => {
   return (
-    <figure className={styles.images}>
+    <figure className={styles.wrapper}>
       <img className={styles.photo} src={activePhoto} />
     </figure>
   );
